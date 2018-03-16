@@ -1,0 +1,51 @@
+\BOOKMARK [1][-]{section.0}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.0.1}{Time-Series}{section.0}% 2
+\BOOKMARK [3][-]{subsubsection.0.1.1}{TS Applications}{subsection.0.1}% 3
+\BOOKMARK [2][-]{subsection.0.2}{I/O Systems}{section.0}% 4
+\BOOKMARK [3][-]{subsubsection.0.2.1}{I/O Applications}{subsection.0.2}% 5
+\BOOKMARK [2][-]{subsection.0.3}{Time Series vs I/O Systems}{section.0}% 6
+\BOOKMARK [2][-]{subsection.0.4}{Modelling structures}{section.0}% 7
+\BOOKMARK [2][-]{subsection.0.5}{Mathematical Models}{section.0}% 8
+\BOOKMARK [3][-]{subsubsection.0.5.1}{White Box Models}{subsection.0.5}% 9
+\BOOKMARK [3][-]{subsubsection.0.5.2}{Black Box Models}{subsection.0.5}% 10
+\BOOKMARK [3][-]{subsubsection.0.5.3}{White box vs Black box}{subsection.0.5}% 11
+\BOOKMARK [2][-]{subsection.0.6}{Stochastic Processes}{section.0}% 12
+\BOOKMARK [3][-]{subsubsection.0.6.1}{Characteristics}{subsection.0.6}% 13
+\BOOKMARK [3][-]{subsubsection.0.6.2}{Stationary Stochastic Processes}{subsection.0.6}% 14
+\BOOKMARK [3][-]{subsubsection.0.6.3}{White Noise}{subsection.0.6}% 15
+\BOOKMARK [2][-]{subsection.0.7}{Sample estimation of mean and covariance function}{section.0}% 16
+\BOOKMARK [3][-]{subsubsection.0.7.1}{Sample Mean}{subsection.0.7}% 17
+\BOOKMARK [3][-]{subsubsection.0.7.2}{Sample Covariance}{subsection.0.7}% 18
+\BOOKMARK [1][-]{section.1}{Chapter 1}{}% 19
+\BOOKMARK [2][-]{subsection.1.1}{Model classes}{section.1}% 20
+\BOOKMARK [3][-]{subsubsection.1.1.1}{Time-Series model classes}{subsection.1.1}% 21
+\BOOKMARK [3][-]{subsubsection.1.1.2}{Input/Output model classes}{subsection.1.1}% 22
+\BOOKMARK [2][-]{subsection.1.2}{Transfer function representation}{section.1}% 23
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Z Operator}{subsection.1.2}% 24
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Time domain to Transfer Function}{subsection.1.2}% 25
+\BOOKMARK [3][-]{subsubsection.1.2.3}{From Z- to Z+ }{subsection.1.2}% 26
+\BOOKMARK [3][-]{subsubsection.1.2.4}{Importance of stationary property}{subsection.1.2}% 27
+\BOOKMARK [3][-]{subsubsection.1.2.5}{Pole,Zeros and Stability}{subsection.1.2}% 28
+\BOOKMARK [3][-]{subsubsection.1.2.6}{Stationary property and stability }{subsection.1.2}% 29
+\BOOKMARK [3][-]{subsubsection.1.2.7}{Poles and Zeros in MA \046 AR processes}{subsection.1.2}% 30
+\BOOKMARK [1][-]{section.2}{Chapter 2 : Analysis of Stochastic Processes}{}% 31
+\BOOKMARK [2][-]{subsection.2.1}{Probabilistic Representation}{section.2}% 32
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Probabilistic representation of MA\(n\)}{subsection.2.1}% 33
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Probabilistic representation of AR\(1\)}{subsection.2.1}% 34
+\BOOKMARK [3][-]{subsubsection.2.1.3}{AR/ARMA as MA\(\)}{subsection.2.1}% 35
+\BOOKMARK [2][-]{subsection.2.2}{Frequency Representation}{section.2}% 36
+\BOOKMARK [2][-]{subsection.2.3}{Inverse Fourier Transform}{section.2}% 37
+\BOOKMARK [2][-]{subsection.2.4}{White Noise in the frequency domain}{section.2}% 38
+\BOOKMARK [2][-]{subsection.2.5}{Computation of the spectrum of a process generated as the output of a digital system}{section.2}% 39
+\BOOKMARK [3][-]{subsubsection.2.5.1}{Frequency Response of a linear system}{subsection.2.5}% 40
+\BOOKMARK [3][-]{subsubsection.2.5.2}{Spectrum computation with FR}{subsection.2.5}% 41
+\BOOKMARK [2][-]{subsection.2.6}{Equivalent representations of ARMA}{section.2}% 42
+\BOOKMARK [2][-]{subsection.2.7}{Example \046 Exercises }{section.2}% 43
+\BOOKMARK [1][-]{section.3}{Chapter 3 : Prediction}{}% 44
+\BOOKMARK [2][-]{subsection.3.1}{All-Pass Filter}{section.3}% 45
+\BOOKMARK [2][-]{subsection.3.2}{Canonical Representation}{section.3}% 46
+\BOOKMARK [2][-]{subsection.3.3}{Predictor}{section.3}% 47
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Optimality}{subsection.3.3}% 48
+\BOOKMARK [3][-]{subsubsection.3.3.2}{1-step ahead prediction of MA\(n\)}{subsection.3.3}% 49
+\BOOKMARK [3][-]{subsubsection.3.3.3}{K-steps ahead predictor of MA\(n\)}{subsection.3.3}% 50
+\BOOKMARK [3][-]{subsubsection.3.3.4}{K-steps ahead predictor of general ARMA\(m,n\)}{subsection.3.3}% 51

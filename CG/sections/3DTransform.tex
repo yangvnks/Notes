@@ -1,0 +1,96 @@
+\section{3D Transform}
+A general matrix representation can be derived starting from all the transformations found so far :
+\begin{figure}[H]
+\centering
+  \includegraphics[width=.4\linewidth]{generalmatrix}
+\end{figure}
+\begin{itemize}
+\item \textbf{Mr} : sub-matrix representing \textbf{rotation,scaling \& shear}
+\item \textbf{dt} : translation
+\item \textbf{1}  : to ensure that the w coordinate remains \textbf{unchanged}
+\end{itemize}
+The columns of $M_R$ represent \textbf{directions \& sizes} of the new axes in the old reference system\\
+\textbf{Rotations} maintain the size of the axis constant but change their direction.\\
+\textbf{Scalings} maintain the direction of the axis constant , changing the size.\\
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=.4\linewidth]{newaxis}
+\end{figure}
+Vector $d^t$ represents the position of the origin of the new coordinate system in the old one
+\begin{figure}[H]
+\centering
+  \includegraphics[width=.4\linewidth]{neworigin}
+\end{figure}
+
+
+\subsection{Inversion of transformations}
+To return an object to its \textbf{origina} state transformation can be reversed. \textbf{Matrix inversion} can be applied when using the matrices representation of transformations.
+$$ p'=(x',y',z',1) \to p=(x,y,z,1)$$
+$$ p =M^{-1}p$$
+Matrix $M^{-1}$ is \textbf{invertible} if its submatrix $M_R$ is invertible.
+Generally $M^{-1}$ is always invertible except when dealing axis degeneration ( zero factor scaling for example).\\
+Another method of inverting transformations is by using a reverse matrix : 
+\begin{figure}[H]
+\begin{minipage}{.5\textwidth}
+ \centering
+  \includegraphics[width=.6\linewidth]{reversetr}
+  \caption{Translation}
+\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{reversesc}
+  \caption{Scaling}
+\end{minipage}%
+\end{figure}
+\begin{figure}[H]
+\begin{minipage}{.325\textwidth}
+ \centering
+  \includegraphics[width=.9\linewidth]{reversero3}
+\end{minipage}%
+	\begin{minipage}{.325\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{reversero2}
+\end{minipage}%
+\begin{minipage}{.35\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{reversero1}
+\end{minipage}%
+\caption{Reverse rotation}
+\end{figure}
+\newpage
+\subsection{Composition}
+During the creation of scene an object is subject to \textbf{several} transformations. Applying a \textbf{sequence of transformations} is called \textbf{composition}.
+An example is the movement of a cube , sides parallel to x,y,z axis and with center in the origin.\\
+- Translation of center to position $p_x,p_y,p_z$\\
+- Rotation of angle $\alpha$ around y\\
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.4\linewidth]{composition}
+\end{figure}
+\begin{itemize}
+\item \textbf{Rotation} around y of $\alpha \to p'=R_y(\alpha) \cdot p$\\
+$	
+R_y(\alpha)= \begin{bmatrix}
+       cos\alpha & 0 & sin\alpha & 0        \\[0.1em]
+       0 & 1 & 0 & 0		    \\[0.1em]
+       -sin\alpha & 0 & cos\alpha & 0							\\[0.1em]
+       0 & 0 & 0 & 1
+     \end{bmatrix} 
+$ 
+\item \textbf{Translation} in position $p''=T(p_x,p_y,p_z) \cdot p'$\\
+$	
+T(p_x,p_y,p_z)= \begin{bmatrix}
+       0 & 0 & 0 & p_x        \\[0.1em]
+       0 & 0 & 0 & p_y	    \\[0.1em]
+       0 & 0 & 1 & p_z							\\[0.1em]
+       0 & 0 & 0 & 1
+     \end{bmatrix} 
+$
+\end{itemize}
+\[
+\boxed{p''= T(p_x,p_y,p_z) \cdot R_y(\alpha) \cdot p}
+\]
+Matrices appear in \textbf{reverse} order wrt to the transformations they represent.
+
+
