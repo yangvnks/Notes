@@ -1,0 +1,38 @@
+\section{Data representation}
+Inside databases and datasets we can identify:
+\begin{itemize}
+\item \textbf{Instances} $\to$ observations/cases/records that represent atomic elements of information
+\item \textbf{Attributes} $\to$ variables/features that measure aspects of an instance. Each instance has a certain number of attributes
+\item \textbf{Concepts} $\to$ things that can be learned inside the data
+\end{itemize}
+
+\subsection{Attribute types}
+Data types are not only important for our understanding but some algorithms work better with a certain type of data : make it easier to make adequate comparisons for example. \\
+Knowing the data type is also important the check for \textbf{valid values} and deal with \textbf{missing values}.
+\begin{description}
+\item[Numeric attributes]\hfill\\
+\begin{itemize}
+\item Real-valued or integer-valued domain
+\item Interval-scaled when only differences are useful $\to$ temperature
+\item Ratio-scaled when only rations are meaningful $\to$ age
+\end{itemize}
+Numerical attributes are \textbf{ordered} and measured in fixed units.\\
+Zero point is only defied for \textbf{ratio attributes}.\\
+Can be divided into \textit{discrete or continuous}.
+\item[Categorical attributes]\hfill\\
+\begin{itemize}
+\item Set-valued domain composed of a set of symbols
+\item \textit{Nominal}\\ When only equality is meaningful
+Values are distinct symbols that serve as labels. No relation is implied among nominal values and only equality test can be performed.
+\item \textit{Ordinal}\\When both equality and inequality are meaningful. As in the nominal case, also here talking about \textbf{difference} doesn't make sense.
+\end{itemize}
+\item[Binary attributes]\hfill\\
+Represented by either 0/1
+
+\end{description}
+Sometimes the same attribute can be either considered \textbf{nominal} or \textbf{ordinal} : \texttt{if age == young AND ...} is nominal whereas \texttt{if age < presbyopic AND...} is ordinal.\\
+
+\subsection{Missing values}
+Many databases present \textbf{missing values} . The nature of missing values is very broad and must be understood : it can be due to faulty equipment, incorrect measurements, censored or anonymous data  ecc...\\
+Missing values can have their own importance ( ex: a missing test ) but in that case is should have its own coding.
+Usually missing values are indicated by \textbf{out of range } entries, \textbf{Nan} or \textbf{special values}. 

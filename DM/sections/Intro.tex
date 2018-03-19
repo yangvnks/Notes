@@ -1,0 +1,69 @@
+\section{Introduction}
+Digital data storing is a task that started in the early '60s and became since then an important field of computer science. With the passing of time technologies became more powerful and storing large amounts of data became easier.\\
+Analysing bigger and bigger amounts of data became a difficult task over time so \textbf{automation} was required . In the late '80s / start of '90s \textbf{data mining} became an important task to make sense and interpret  massive amounts of data and has been a crucial since then in many fields (customer attrition,credit assessment ,customer segmentation, community detection and many more ) as part of a larger subject called \textbf{data science}\\
+Data mining is the non-trivial process of identifying
+\begin{itemize}
+\item \textbf{valid}
+\item \textbf{novel/interesting}
+\item \textbf{useful}
+\item \textbf{understandable}
+\end{itemize}
+\textbf{patterns} in data that results in some \textbf{worthy} information.\\
+The aim of data mining is to build programs that run automatically on large databases to seek for regularities or patterns. The main problem is that most patterns are \textbf{uninteresting, spurious,inexact} and based on real \textbf{imperfect} data.
+This is why data mining algorithms need to be \textbf{robust} to cope with imperfections and to extract regularities that are inexact but \textbf{useful}.\\
+The informations found can then be used for:
+\begin{itemize}
+\item \textbf{predictive} tasks $\to$ create predictions based on patterns
+\item \textbf{descriptive} tasks $\to$ create insights based on patterns
+\item \textbf{prescriptive} tasks $\to$ combination of both
+\end{itemize}
+\newpage
+\subsection{Data mining process}
+\begin{enumerate}
+\item Interesting question\\
+What is the goal? What must be predicted?
+\item Get the data \\
+How was data sampled ? Which data is relevant?
+\item Explore the data\\
+Plot data,compute statistics , search for anomalies 
+\item Build model\\
+Build,fit ,validate
+\item Communicate result\\
+What did we learn? Is there a result?
+\end{enumerate}
+The data part is the most important : 
+\begin{itemize}
+\item \textbf{Selection}\\
+What are the data we actually need?
+\item \textbf{Cleaning}\\
+Are there errors / inconsistencies that need to be eliminated?
+\item \textbf{Transformation}\\
+Some data can be eliminated because equivalent to other data or used to get new data
+\item \textbf{Mining}\\
+Select mining approach : \textbf{classification ,regression ,clustering...} and apply algorithms
+\item \textbf{Validation}\\
+Are the patterns found \textbf{sound}  ? According to which criteria? Can the results be explained?
+\end{itemize}
+\newpage
+\subsection{Data mining tasks}
+\begin{itemize}
+\item {Prediction \& Regression}
+\item {Classification}
+\item {Clustering}
+\item {Association rules}
+\item {Trend \& evolution analysis}
+\item {Outlier analysis}
+\item {Text mining ,topic modelling, graph mining}
+\end{itemize}
+
+\subsection{Issues}
+Data mining generates many patterns, but typically only \textbf{few} are interesting. It is important to find an \textbf{interestingness} measure : a pattern is interesting if it is understood, valid on new data/test data with some degree of certainty, potentially useful,novel or validates some hypothesis that needed confirmation.\\
+Interestingness measures can be \textbf{objective} ( based on \textbf{statistics} and \textbf{patterns}) or \textbf{subjective} ( based on \textbf{belief} in data) .\\
+Can \textbf{all} interesting patterns be found?\\
+\begin{description}
+\item[Completeness problem]\hfill\\
+Can a data mining system find \textbf{all} the interesting data within a dataset?
+This depends also on the data mining approach that has been chosen.
+\item[Optimization problem]\hfill\\
+The data mining system should \textbf{only} find useful and interesting patterns , by either filtering \textbf{all possible patterns} or by using \textbf{mining query optimization}
+\end{description}
