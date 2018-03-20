@@ -92,5 +92,59 @@ $
 \boxed{p''= T(p_x,p_y,p_z) \cdot R_y(\alpha) \cdot p}
 \]
 Matrices appear in \textbf{reverse} order wrt to the transformations they represent.
+\subsubsection{Properties of composition of transformations}
+Matrix-Matrix and Matrix-Vector products are \textbf{associative}:
+$$ A \cdot (B \cdot C) = (A \cdot B) \cdot C$$
+$$ A \cdot (B \cdot p) = (A \cdot B) \cdot p$$
+Using the associative property we can obtain a \textbf{single matrix} corresponding to the product of \textbf{all the transformations}.\\
+This is useful because usually the multiplication is done for many points ($ 10^4 \sim 10^6$ , so having one matrix that sums up all transformation \textbf{improves performances}.\\
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.4\linewidth]{comp-prop}
+\end{figure}
+As in the figure instead of having 16 matrix-vector products we only have 12 ( 4 are to create the matrix M ).\\
+\textbf{Inversion} can be handled by considering : $$ (A \cdot B)^{-1} = B^{-1} \cdot A^{-1}$$
+Example : $M= R_y(\ang{30}) \cdot T(1,2,3) \to M^{-1}= T(1,2,3)^{-1} \cdot R_y(\ang{30})^{-1}$
+Matrix products are \textbf{not commutative} : the order of the transformations is important , and transformations cannot be swapped without obtaining a \textbf{different } result.
+\newpage
+\subsection{Transformations around an arbitrary axis or center}
+\begin{description}
+\item[Case : Rotation]\hfill\\
+Instead of rotating an object around the x,y or z axis we consider now a rotation of angle $\alpha$ around an arbitrary axis that passes through the origin. Depending on where the considered axis is it forms \textbf{two angles} with the the other axis.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.4\linewidth]{axis}
+\end{figure}
+In this case the two angles are $\gamma, \beta$ :\\
+- $\gamma \to$ how much the axis rises on the xz plane\\
+- $\beta \to$ how much it rises on the xy plane\\
+The angles and planes chosen are arbitrary, other angles and planes can be used to describe the same transformations.
+\begin{enumerate}
+\item $R_y(-\beta)$\\
+Considering a rotation of $-\beta$  along the y-axis ,the arbitrary axis now lies on the xy plane.
+\item $R_z(-\gamma)$\\
+Then considering a rotation of $-\gamma$ along the z-axis ,the arbitrary axis now corresponds to the x-axis.
+\item $R_x(\alpha)$\\
+As our chosen axis corresponds to the x-axis , the rotation of the object of angle $\alpha$ can be done around the x-axis.
+\item $R_z(\gamma)$ and $R_y(\beta)$\\
+To restore the original axis position.
+\end{enumerate}
+Final transformation composition :
+\[
+\boxed{p'=R_y(\beta)R_z(\gamma)R_x(\alpha)R_Z(-\gamma)R_y(-\beta) \cdot p}
+\]
+
+If the axis does not pass through the \textbf{origin} , a \textbf{translation T} must be applied of a point known through which the axis passes:
+\[
+\boxed{p'=T(p_x,p_y,p_z)R_y(\beta)R_z(\gamma)R_x(\alpha)R_Z(-\gamma)R_y(-\beta)T(-p_x,-p_y,-p_z) \cdot p}
+\]
+
+Similar procedures can be applied to :
+\begin{itemize}
+\item \textbf{Scaling}
+\item \textbf{Shear}
+\end{itemize}
+\end{description}
+
 
 

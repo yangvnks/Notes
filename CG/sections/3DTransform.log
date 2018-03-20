@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  16 MAR 2018 12:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  20 MAR 2018 17:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2401,12 +2401,18 @@ Overfull \hbox (20.00006pt too wide) in paragraph at lines 81--90
 \OT1/cmr/m/n/10 0001$ 
  []
 
+! Undefined control sequence.
+l.92 \boxed
+           {p''= T(p_x,p_y,p_z) \cdot R_y(\alpha) \cdot p}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Overfull \hbox (114.11607pt too wide) detected at line 91
-\OML/cmm/m/it/10 p[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 T\OT1/cmr/m/n/10 (\OML/
-cmm/m/it/10 p[]; p[]; p[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^A \OML/cmm/m/it/1
-0 R[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^A 
-\OML/cmm/m/it/10 p
+
+Overfull \hbox (123.00475pt too wide) detected at line 93
+[]
  []
 
 Missing character: There is no M in font nullfont!
@@ -2468,12 +2474,12 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (13.84023pt too wide) in paragraph at lines 91--93
+Overfull \hbox (13.84023pt too wide) in paragraph at lines 93--95
    \OT1/cmr/bx/n/10 re-
  []
 
 
-Overfull \hbox (25.56377pt too wide) in paragraph at lines 91--93
+Overfull \hbox (25.56377pt too wide) in paragraph at lines 93--95
 \OT1/cmr/bx/n/10 verse
  []
 
