@@ -102,7 +102,7 @@ $$  \epsilon(t+k) = y(t+k)- \hat{y}(t + k|t)$$
 So the \textbf{real value } is preditor + error:
 $$ y(t+k|t) = \hat{y}(t+k|t) + \epsilon(t+k)$$
 $$ y(t) = \hat{y}(t|t-k) + \epsilon(t) $$
-The formulas as equivalent because as per hypothesis $y(t)$ is \textbf{equivalent}.
+The formulas as equivalent because as per hypothesis $y(t)$ is \textbf{stationary}.
 \subsubsection{Optimality}
 The predictor $ \hat{y}(t+k|t) $ is \textbf{optimal} if:
 \begin{enumerate}
@@ -235,5 +235,133 @@ which results in
 Instead of having term R(Z) , the formula is now C(Z)-A(Z). As $R(Z)= \tilde{R}(Z)Z^{-1}$ there is a hidden $Z^{-1}$ in C(Z)-A(Z).
 \end{description}
 
+\subsection{Examples \& Exercises}
 
+\subsubsection{Example 1}
+Given a process $$ y(t)= \frac{Z+3}{2Z+1} e(t-1) , e(t) \sim WN(0,1)$$
+Since the pole of the TF is $z=-\frac{1}{2}$ inside the unitary circle ,  W(Z) is asymptotically stable $\to$ y(t) is \textbf{stationary}.\\
+\begin{enumerate}
+
+\item \textbf{Compute $\gamma_y(0)$}\\
+NB.: To calculate the variance it is not important fort the system to be in canonical representation\\
+$y(t) = \frac{C(Z)}{A(Z)}e(t-1) $ is \textbf{not canonical} since it has \\
+- Z = -3 not inside unitary circle\\
+- 2Z in the A(Z) term\\
+- $Z^{-1}e(t)$\\
+Using an \textbf{All-Pass Filter}: 
+$$ y(t) = \frac{Z+3}{2(Z+\frac{1}{2})} Z^{-1} \cdot 3 \frac{Z+\frac{1}{3}}{Z+3}e(t)$$
+$$ \eta = \frac{3}{2}Z^{-1}e(t) \sim WN(0,\frac{9}{4}$$
+$$ y(t) = \frac{Z+\frac{1}{3}}{Z+\frac{1}{2}}\eta(t)$$
+Passing in time domain : $$ y(t)= -\frac{1}{2}y(t-1)+\eta(t) +\frac{1}{3}\eta(t-1)$$
+-$m_y = E[y(t)]= -\frac{1}{2}E[y(t-1)]+\frac{4}{3}m_e \to 0$\\
+-$\gamma_y(0) = E[y(t)^2] = E[(-\frac{1}{2}y(t-1) + \eta(t) + \frac{1}{3}\eta(t-1))^2]$\\
+  $\gamma_y(0) = \frac{1}{4}\gamma_y(0) + \frac{9}{4} + \frac{1}{9}\frac{9}{4} - \frac{1}{3}E[y(t-1)\eta(t-1)]$\\
+  $\frac{3}{4}\gamma_y(0) =\frac{10}{4} - \frac{1}{3}E[(-\frac{1}{2}y(t-2)+\eta(t-1)+\frac{1}{3}\eta(t-2))\eta(t-1)] $\\
+  $\frac{3}{4}\gamma_y(0) = \frac{10}{4} -\frac{1}{3}E[\eta(t-1)^2] \to \frac{3}{4}\gamma_y(0) = \frac{10}{4} -\frac{1}{3}\frac{9}{4}$
+ \[
+ \boxed{\gamma_y(0)=\frac{7}{3}}
+ \]
+
+\item \textbf{Prediction for k=1}\\
+Using the canonical negative power representation $$ y(t) = \frac{1+\frac{1}{3}Z^{-1}}{1+\frac{1}{2}Z^{-1}}\eta(t)$$
+Applying the k=1 prediction formula $ \hat{y}(t|t-1) = \frac{C(Z)-A(Z)}{C(Z)}y(t)$ :
+$$ \hat{y}(t|t-1) = \frac{1+\frac{1}{3}Z^{-1}-1-\frac{1}{2}Z^{-1}}{1+\frac{1}{3}Z^{-1}}y(t)$$
+$$ \hat{y}(t|t-1) = \frac{-\frac{1}{6}}{1+\frac{1}{3}Z^{-1}}y(t-1)$$
+In time domain :
+\[
+\boxed{\hat{y}(t|t-1) = -\frac{1}{3}\hat{y}(t-1|t-2)-\frac{1}{6}y(t-1)}
+\]
+\[
+\boxed{\epsilon(t) = y(t) - \hat{y}(t|t-1) = E(Z)\eta(t) = \eta(t)}
+\]
+\[
+\boxed{var[ y(t) - \hat{y}(t|t-1)]= var[\eta(t)] = \frac{9}{4}}
+\]
+\newpage
+\item \textbf{Prediction for k=2}
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.5\linewidth]{ex_division}
+\end{figure}
+$$ \hat{y}(t|t-2) = \frac{R(Z)}{C(Z)}y(t) = \frac{\tilde{R}(Z)}{C(Z)}y(t-2)$$
+$$ \hat{y}(t|t-2) = \frac{\frac{1}{12}}{1+\frac{1}{3}Z^{-1}}y(t-2)$$
+\[
+\boxed{\hat{y}(t|t-2) = -\frac{1}{3}\hat{y}(t-1|t-3) +\frac{1}{12}y(t-2)}
+\]
+\[
+\boxed{\epsilon(t) = y(t) - \hat{y}(t|t-2) = E(Z)\eta(t) = (1-\frac{1}{6}Z^{-1})\eta(t)}
+\]
+\[
+\boxed{var[ y(t) - \hat{y}(t|t-2)]= var[(1-\frac{1}{6}Z^{-1})\eta(t)] = \frac{37}{16}}
+\]
+\newpage
+\item \textbf{Properties of $var[\epsilon(t)]$ as function of $k$}
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.5\linewidth]{ex_vark}
+\end{figure}
+- $k=0 \to var[y(t) -\hat{y}(t|t-k)] = 0$\\
+- $k=1 \to var[y(t) -\hat{y}(t|t-k)] = \lambda^2$\\
+- $k \to \infty \to var[y(t) -\hat{y}(t|t-k)] = \gamma_y(0)$ because when $k \to \infty$ the prediction goes to zero!\\
+- $ var[y(t) -\hat{y}(t|t-k)] $ is a \textbf{monotonic (not strictly) increasing} function
+
+\item \textbf{Prediction goodness}\\
+The \textbf{Error to signal ratio} is a useful prediction measure:
+$$ ESR(k) = \frac{var[y(t) - \hat{y}(t|t-k)]}{var[y(t)]}$$
+For k=1 $$ESR(1) = \frac{\frac{9}{4}}{\frac{7}{3}} = 0.97$$
+Which is a very bad prediction. The most trivial prediction that can be done is 
+$$ \hat{y}(t|t-k) = m_y$$  (predicting the mean) which has \textbf{ESR(k)=1}.\\
+For k=1 we only have a 3\% better prediction than the trivial one.\\
+The predictor for k=1 is \textbf{optimal} which means that \textbf{no better } prediction can be made : the bad prediction is an intrinsic property of the process y(t).\\
+ 
+\begin{figure}[H]
+\begin{minipage}{.5\textwidth}
+ \centering
+  \includegraphics[width=.6\linewidth]{ex_poles}
+\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{ex_spectrum}
+\end{minipage}%
+\end{figure}
+By analysing the poles and zeros, it is easy to see that they're so close together that they almost cancel each other out.\\
+The \textbf{spectrum} $\Gamma_y(w)$  in green is very close to that of the \textbf{white noise}: this is the reason y(t) is hard to predict 
+\end{enumerate}
+
+
+\subsubsection{Example 2 - Practical}
+We have measured 5 data points of a signal: \\ $ y(1)=1, y(2) =\frac{1}{2}, y(3) =-\frac{1}{2}, y(4)=0, y(5)= -\frac{1}{2}$\\
+With t=5 represent the present time  , make a prediction of $ \hat{y}(6|5) $.
+To solve the problem we must make a mathematical modelling assumption. Since we're still not able to do this we need some interpretations models for this signal\\
+Model A $$ y(t) = \frac{1}{2}y(t-1)+\frac{1}{4}y(t-2)+e(t) , e(t) \sim WN(0,\lambda^2)$$
+Model B $$ y(t) = e(t) +\frac{1}{2}e(t-1),e(t) \sim WN(0,\lambda^2)$$
+To determine which model is better we compute the \textbf{optimal} model assuming the chosen model is right.
+\begin{itemize}
+\item \textbf{Assuming Model A right}\hfill\\
+$$ y(t) = \frac{1}{1-\frac{1}{2}Z^{-1}-\frac{1}{4}Z^{-2}} e(t)$$ is an AR(2) process in canonical representation (check it always!).\\
+Since we're dealing with a k=1 prediction : 
+$$ \hat{y}(t|t-1) = \frac{C(Z)-A(Z)}{C(Z)}y(t)$$
+$$ \hat{y}(t|t-1) = \frac{1-1+\frac{1}{2}Z^{-1}+\frac{1}{4}Z^{-2}}{1}y(t)$$
+$$ \hat{y}(t|t-1) = \frac{1}{2}y(t-1) + \frac{1}{4}y(t-2)$$
+Substituting the data points :
+$$ \hat{y}(6|5) = \frac{1}{2}y(5) + \frac{1}{4}y(4) = -\frac{1}{4}$$
+\item \textbf{Assuming Model B right}\hfill\\
+$$ y(t) = (1+\frac{1}{2}Z^{-1})e(t) $$ is an MA(1) process in canonical representation.\\
+Since we're dealing with a k=1 prediction : 
+$$ \hat{y}(t|t-1) = \frac{C(Z)-A(Z)}{C(Z)}y(t)$$
+$$ \hat{y}(t|t-1) = \frac{1+\frac{1}{2}Z^{-1}-1}{1+\frac{1}{2}Z^{-1}}y(t)$$
+$$ \hat{y}(t|t-1) = -\frac{1}{2}\hat{y}(t-1|t-2) +\frac{1}{2}y(t-1)$$
+Substituting the data points :
+$$ \hat{y}(6|5) = -\frac{1}{2}\hat{y}(5|4) + \frac{1}{2}y(5) = -\frac{1}{2}\hat{y}(5|4) -\frac{1}{4}$$
+To compute $-\frac{1}{2}\hat{y}(5|4)$ we need to go back to the \textbf{initial condition } to compute all terms up to time =5:\\
+-$ \hat{y}(2|1) = -\frac{1}{2}\hat{y}(1|0) + \frac{1}{2}y(1)$ by making the assumption that $-\frac{1}{2}\hat{y}(1|0) = m_y \to \frac{1}{2}$\\
+-$ \hat{y}(3|2) = -\frac{1}{2}\hat{y}(2|1) + \frac{1}{2}y(2) = 0$\\
+-$ \hat{y}(4|3) = -\frac{1}{2}\hat{y}(3|2) + \frac{1}{2}y(3) = -\frac{1}{4}$\\
+-$ \hat{y}(5|4) = -\frac{1}{2}\hat{y}(4|3) + \frac{1}{2}y(4) = \frac{1}{8}$\\
+-$ \hat{y}(6|5) = -\frac{1}{2}\hat{y}(5|4) + \frac{1}{2}y(5) = -\frac{5}{16}$\\
+Our final prediction for model B is $\hat{y}(6|5) = -\frac{5}{16}$ which depends on the initial condition made assuming that $-\frac{1}{2}\hat{y}(1|0) = m_y $. It the choice of the initial condition important?
+\textbf{If the system is asymptotically stable, and N is big the initial condition is not important as it will vanish.}
+
+
+\end{itemize}
 

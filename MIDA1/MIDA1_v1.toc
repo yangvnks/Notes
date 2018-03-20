@@ -49,3 +49,6 @@
 \contentsline {subsubsection}{\numberline {3.3.2}1-step ahead prediction of MA(n)}{45}{subsubsection.3.3.2}
 \contentsline {subsubsection}{\numberline {3.3.3}K-steps ahead predictor of MA(n)}{46}{subsubsection.3.3.3}
 \contentsline {subsubsection}{\numberline {3.3.4}K-steps ahead predictor of general ARMA(m,n)}{47}{subsubsection.3.3.4}
+\contentsline {subsection}{\numberline {3.4}Examples \& Exercises}{49}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Example 1}{49}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}Example 2 - Practical}{53}{subsubsection.3.4.2}
