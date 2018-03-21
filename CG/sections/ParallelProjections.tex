@@ -76,7 +76,7 @@ Limiting the range of a scene is important to avoid showing objects \textbf{behi
 Usually distance from viewport to near plane is very small. Things before the near plane and behind the far plane are \textbf{not shown} in the scene: only the visible volume will be seen.\\
 \end{description}
 \textbf{Orthogonal projections} can be implemented by \textbf{normalizing} the x,y,z coordinates of the projection box in the (-1,1) range. Then a \textbf{projection matrix} can be computed to find the normalized 3D coordinates :
-$$ p_N = P_ort \cdot p_W$$
+$$ p_N = P_{ort}\cdot p_W$$
 How to find $P_ort $?\\
 Coordinates l,r are the \textbf{x-coordinates} in the 3D space that will be displayed on the left and right borders of the screen. Everything on the left of l or right of r will be \textbf{cut}.\\
 Similarly t,b are the \textbf{y-coordinates} of the top and bottom borders of the screen.\\

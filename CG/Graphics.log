@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  20 MAR 2018 20:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  21 MAR 2018 11:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -749,7 +749,7 @@ File: siunitx-abbreviations.cfg 2016/03/01 v2.6q siunitx: Abbreviated units
 e{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 ...llel Projections}{34}{subsubsection.5.0.1}
+l.31 ...}Parallel Projections}{34}{subsection.5.1}
                                                    [1])
 \tf@toc=\write4
 \openout4 = `Graphics.toc'.
@@ -1208,45 +1208,35 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
  (./Graphics.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
-
-
-Package rerunfilecheck Warning: File `Graphics.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Graphics.out':
-(rerunfilecheck)             Before: 4D0667E1D52DB9B359C58DE44C050909;2169
-(rerunfilecheck)             After:  DDCC0E5DED5EFE56DBC642DA5CB68C6E;2164.
+Package rerunfilecheck Info: File `Graphics.out' has not changed.
+(rerunfilecheck)             Checksum: DDCC0E5DED5EFE56DBC642DA5CB68C6E;2164.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 129.
  ) 
 Here is how much of TeX's memory you used:
- 17956 strings out of 493014
- 337110 string characters out of 6133351
+ 17955 strings out of 493014
+ 337086 string characters out of 6133351
  492611 words of memory out of 5000000
  21144 multiletter control sequences out of 15000+600000
  12751 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,9n,42p,10359b,2103s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsubsection.5.0.1} has been referenced but does
- not exist, replaced by a fixed one
-
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Graphics.pdf (36 pages, 2300607 bytes).
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Graphics.pdf (36 pages, 2269665 bytes).
 PDF statistics:
- 579 PDF objects out of 1000 (max. 8388607)
- 439 compressed objects within 5 object streams
- 159 named destinations out of 1000 (max. 500000)
+ 578 PDF objects out of 1000 (max. 8388607)
+ 438 compressed objects within 5 object streams
+ 158 named destinations out of 1000 (max. 500000)
  459 words of extra memory for PDF output out of 10000 (max. 10000000)
 
