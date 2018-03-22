@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  22 MAR 2018 12:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  22 MAR 2018 15:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1006,40 +1006,43 @@ File: Pictures/armaxallpass.png Graphic file (type png)
 Package pdftex.def Info: Pictures/armaxallpass.png used on input line 52.
 (pdftex.def)             Requested size: 209.12683pt x 94.01518pt.
  [41 <./Pictures/allpass.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
 [42 <./Pictures/armaxallpass.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-
- []
-
 <Pictures/canonical.png, id=608, 1015.795pt x 308.15125pt>
 File: Pictures/canonical.png Graphic file (type png)
 
 <use Pictures/canonical.png>
-Package pdftex.def Info: Pictures/canonical.png used on input line 84.
+Package pdftex.def Info: Pictures/canonical.png used on input line 83.
 (pdftex.def)             Requested size: 209.12683pt x 63.43942pt.
- [43 <./Pictures/canonical.png>]
-<Pictures/predictoropt.png, id=614, 925.4575pt x 251.94125pt>
+
+<Pictures/remark_simple.png, id=609, 643.40375pt x 383.4325pt>
+File: Pictures/remark_simple.png Graphic file (type png)
+
+<use Pictures/remark_simple.png>
+Package pdftex.def Info: Pictures/remark_simple.png used on input line 100.
+(pdftex.def)             Requested size: 209.12683pt x 124.62578pt.
+ [43 <./Pictures/canonical.png>] [44 <./Pictures/remark_simple.png>]
+<Pictures/predictoropt.png, id=620, 925.4575pt x 251.94125pt>
 File: Pictures/predictoropt.png Graphic file (type png)
 
 <use Pictures/predictoropt.png>
-Package pdftex.def Info: Pictures/predictoropt.png used on input line 114.
+Package pdftex.def Info: Pictures/predictoropt.png used on input line 135.
 (pdftex.def)             Requested size: 209.12683pt x 56.93036pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--118
+Underfull \hbox (badness 10000) in paragraph at lines 137--139
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--125
+Underfull \hbox (badness 10000) in paragraph at lines 141--146
 
  []
 
-[44 <./Pictures/predictoropt.png>]
-Overfull \hbox (22.04268pt too wide) detected at line 148
+[45 <./Pictures/predictoropt.png>]
+Overfull \hbox (22.04268pt too wide) detected at line 169
 []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 t \OMS/
 cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1) = (1 + \OML/cmm/m/it/12 c[]Z[] \OT1/cmr/m/n/
 12 + \OML/cmm/m/it/12 ::: \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 c[]Z[]\OT1/cmr/m/n
@@ -1049,136 +1052,156 @@ S/cmsy/m/n/12 ! []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OMS/cmsy/m/n/12 j\OML/cmm
 mr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )
  []
 
-<Pictures/mapredictor.png, id=623, 1021.8175pt x 364.36125pt>
+<Pictures/mapredictor.png, id=629, 1021.8175pt x 364.36125pt>
 File: Pictures/mapredictor.png Graphic file (type png)
 
 <use Pictures/mapredictor.png>
-Package pdftex.def Info: Pictures/mapredictor.png used on input line 155.
+Package pdftex.def Info: Pictures/mapredictor.png used on input line 176.
 (pdftex.def)             Requested size: 209.12683pt x 74.56667pt.
- [45]
-Underfull \hbox (badness 10000) in paragraph at lines 161--165
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
+[46 <./Pictures/mapredictor.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
 
-<Pictures/poldivision.png, id=628, 939.51pt x 714.67pt>
+<Pictures/poldivision.png, id=635, 939.51pt x 714.67pt>
 File: Pictures/poldivision.png Graphic file (type png)
 
 <use Pictures/poldivision.png>
-Package pdftex.def Info: Pictures/poldivision.png used on input line 188.
+Package pdftex.def Info: Pictures/poldivision.png used on input line 209.
 (pdftex.def)             Requested size: 292.77629pt x 222.70132pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--189
+Underfull \hbox (badness 10000) in paragraph at lines 202--210
 
  []
 
-[46 <./Pictures/mapredictor.png>] [47 <./Pictures/poldivision.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 206--207
+[47 <./Pictures/poldivision.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
 
  []
 
 [48] [49]
-Underfull \hbox (badness 10000) in paragraph at lines 267--268
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--283
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
 
  []
 
 [50]
-Underfull \hbox (badness 10000) in paragraph at lines 292--294
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
-[51] [52] <Pictures/ex_division.png, id=662, 752.8125pt x 529.98pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--315
+
+ []
+
+[51] [52] <Pictures/ex_division.png, id=664, 752.8125pt x 529.98pt>
 File: Pictures/ex_division.png Graphic file (type png)
 
 <use Pictures/ex_division.png>
-Package pdftex.def Info: Pictures/ex_division.png used on input line 335.
+Package pdftex.def Info: Pictures/ex_division.png used on input line 356.
 (pdftex.def)             Requested size: 209.12683pt x 147.22078pt.
  [53 <./Pictures/ex_division.png>]
-<Pictures/ex_vark.png, id=669, 971.63pt x 486.81876pt>
+<Pictures/ex_vark.png, id=671, 971.63pt x 486.81876pt>
 File: Pictures/ex_vark.png Graphic file (type png)
 
 <use Pictures/ex_vark.png>
-Package pdftex.def Info: Pictures/ex_vark.png used on input line 352.
+Package pdftex.def Info: Pictures/ex_vark.png used on input line 373.
 (pdftex.def)             Requested size: 209.12683pt x 104.7754pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--367
+Underfull \hbox (badness 10000) in paragraph at lines 385--388
 
  []
 
-<Pictures/ex_poles.png, id=670, 501.875pt x 335.2525pt>
+<Pictures/ex_poles.png, id=672, 501.875pt x 335.2525pt>
 File: Pictures/ex_poles.png Graphic file (type png)
 
 <use Pictures/ex_poles.png>
-Package pdftex.def Info: Pictures/ex_poles.png used on input line 371.
+Package pdftex.def Info: Pictures/ex_poles.png used on input line 392.
 (pdftex.def)             Requested size: 125.47737pt x 83.81802pt.
 
-<Pictures/ex_spectrum.png, id=671, 615.29875pt x 351.3125pt>
+<Pictures/ex_spectrum.png, id=673, 615.29875pt x 351.3125pt>
 File: Pictures/ex_spectrum.png Graphic file (type png)
 
 <use Pictures/ex_spectrum.png>
-Package pdftex.def Info: Pictures/ex_spectrum.png used on input line 375.
+Package pdftex.def Info: Pictures/ex_spectrum.png used on input line 396.
 (pdftex.def)             Requested size: 188.21286pt x 107.45837pt.
  [54 <./Pictures/ex_vark.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 391--392
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
  []
 
 [55 <./Pictures/ex_poles.png> <./Pictures/ex_spectrum.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 399--400
+Underfull \hbox (badness 10000) in paragraph at lines 420--421
 
  []
 
 [56]
-Underfull \hbox (badness 10000) in paragraph at lines 417--421
+Underfull \hbox (badness 10000) in paragraph at lines 438--442
 
  []
 
-<Pictures/ex_division2.png, id=690, 667.49374pt x 380.42125pt>
+<Pictures/ex_division2.png, id=692, 667.49374pt x 380.42125pt>
 File: Pictures/ex_division2.png Graphic file (type png)
 
 <use Pictures/ex_division2.png>
-Package pdftex.def Info: Pictures/ex_division2.png used on input line 433.
+Package pdftex.def Info: Pictures/ex_division2.png used on input line 454.
 (pdftex.def)             Requested size: 209.12683pt x 119.18318pt.
  [57 <./Pictures/ex_division2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 450--453
+Underfull \hbox (badness 10000) in paragraph at lines 471--474
 
  []
 
-[58] <Pictures/ex_division3.png, id=700, 797.98125pt x 393.47pt>
+[58] <Pictures/ex_division3.png, id=702, 797.98125pt x 393.47pt>
 File: Pictures/ex_division3.png Graphic file (type png)
 
 <use Pictures/ex_division3.png>
-Package pdftex.def Info: Pictures/ex_division3.png used on input line 491.
+Package pdftex.def Info: Pictures/ex_division3.png used on input line 512.
 (pdftex.def)             Requested size: 209.12683pt x 103.1163pt.
 
-<Pictures/ex_varplot.png, id=701, 953.5625pt x 392.46625pt>
+<Pictures/ex_varplot.png, id=703, 953.5625pt x 392.46625pt>
 File: Pictures/ex_varplot.png Graphic file (type png)
 
 <use Pictures/ex_varplot.png>
-Package pdftex.def Info: Pictures/ex_varplot.png used on input line 501.
+Package pdftex.def Info: Pictures/ex_varplot.png used on input line 522.
 (pdftex.def)             Requested size: 209.12683pt x 86.07335pt.
- [59 <./Pictures/ex_division3.png>])
+ [59 <./Pictures/ex_division3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 524--526
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 534--536
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 549--552
+
+ []
+
+[60 <./Pictures/ex_varplot.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 562--565
+
+ []
+
+)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
- [60 <./Pictures/ex_varplot.png>]
+ [61]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
  (./MIDA1_v1.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
@@ -1192,10 +1215,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
  ) 
 Here is how much of TeX's memory you used:
- 7354 strings out of 493014
- 106814 string characters out of 6133351
+ 7360 strings out of 493014
+ 106961 string characters out of 6133351
  302578 words of memory out of 5000000
- 10589 multiletter control sequences out of 15000+600000
+ 10593 multiletter control sequences out of 15000+600000
  10797 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,14n,38p,508b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1213,10 +1236,10 @@ live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texliv
 e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on MIDA1_v1.pdf (61 pages, 2128070 bytes).
+Output written on MIDA1_v1.pdf (62 pages, 2151826 bytes).
 PDF statistics:
- 798 PDF objects out of 1000 (max. 8388607)
- 614 compressed objects within 7 object streams
- 168 named destinations out of 1000 (max. 500000)
- 707 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 805 PDF objects out of 1000 (max. 8388607)
+ 618 compressed objects within 7 object streams
+ 169 named destinations out of 1000 (max. 500000)
+ 712 words of extra memory for PDF output out of 10000 (max. 10000000)
 

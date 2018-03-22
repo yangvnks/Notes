@@ -64,7 +64,6 @@ Given a SSP y(t) that can be modellded as an ARMA process: $$ y(t) = \frac{C(Z)}
 \item C(Z) and A(Z) are  \textbf{monic} ( coefficient of max degree of both C(Z) and A(Z) is 1)
 \item All roots of C(Z) and A(Z) are \textbf{strictly inside} the unit circle
 \end{enumerate}
-Does the canonical representation \textbf{always} exist?\\
 \begin{description}
 \item[Example]\hfill\\
 $ y(t) = \frac{1+3Z^{-1}}{2+Z^{-1}}e(t-2) , e(t) \sim WN(0,1)$
@@ -91,15 +90,38 @@ Finally we obtain :
 \boxed{y(t) =\frac{1+\frac{1}{3}Z^{-1}}{1+\frac{1}{2}Z^{-1}}\theta(t) , \theta \sim WN(0,\frac{9}{4})}
 \]
 Which is an \textbf{ARMA(1,1)} $\to$ the \textbf{canonical representation} is the representation with \textbf{minimum order!}
-
 \end{itemize}
+
+\item[Remark]\hfill\\
+Does the canonical representation \textbf{always} exist?\\
+Not always :  the problem lies in the $4^{th}$ condition . It is possible that the system has poles or zeros \textbf{on} the unitary circle.
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.5\linewidth]{remark_simple}
+\end{figure}
+If $C(Z)$ has \textbf{zeros on the u.c} $\to$ prediction from data is \textbf{not asymptotically stable}\\
+If $A(Z)$ has \textbf{roots in +1} $\to$ \textbf{ARIMA models}:
+\[
+\boxed{y(t) = \frac{C(Z)}{(Z-1)^dA(Z)}e(t) \to ARIMA(m,d,n)}
+\]
+[Autoregressive Integrated Moving average ]\\
+A special case of ARIMA $\to$ \textbf{ARIMA(0,1,0)}:
+\[
+\boxed{y(t) = \frac{1}{1-Z^{-1}}e(t)}
+\]
+\[
+\boxed{y(t) =y(t-1) +e(t) , e(t) \sim WN(0,\lambda^2)}
+\]
+Process y(t) is a \textbf{Random Walk} that uses as TF $\frac{1}{1-Z^{-1}}$ which is an \textbf{integrator in discrete time}
 \end{description}
+ARIMA processes have an \textbf{asymptotically stable} predictor that can be used to model \textbf{not strictly stationary processes!!}
+
 \subsection{Predictor}
 The predictor at time t+k , given the data up to time t is:
 $$ \hat{y}(t+k|t) $$
 The \textbf{prediction error} is: 
 $$  \epsilon(t+k) = y(t+k)- \hat{y}(t + k|t)$$
-So the \textbf{real value } is preditor + error:
+So the \textbf{real value } is predictor + error:
 $$ y(t+k|t) = \hat{y}(t+k|t) + \epsilon(t+k)$$
 $$ y(t) = \hat{y}(t|t-k) + \epsilon(t) $$
 The formulas as equivalent because as per hypothesis $y(t)$ is \textbf{stationary}.
@@ -501,8 +523,53 @@ So $\tilde{\epsilon}(t) = \tilde{y}(t) - \hat{\tilde{y}}(t|t-2) = \tilde{y})(t)$
   \includegraphics[width=.5\linewidth]{ex_varplot}
 \end{figure}
 We need to go back to the original process because $\hat{y}(t|t-1) \neq \hat{\tilde{y}}(t|t-1)$ : 
+- for \textbf{k=1}\\
 $$ \hat{y}(t|t-1)-5 = \frac{\frac{1}{4}}{1+\frac{1}{4}Z^{-1}}(y(t-1)-5)$$
 $$ \hat{y}(t|t-1)= \frac{\frac{1}{4}}{1+\frac{1}{4}Z^{-1}}y(t-1)+5 - 5\frac{\frac{1}{4}}{1+\frac{1}{4}Z^{-1}}$$
+The term  $5\frac{\frac{1}{4}}{1+\frac{1}{4}Z^{-1}}$ can be resolved by applying the \textbf{frequency response theorem } by taking in account that $5$ is a sinusoid with frequency $w=0$ : 
 
-
+$$ \frac{\frac{1}{4}}{1+\frac{1}{4}e^{0j}} \cdot 5 = 1$$ 
+so :
+\[
+\boxed{\hat{y}(t|t-1)= \frac{\frac{1}{4}}{1+\frac{1}{4}Z^{-1}}y(t-1)+4}
+\]
+- for \textbf{k=2}\\
+$$ \hat{\tilde{y}}(t|t-2) = 0 \to \hat{y}(t|t-2) -5= 0$$
+\[
+\boxed{\hat{y}(t|t-2)=5}
+\]
+\[
+\boxed{var[\tilde{\eta}(t)] =var[\eta(t)]}
+\]
+\item[Method 2]\hfill\\
+\textbf{De-bias technique only on $\eta(t)$}:
+$$ \tilde{\eta}(t) = \eta(t) -4$$
+$$ y(t) = \tilde{\eta}(t)+4 + \frac{1}{4}(\tilde{\eta}(t)+4)$$
+\[
+\boxed{y(t) = \tilde{\eta}(t) +\frac{1}{4}\tilde{\eta}(t-1)+5}
+\]
+Which can be considered as an \textbf{ARMAX} process.\\
+-\textbf{for k=1}\\
+$$ y(t) = u(t-1)+(1+\frac{1}{4}Z^{-1}\tilde{\eta}(t)), u(t) = 5 \forall t$$
+$u(t-1)$ is chosen arbitrarily because we need to compute $\hat{y}(t|t-1)$:\\
+- k =1\\
+- $B(Z)=1$\\
+- $C(Z)=1+\frac{1}{4}Z^{-1}$\\
+- $A(Z)=1$
+$$\hat{y}(t|t-1)= \frac{1 \cdot 1}{1+\frac{1}{4}Z^{-1}}u(t-1) +\frac{(1+\frac{1}{4}Z^{-1})-1}{1+\frac{1}{4}Z^{-1}}y(t) $$
+As $u(t-1)=5$ the system taking it as input can be simplified again using FR. Theorem :
+\[
+\boxed{\hat{y}(t|t-1)=\frac{\frac{1}{4}}{1+\frac{1}{4}Z^{-1}}y(t-1)+4}
+\]
+Which is the same result as for the first method.\\
+-\textbf{for k=2}\\
+$$ y(t) = u(t-2)+(1+\frac{1}{4}Z^{-1})\tilde{\eta}(t) , u(t) = 5 \forall t$$
+Making a 2 step long division $\frac{C(Z)}{A(Z)}$:\\
+-$E(Z)=1+\frac{1}{4}Z^{-1}$
+-$R(Z)=0$
+$$\hat{y}(t|t-2)= \frac{1 \cdot (1+\frac{1}{4}Z^{-1})}{1+\frac{1}{4}Z^{-1}}u(t-2)+0 $$
+\[
+\boxed{\hat{y}(t|t-2)=5}
+\]
+Which again is the same result as in the first method.
 \end{description}
