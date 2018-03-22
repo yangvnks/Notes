@@ -235,6 +235,57 @@ which results in
 Instead of having term R(Z) , the formula is now C(Z)-A(Z). As $R(Z)= \tilde{R}(Z)Z^{-1}$ there is a hidden $Z^{-1}$ in C(Z)-A(Z).
 \end{description}
 
+\subsubsection{K-steps ahead prediction of ARMAX(m,n,k+p)}
+$$ y(t) = \frac{B(Z)}{A(Z)}u(t-k) + \frac{C(Z)}{A(Z)}e(t) ,e(t) \sim WN(0,\lambda^2)$$
+Where:
+$$ A(Z)=1+a_1Z^{-1}+...+a_mZ^{-m}$$
+$$ B(Z)=b_0 + b_1Z^{-1}+...+b_pZ^{-p}$$
+$$ C(Z)=1+c_1Z^{-1}+...+c_nZ^{-n}$$
+In the hypothesis that $\frac{C(Z)}{A(Z)}$ is in \textbf{canonical representation} and keeping in mind that for $\frac{B(Z)}{A(Z)}u(t-k)$ no \textbf{spectral equivalence} modifications can be made.\\
+In an ARMAX(m,n,k+p) process the most interesting prediction that can be made is the \textbf{delay} between u(t) and y(t) $\to$ \textbf{k} so we'll deal only with k-steps predictions.
+\begin{description}
+\item[Predictor from noise]\hfill\\
+Separate predictable from unpredictable part in $\frac{C(Z)}{A(Z)}e(t)$\\
+K-steps division $\frac{C(Z)}{A(Z)} \to E(Z)+\frac{R(Z)}{A(Z)}$
+$$ y(t) = \frac{B(Z)}{A(Z)}u(t-k) + E(Z)e(t) + \frac{\tilde{R}(Z)}{A(Z)}e(t-k)$$
+where 
+$$\frac{B(Z)}{A(Z)}u(t-k) \to \text{depends on } u(t-k),...,u(t-k-p) \to \text{predictable} $$ 
+$$ E(Z)e(t) \to \text{depends on } e(t) , e(t-1),...,e(t-k+1) \to \text{unpredictable} $$ 
+$$ \frac{\tilde{R}(Z)}{A(Z)}e(t-k) \to \text{depends on } e(t-k),...,e(t-k-p) \to \text{predictable}$$   
+so
+\[
+\boxed{\hat{y}(t|t-k)=\frac{B(Z)}{A(Z)}u(t-k)+\frac{R(Z)}{A(Z)}e(t)}
+\]
+\[
+\boxed{\epsilon(t) = y(t) - \hat{y}(t|t-k) = E(t)e(t)}
+\]
+Which is optimal if\begin{itemize}
+\item $\epsilon(t) \perp \hat{y}(t|t-k)$
+\item $\epsilon(t) \perp y(t-k),y(t-k-1)... $
+\end{itemize}
+
+\item[Predictor from data]\hfill\\
+$$ e(t) = \frac{A(Z)}{C(Z)}y(t) - \frac{B(Z)}{A(Z)}u(t-k)$$
+$$ \hat{y}(t|t-k) = \frac{B(Z)}{A(Z)}u(t-k)+ \frac{R(Z)}{A(Z)} [\frac{A(Z)}{C(Z)}y(t)- \frac{B(Z)}{A(Z)}u(t-k)]$$
+$$ \hat{y}(t|t-k) = \frac{R(Z)}{C(Z)}y(t) + [\frac{B(Z)}{A(Z)}-\frac{R(Z)B(Z)}{A(Z)C(Z)}]u(t-k)$$
+$$ \hat{y}(t|t-k) = \frac{B(Z)}{C(Z)}y(t) + [\frac{B(Z)(C(Z)-R(Z))}{A(Z)C(Z)}]u(t-k)  $$
+Knowing that $C(Z)= A(Z)E(Z)+R(Z) \to C(Z)-R(Z)= A(Z)E(Z)$
+\[
+\boxed{\hat{y}(t|t-k)=\frac{B(Z)E(Z)}{C(Z)}u(t-k) + \frac{\tilde{R}(Z)}{C(Z)}y(t-k)}
+\]
+\[
+\boxed{\epsilon=E(Z)e(t)}
+\]
+Note that $\frac{\tilde{R}(Z)}{C(Z)}y(t-k) $ is the exact ARMA predictor.\\
+The prediction error is the same as in the \textbf{ARMA} process: the \textbf{exogenous} part does not add any \textbf{additional uncertainty}.
+
+\item[Remark : Special case k=1]\hfill\\
+$$ y(t) = \frac{B(Z)}{A(Z)}u(t-1)+\frac{C(Z)}{A(Z)}e(t)$$
+$E(Z) =1 $ and $ R(Z)= C(Z)-A(Z)$
+$$ \hat{y}(t|t-1)= \frac{B(Z)}{C(Z)}u(t-1) + \frac{C(Z)-A(Z)}{C(Z)}y(t)$$
+
+\end{description}
+
 \subsection{Examples \& Exercises}
 
 \subsubsection{Example 1}
@@ -362,6 +413,96 @@ To compute $-\frac{1}{2}\hat{y}(5|4)$ we need to go back to the \textbf{initial 
 Our final prediction for model B is $\hat{y}(6|5) = -\frac{5}{16}$ which depends on the initial condition made assuming that $-\frac{1}{2}\hat{y}(1|0) = m_y $. It the choice of the initial condition important?
 \textbf{If the system is asymptotically stable, and N is big the initial condition is not important as it will vanish.}
 
-
+\subsubsection{Example 3 - ARMAX \& ARX}
+$$ y(t) = (Z+6Z^{-1})u(t-2) + \frac{2}{3+\frac{3}{2}Z{-1}}\eta(t-1) , \eta \sim WN(0,1)$$
+Find predictor from data and the corresponding error with its variance.\\
+u(t-2) $\to$ k=2\\
+Canonical form for ARMA part\\
+$$ \frac{2}{3(1+\frac{1}{2}Z^{-1})}Z^{-1}\eta(t)$$
+So $$ e(t) = \frac{2}{3} \eta(t-1) , e(t) \sim WN(0,\frac{4}{9}$$
+$$ \frac{1}{1+\frac{1}{2}Z^{-1}}e(t)$$
+Substituting in the original process:
+$$ y(t) = (Z+6Z^{-1})u(t-2) +  \frac{1}{1+\frac{1}{2}Z^{-1}}e(t), e(t) \sim WN(0,\frac{4}{9})$$
+Is the term $(Z+6Z^{-1})u(t-2)$ also in canonical representation? Wrong question, there is nothing we can do about it!\\
+We need the form : $$ y(t) = \frac{B(Z)}{A(Z)}u(t-k) + \frac{C(Z)}{A(Z)}e(t)$$
+So rewriting :
+$$ y(t) =\frac{(2+6Z{-1})(1+\frac{1}{2}Z^{-1})}{(1+\frac{1}{2}Z^{-1})}u(t-2)+ \frac{1}{1+\frac{1}{2}}e(t)$$
+Using a k-steps long division $\frac{C(Z)}{A(Z)}$:
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.5\linewidth]{ex_division2}
+\end{figure}
 \end{itemize}
+$$ \hat{y}(t|t-2) = \frac{(2+6Z^{-1})(1+\frac{1}{2}Z^{-1})(1-\frac{1}{2}Z{-1})}{1}u(t-2)+ \frac{\frac{1}{4}Z^{-2}}{1} y(t)$$
 
+\[
+\boxed{\hat{y}(t|t-2) = 2u(t-2)+6u(t-3)-\frac{1}{2}u(t-4)-\frac{3}{2}u(t-5)+\frac{1}{4}y(t-2)}
+\]
+\textbf{No old prediction} is used $\to$ process is \textbf{ARMAX(1,0,2+2)} $\to$ \textbf{ARX(1,4)} model.
+\[
+\boxed{\epsilon=E(Z)e(t)=(1-\frac{1}{2})Z^{-1}e(t)}
+\]
+The variance of $\epsilon$ :
+$$ var[\epsilon(t)]= (1+\frac{1}{4})\cdot \frac{4}{9} = \frac{5}{4}\frac{4}{9}= \frac{5}{9}$$
+
+
+\subsubsection{Example ARMA with non-zero mean}
+$$ y(t) =e(t) + 4e(t-1) , e \sim WN(1,1)$$
+Compute $\hat{y}(t|t-1)$ and $\hat{y}(t|t-2)$ from data.\\
+Canonical form representation\\
+$$y(t) =(1+4Z^{-1})e(t) \to y(t)= (1+4Z^{-1})[4\cdot \frac{1+\frac{1}{4}Z^{-1}}{1+4Z^{-1}}]e(t)$$
+Getting the new $\eta(t)$:
+$$ \eta(t) = 4e(t)$$
+$$m_{\eta}=E[\eta(t)]=E[4e(t)] = 4$$
+$$var[\eta]= E[(\eta(t)-4)^2]= E[(4e(t)-4)^2]= 16E[(e(t)-1)^2] =16$$
+Canonical form :
+\[
+\boxed{y(t) =(1+\frac{1}{4}Z^{-1})\eta(t)}
+\]
+\[
+\boxed{\eta(t) \sim WN(4,16)}
+\]
+\begin{description}
+\item[Method 1]\hfill\\
+\textbf{De-biasing technique}:
+$$ \tilde{y}(t) = y(t) - m_y$$
+$$ \tilde{\eta}(t) = \eta(t) - m_{\eta}$$
+Mean of y:
+$$ E[y(t)]=E[(\eta(t)+\frac{1}{4}\eta(t-1))] \to m_y= \frac{5}{4}m_{\eta}=5$$
+So:
+$$ \tilde{y}(t) = y(t) - 5$$
+$$ \tilde{\eta}(t) = \eta(t) - 4 \to \tilde{\eta} \sim WN(0,16)$$
+Obtaining:
+$$ \tilde{y}+5= (\tilde{\eta}(t)+4)+\frac{1}{4}(\tilde{\eta}(t-1)+4)$$
+\[
+\boxed{\tilde{y}= \tilde{\eta}(t)+\frac{1}{4}\tilde{\eta}(t-1)}
+\]
+Now we can compute the predictions for $\tilde{y}$ for k=1:
+ $$ \hat{\tilde{y}}(t|t-1)= \frac{(1+\frac{1}{4}Z^{-1})-1}{(1+\frac{1}{4}Z{-1})} \tilde{y}(t)$$
+\[
+\boxed{\hat{\tilde{y}}(t|t-1)= \frac{\frac{1}{4}}{(1+\frac{1}{4}Z{-1})} \tilde{y}(t-1)}
+\]
+\[
+\boxed{\epsilon(t) = \tilde{\eta}(t) = 16}
+\]
+Now we can compute the prediction for $\tilde{y}$ for k=2:
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.5\linewidth]{ex_division3}
+\end{figure}
+Which means that 
+\[
+\boxed{\hat{\tilde{y}}(t|t-2) = 0}
+\]
+Because MA(1) process has a \textbf{finite memory} of 1-step only!
+So $\tilde{\epsilon}(t) = \tilde{y}(t) - \hat{\tilde{y}}(t|t-2) = \tilde{y})(t)$ so the $var[\tilde{\epsilon}(t)]=var[\tilde{y}(t)] = (1+\frac{1}{16}) \cdot 16= 17$
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.5\linewidth]{ex_varplot}
+\end{figure}
+We need to go back to the original process because $\hat{y}(t|t-1) \neq \hat{\tilde{y}}(t|t-1)$ : 
+$$ \hat{y}(t|t-1)-5 = \frac{\frac{1}{4}}{1+\frac{1}{4}Z^{-1}}(y(t-1)-5)$$
+$$ \hat{y}(t|t-1)= \frac{\frac{1}{4}}{1+\frac{1}{4}Z^{-1}}y(t-1)+5 - 5\frac{\frac{1}{4}}{1+\frac{1}{4}Z^{-1}}$$
+
+
+\end{description}
