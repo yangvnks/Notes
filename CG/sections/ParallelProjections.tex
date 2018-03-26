@@ -107,3 +107,29 @@ Which can be resumed by using a single combined matrix:
  \centering
   \includegraphics[width=.5\linewidth]{comb_ort}
 \end{figure}
+Once the \textbf{normalized} screen coordinates are obtained for example for the vertices of a triangle we can apply the the usual drawing primitive procedure to fill up the whole triangle. By repeating this step for \textbf{every triangle} that composes the image we can build up a \textbf{2D view of a 3D object}.\\
+\subsubsection{Aspect Ratio}
+Normalized coordinates are able to support \textbf{non-square pixels} it wasn't able to deal with the proportion of the window where objects are drawn .
+The \textbf{aspect ratio } $a = \frac{D_x}{D_y}$ must be considered where $D_x ,D_y$ are the \textbf{horizontal, vertical} dimensions. Aspect ratios are usually 4:3 or 16:9.\\
+Having a resolution of $2000$ x $1000$ with \textbf{rectangular pixels}. In this case is $a = \frac{2000}{1000} = 2$ ? No because the \textbf{aspect ratio} is defined using \textbf{metrical units}. Summing up:
+\begin{itemize}
+\item\textbf{Square pixels}\\
+The \textbf{aspect ratio} can be computed by dividing the the number of pixels on the horizontal and vertical directions.
+\item\textbf{Rectangular pixels}\\
+The \textbf{aspect ratio} must be computed by using the actual \textbf{physical} dimensions must be used.
+\end{itemize}
+Normalized screen coordinates does \textbf{not} take care of the aspect ratio : 
+the \textbf{projection matrix } must take care of this adding a \textbf{scaling factor}.\\
+Considering the viewport the \textbf{width} is r-l and the height is t-b so the ratio of the window is $ \frac{r-l}{t-b}$ if : 
+$$\frac{r-l}{t-b} = a =\frac{D_x}{D_y} $$ 
+then the image will not be \textbf{distorted}. 
+
+\subsubsection{Projection matrices and aspect ratio}
+Usually the \textbf{projection box} is centred vertically and horizontally in the world. Using the half-width \textbf{w} from the center to the left/right border we can use less information to computed the matrix. The vertical equivalent of the w is computed using the \textbf{aspect ratio} \textbf{a} : $\frac{a}{w}$.
+This way we can compute the position of left,right, bottom and top only knowing the half-width and the aspect ratio.
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.4\linewidth]{p_ort_ratio}
+\end{figure}
+Note that the element in position (1,3)=(1,4)= 0 because the projection box is \textbf{already} centred in the origin.
+ 

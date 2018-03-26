@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  22 MAR 2018 16:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  26 MAR 2018 11:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -755,20 +755,20 @@ l.31 ...}Parallel Projections}{34}{subsection.5.1}
 \openout4 = `Graphics.toc'.
 
  [2]
-(./sections/Adapters.tex <Pictures/cmd.png, id=177, 305.14pt x 316.18124pt>
+(./sections/Adapters.tex <Pictures/cmd.png, id=187, 305.14pt x 316.18124pt>
 File: Pictures/cmd.png Graphic file (type png)
 
 <use Pictures/cmd.png>
 Package pdftex.def Info: Pictures/cmd.png used on input line 18.
 (pdftex.def)             Requested size: 125.47737pt x 130.01628pt.
- <Pictures/vector.png, id=179, 905.3825pt x 445.665pt>
+ <Pictures/vector.png, id=189, 905.3825pt x 445.665pt>
 File: Pictures/vector.png Graphic file (type png)
 
 <use Pictures/vector.png>
 Package pdftex.def Info: Pictures/vector.png used on input line 22.
 (pdftex.def)             Requested size: 188.21286pt x 92.64037pt.
 
-<Pictures/raster.png, id=180, 935.495pt x 391.4625pt>
+<Pictures/raster.png, id=190, 935.495pt x 391.4625pt>
 File: Pictures/raster.png Graphic file (type png)
 
 <use Pictures/raster.png>
@@ -787,7 +787,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 40.
- [4 <./Pictures/raster.png>] <Pictures/cones.png, id=196, 592.2125pt x 396.4812
+ [4 <./Pictures/raster.png>] <Pictures/cones.png, id=206, 592.2125pt x 396.4812
 5pt>
 File: Pictures/cones.png Graphic file (type png)
 
@@ -795,7 +795,7 @@ File: Pictures/cones.png Graphic file (type png)
 Package pdftex.def Info: Pictures/cones.png used on input line 59.
 (pdftex.def)             Requested size: 209.12683pt x 140.00467pt.
  [5 <./Pictures/cones.png>]
-<Pictures/cyanyellow.png, id=202, 477.785pt x 424.58624pt>
+<Pictures/cyanyellow.png, id=212, 477.785pt x 424.58624pt>
 File: Pictures/cyanyellow.png Graphic file (type png)
 
 <use Pictures/cyanyellow.png>
@@ -807,28 +807,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--76
  []
 
 [6 <./Pictures/cyanyellow.png>]
-<Pictures/range.png, id=209, 456.70625pt x 487.8225pt>
+<Pictures/range.png, id=219, 456.70625pt x 487.8225pt>
 File: Pictures/range.png Graphic file (type png)
 
 <use Pictures/range.png>
 Package pdftex.def Info: Pictures/range.png used on input line 83.
 (pdftex.def)             Requested size: 104.56342pt x 111.6832pt.
 
-<Pictures/q_range.png, id=210, 382.42876pt x 407.5225pt>
+<Pictures/q_range.png, id=220, 382.42876pt x 407.5225pt>
 File: Pictures/q_range.png Graphic file (type png)
 
 <use Pictures/q_range.png>
 Package pdftex.def Info: Pictures/q_range.png used on input line 87.
 (pdftex.def)             Requested size: 104.56342pt x 111.42543pt.
 ) (./sections/2D.tex [7 <./Pictures/range.png> <./Pictures/q_range.png>] <Pictu
-res/coord.png, id=219, 394.47375pt x 406.51875pt>
+res/coord.png, id=229, 394.47375pt x 406.51875pt>
 File: Pictures/coord.png Graphic file (type png)
 
 <use Pictures/coord.png>
 Package pdftex.def Info: Pictures/coord.png used on input line 8.
 (pdftex.def)             Requested size: 83.64944pt x 86.20265pt.
 
-<Pictures/clipping.png, id=220, 490.83376pt x 379.4175pt>
+<Pictures/clipping.png, id=230, 490.83376pt x 379.4175pt>
 File: Pictures/clipping.png Graphic file (type png)
 
 <use Pictures/clipping.png>
@@ -857,7 +857,7 @@ Missing character: There is no ° in font cmr12!
 Missing character: There is no Â in font cmr12!
 Missing character: There is no ° in font cmr12!
 
-<Pictures/pixelnum.png, id=235, 863.225pt x 421.575pt>
+<Pictures/pixelnum.png, id=245, 863.225pt x 421.575pt>
 File: Pictures/pixelnum.png Graphic file (type png)
 
 <use Pictures/pixelnum.png>
@@ -869,34 +869,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--39
  []
 
 [10 <./Pictures/pixelnum.png>] [11]
-<Pictures/octants.png, id=269, 512.91624pt x 465.74pt>
+<Pictures/octants.png, id=279, 512.91624pt x 465.74pt>
 File: Pictures/octants.png Graphic file (type png)
 
 <use Pictures/octants.png>
 Package pdftex.def Info: Pictures/octants.png used on input line 78.
 (pdftex.def)             Requested size: 167.2989pt x 151.9109pt.
 
-<Pictures/pixelsel.png, id=270, 572.1375pt x 431.6125pt>
+<Pictures/pixelsel.png, id=280, 572.1375pt x 431.6125pt>
 File: Pictures/pixelsel.png Graphic file (type png)
 
 <use Pictures/pixelsel.png>
 Package pdftex.def Info: Pictures/pixelsel.png used on input line 87.
 (pdftex.def)             Requested size: 125.47737pt x 94.65868pt.
  [12 <./Pictures/octants.png> <./Pictures/pixelsel.png>] <Pictures/oc2.png, id=
-283, 836.12375pt x 496.85625pt>
+293, 836.12375pt x 496.85625pt>
 File: Pictures/oc2.png Graphic file (type png)
 
 <use Pictures/oc2.png>
 Package pdftex.def Info: Pictures/oc2.png used on input line 131.
 (pdftex.def)             Requested size: 418.25368pt x 248.54881pt.
- <Pictures/oc1.png, id=284, 837.1275pt x 495.8525pt>
+ <Pictures/oc1.png, id=294, 837.1275pt x 495.8525pt>
 File: Pictures/oc1.png Graphic file (type png)
 
 <use Pictures/oc1.png>
 Package pdftex.def Info: Pictures/oc1.png used on input line 135.
 (pdftex.def)             Requested size: 418.25368pt x 247.73648pt.
  [13] [14 <./Pictures/oc2.png> <./Pictures/oc1.png>]
-<Pictures/tri.png, id=327, 821.0675pt x 399.4925pt>
+<Pictures/tri.png, id=337, 821.0675pt x 399.4925pt>
 File: Pictures/tri.png Graphic file (type png)
  <use Pictures/tri.png>
 Package pdftex.def Info: Pictures/tri.png used on input line 145.
@@ -906,14 +906,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--146
 
  []
 
-<Pictures/tridraw.png, id=328, 618.31pt x 358.33875pt>
+<Pictures/tridraw.png, id=338, 618.31pt x 358.33875pt>
 File: Pictures/tridraw.png Graphic file (type png)
 
 <use Pictures/tridraw.png>
 Package pdftex.def Info: Pictures/tridraw.png used on input line 159.
 (pdftex.def)             Requested size: 209.12683pt x 121.1993pt.
  [15 <./Pictures/tri.png> <./Pictures/tridraw.png>]
-<Pictures/trisplit.png, id=335, 485.815pt x 455.7025pt>
+<Pictures/trisplit.png, id=345, 485.815pt x 455.7025pt>
 File: Pictures/trisplit.png Graphic file (type png)
 
 <use Pictures/trisplit.png>
@@ -925,7 +925,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 180--184
  []
 
 [16 <./Pictures/trisplit.png>]) [17] (./sections/3D.tex
-<Pictures/3Dcoor.png, id=360, 754.82pt x 451.6875pt>
+<Pictures/3Dcoor.png, id=370, 754.82pt x 451.6875pt>
 File: Pictures/3Dcoor.png Graphic file (type png)
  <use Pictures/3Dcoor.png>
 Package pdftex.def Info: Pictures/3Dcoor.png used on input line 9.
@@ -946,7 +946,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--83
 
  []
 
-[20] <Pictures/mirroring.png, id=375, 378.41376pt x 355.3275pt>
+[20] <Pictures/mirroring.png, id=385, 378.41376pt x 355.3275pt>
 File: Pictures/mirroring.png Graphic file (type png)
 
 <use Pictures/mirroring.png>
@@ -959,14 +959,14 @@ Package pdftex.def Info: Pictures/mirroring.png used on input line 104.
                                                   \fi \fi 
 l.107 \newpage
                <./Pictures/mirroring.png>]
-<Pictures/mirroring2.png, id=383, 487.8225pt x 392.46625pt>
+<Pictures/mirroring2.png, id=393, 487.8225pt x 392.46625pt>
 File: Pictures/mirroring2.png Graphic file (type png)
 
 <use Pictures/mirroring2.png>
 Package pdftex.def Info: Pictures/mirroring2.png used on input line 112.
 (pdftex.def)             Requested size: 167.2989pt x 134.59853pt.
 
-<Pictures/mirroring3.png, id=384, 436.63126pt x 312.16624pt>
+<Pictures/mirroring3.png, id=394, 436.63126pt x 312.16624pt>
 File: Pictures/mirroring3.png Graphic file (type png)
 
 <use Pictures/mirroring3.png>
@@ -987,7 +987,7 @@ cate ignored
 l.130 $$
          x' = x \cdot cos\alpha - y \cdot sin\alpha$$ <./Pictures/mirroring2.pn
 g> <./Pictures/mirroring3.png>]
-<Pictures/rotation.png, id=395, 391.4625pt x 409.53pt>
+<Pictures/rotation.png, id=405, 391.4625pt x 409.53pt>
 File: Pictures/rotation.png Graphic file (type png)
 
 <use Pictures/rotation.png>
@@ -1006,7 +1006,7 @@ Overfull \hbox (22.17084pt too wide) in paragraph at lines 149--172
                                                   \fi \fi 
 l.172 \newpage
                <./Pictures/rotation.png>] [24]
-<Pictures/shear.png, id=407, 438.63875pt x 379.4175pt>
+<Pictures/shear.png, id=417, 438.63875pt x 379.4175pt>
 File: Pictures/shear.png Graphic file (type png)
 
 <use Pictures/shear.png>
@@ -1026,7 +1026,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 191--123
  []
 
 [25 <./Pictures/shear.png>] (./sections/3DTransform.tex
-<Pictures/generalmatrix.png, id=413, 738.76pt x 303.1325pt>
+<Pictures/generalmatrix.png, id=423, 738.76pt x 303.1325pt>
 File: Pictures/generalmatrix.png Graphic file (type png)
 
 <use Pictures/generalmatrix.png>
@@ -1037,14 +1037,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--15
 
  []
 
-<Pictures/newaxis.png, id=414, 902.37125pt x 415.5525pt>
+<Pictures/newaxis.png, id=424, 902.37125pt x 415.5525pt>
 File: Pictures/newaxis.png Graphic file (type png)
 
 <use Pictures/newaxis.png>
 Package pdftex.def Info: Pictures/newaxis.png used on input line 18.
 (pdftex.def)             Requested size: 167.2989pt x 77.04086pt.
 
-<Pictures/neworigin.png, id=415, 892.33376pt x 418.56375pt>
+<Pictures/neworigin.png, id=425, 892.33376pt x 418.56375pt>
 File: Pictures/neworigin.png Graphic file (type png)
 
 <use Pictures/neworigin.png>
@@ -1052,35 +1052,35 @@ Package pdftex.def Info: Pictures/neworigin.png used on input line 23.
 (pdftex.def)             Requested size: 167.2989pt x 78.47412pt.
  [26 <./Pictures/generalmatrix.png> <./Pictures/newaxis.png> <./Pictures/newori
 gin.png>]
-<Pictures/reversetr.png, id=423, 268.00125pt x 241.90375pt>
+<Pictures/reversetr.png, id=433, 268.00125pt x 241.90375pt>
 File: Pictures/reversetr.png Graphic file (type png)
 
 <use Pictures/reversetr.png>
 Package pdftex.def Info: Pictures/reversetr.png used on input line 37.
 (pdftex.def)             Requested size: 125.47737pt x 113.25552pt.
 
-<Pictures/reversesc.png, id=424, 357.335pt x 235.88126pt>
+<Pictures/reversesc.png, id=434, 357.335pt x 235.88126pt>
 File: Pictures/reversesc.png Graphic file (type png)
 
 <use Pictures/reversesc.png>
 Package pdftex.def Info: Pictures/reversesc.png used on input line 42.
 (pdftex.def)             Requested size: 146.38814pt x 96.63275pt.
 
-<Pictures/reversero3.png, id=425, 376.40625pt x 163.61125pt>
+<Pictures/reversero3.png, id=435, 376.40625pt x 163.61125pt>
 File: Pictures/reversero3.png Graphic file (type png)
 
 <use Pictures/reversero3.png>
 Package pdftex.def Info: Pictures/reversero3.png used on input line 49.
 (pdftex.def)             Requested size: 122.33722pt x 53.1755pt.
 
-<Pictures/reversero2.png, id=426, 365.365pt x 166.6225pt>
+<Pictures/reversero2.png, id=436, 365.365pt x 166.6225pt>
 File: Pictures/reversero2.png Graphic file (type png)
 
 <use Pictures/reversero2.png>
 Package pdftex.def Info: Pictures/reversero2.png used on input line 53.
 (pdftex.def)             Requested size: 122.33722pt x 55.79155pt.
 
-<Pictures/reversero1.png, id=427, 369.38pt x 156.585pt>
+<Pictures/reversero1.png, id=437, 369.38pt x 156.585pt>
 File: Pictures/reversero1.png Graphic file (type png)
 
 <use Pictures/reversero1.png>
@@ -1106,7 +1106,7 @@ figure.9}) has been already used, duplicate ignored
 l.61 \newpage
               <./Pictures/reversetr.png> <./Pictures/reversesc.png> <./Pictures
 /reversero3.png> <./Pictures/reversero2.png> <./Pictures/reversero1.png>]
-<Pictures/composition.png, id=440, 622.325pt x 419.5675pt>
+<Pictures/composition.png, id=450, 622.325pt x 419.5675pt>
 File: Pictures/composition.png Graphic file (type png)
 
 <use Pictures/composition.png>
@@ -1117,7 +1117,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--70
 
  []
 
-<Pictures/comp-prop.png, id=441, 661.47125pt x 432.61626pt>
+<Pictures/comp-prop.png, id=451, 661.47125pt x 432.61626pt>
 File: Pictures/comp-prop.png Graphic file (type png)
 
 <use Pictures/comp-prop.png>
@@ -1129,42 +1129,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--104
  []
 
 [28 <./Pictures/composition.png>] [29 <./Pictures/comp-prop.png>]
-<Pictures/axis.png, id=452, 601.24625pt x 419.5675pt>
+<Pictures/axis.png, id=463, 601.24625pt x 419.5675pt>
 File: Pictures/axis.png Graphic file (type png)
  <use Pictures/axis.png>
 Package pdftex.def Info: Pictures/axis.png used on input line 116.
 (pdftex.def)             Requested size: 167.2989pt x 116.74185pt.
 
 [30 <./Pictures/axis.png>]) (./sections/Parallelprojections.tex [31]
-<Pictures/projections.png, id=468, 897.3525pt x 490.83376pt>
+<Pictures/projections.png, id=478, 897.3525pt x 490.83376pt>
 File: Pictures/projections.png Graphic file (type png)
 
 <use Pictures/projections.png>
 Package pdftex.def Info: Pictures/projections.png used on input line 5.
 (pdftex.def)             Requested size: 250.95476pt x 137.26773pt.
 
-<Pictures/parallel.png, id=469, 623.32875pt x 473.77pt>
+<Pictures/parallel.png, id=479, 623.32875pt x 473.77pt>
 File: Pictures/parallel.png Graphic file (type png)
 
 <use Pictures/parallel.png>
 Package pdftex.def Info: Pictures/parallel.png used on input line 23.
 (pdftex.def)             Requested size: 125.47737pt x 95.36679pt.
 
-<Pictures/perspective.png, id=470, 654.445pt x 477.785pt>
+<Pictures/perspective.png, id=480, 654.445pt x 477.785pt>
 File: Pictures/perspective.png Graphic file (type png)
 
 <use Pictures/perspective.png>
 Package pdftex.def Info: Pictures/perspective.png used on input line 27.
 (pdftex.def)             Requested size: 125.47737pt x 91.6039pt.
 
-<Pictures/parallel_prop.png, id=471, 763.85374pt x 477.785pt>
+<Pictures/parallel_prop.png, id=481, 763.85374pt x 477.785pt>
 File: Pictures/parallel_prop.png Graphic file (type png)
 
 <use Pictures/parallel_prop.png>
 Package pdftex.def Info: Pictures/parallel_prop.png used on input line 36.
 (pdftex.def)             Requested size: 125.47737pt x 78.48117pt.
 
-<Pictures/perspective_prop.png, id=472, 500.87125pt x 569.12625pt>
+<Pictures/perspective_prop.png, id=482, 500.87125pt x 569.12625pt>
 File: Pictures/perspective_prop.png Graphic file (type png)
 
 <use Pictures/perspective_prop.png>
@@ -1176,13 +1176,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--45
 
  []
 
-<Pictures/world.png, id=480, 864.22874pt x 482.80376pt>
+<Pictures/world.png, id=490, 864.22874pt x 482.80376pt>
 File: Pictures/world.png Graphic file (type png)
 
 <use Pictures/world.png>
 Package pdftex.def Info: Pictures/world.png used on input line 51.
 (pdftex.def)             Requested size: 167.2989pt x 93.45753pt.
- <Pictures/3dnorm.png, id=481, 556.0775pt x 529.98pt>
+ <Pictures/3dnorm.png, id=491, 556.0775pt x 529.98pt>
 File: Pictures/3dnorm.png Graphic file (type png)
 
 <use Pictures/3dnorm.png>
@@ -1190,7 +1190,7 @@ Package pdftex.def Info: Pictures/3dnorm.png used on input line 58.
 (pdftex.def)             Requested size: 167.2989pt x 159.44807pt.
  [33 <./Pictures/parallel_prop.png> <./Pictures/perspective_prop.png> <./Pictur
 es/world.png>]
-<Pictures/planes.png, id=489, 911.405pt x 475.7775pt>
+<Pictures/planes.png, id=499, 911.405pt x 475.7775pt>
 File: Pictures/planes.png Graphic file (type png)
 
 <use Pictures/planes.png>
@@ -1202,13 +1202,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
  []
 
 [34 <./Pictures/3dnorm.png> <./Pictures/planes.png>]
-<Pictures/t_ort.png, id=496, 409.53pt x 329.23pt>
+<Pictures/t_ort.png, id=506, 409.53pt x 329.23pt>
 File: Pictures/t_ort.png Graphic file (type png)
  <use Pictures/t_ort.png>
 Package pdftex.def Info: Pictures/t_ort.png used on input line 91.
 (pdftex.def)             Requested size: 125.47737pt x 100.87466pt.
 
-<Pictures/s_ort.png, id=497, 417.56pt x 330.23375pt>
+<Pictures/s_ort.png, id=507, 417.56pt x 330.23375pt>
 File: Pictures/s_ort.png Graphic file (type png)
  <use Pictures/s_ort.png>
 Package pdftex.def Info: Pictures/s_ort.png used on input line 96.
@@ -1219,34 +1219,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--97
  []
 
 [35 <./Pictures/t_ort.png>]
-<Pictures/m_ort.png, id=504, 336.25626pt x 192.72pt>
+<Pictures/m_ort.png, id=514, 336.25626pt x 192.72pt>
 File: Pictures/m_ort.png Graphic file (type png)
  <use Pictures/m_ort.png>
 Package pdftex.def Info: Pictures/m_ort.png used on input line 102.
 (pdftex.def)             Requested size: 125.47737pt x 71.91399pt.
 
-<Pictures/comb_ort.png, id=505, 706.64pt x 379.4175pt>
+<Pictures/comb_ort.png, id=515, 706.64pt x 379.4175pt>
 File: Pictures/comb_ort.png Graphic file (type png)
 
 <use Pictures/comb_ort.png>
 Package pdftex.def Info: Pictures/comb_ort.png used on input line 108.
 (pdftex.def)             Requested size: 209.12683pt x 112.28613pt.
-)
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+
+ []
+
+[36 <./Pictures/s_ort.png> <./Pictures/m_ort.png> <./Pictures/comb_ort.png>]
+<Pictures/p_ort_ratio.png, id=526, 391.4625pt x 301.125pt>
+File: Pictures/p_ort_ratio.png Graphic file (type png)
+
+<use Pictures/p_ort_ratio.png>
+Package pdftex.def Info: Pictures/p_ort_ratio.png used on input line 132.
+(pdftex.def)             Requested size: 167.2989pt x 128.69092pt.
+ [37])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
- [36 <./Pictures/s_ort.png> <./Pictures/m_ort.png> <./Pictures/comb_ort.png>]
+ [38 <./Pictures/p_ort_ratio.png>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
- (./Graphics.aux)
+
+(./Graphics.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
 Package rerunfilecheck Info: File `Graphics.out' has not changed.
-(rerunfilecheck)             Checksum: DDCC0E5DED5EFE56DBC642DA5CB68C6E;2164.
+(rerunfilecheck)             Checksum: C56786B6CFDAC53004FA582938B12CA7;2332.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 129.
  ) 
 Here is how much of TeX's memory you used:
- 17979 strings out of 493014
- 337529 string characters out of 6133351
- 492611 words of memory out of 5000000
- 21160 multiletter control sequences out of 15000+600000
+ 17990 strings out of 493014
+ 337753 string characters out of 6133351
+ 492614 words of memory out of 5000000
+ 21166 multiletter control sequences out of 15000+600000
  12751 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,9n,42p,10359b,2103s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1254,19 +1267,20 @@ Here is how much of TeX's memory you used:
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
-/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Graphics.pdf (37 pages, 2432940 bytes).
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
+sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Graphics.pdf (39 pages, 2410174 bytes).
 PDF statistics:
- 596 PDF objects out of 1000 (max. 8388607)
- 447 compressed objects within 5 object streams
- 162 named destinations out of 1000 (max. 500000)
- 479 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 621 PDF objects out of 1000 (max. 8388607)
+ 467 compressed objects within 5 object streams
+ 166 named destinations out of 1000 (max. 500000)
+ 500 words of extra memory for PDF output out of 10000 (max. 10000000)
 
