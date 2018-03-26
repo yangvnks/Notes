@@ -103,7 +103,7 @@ $$ \frac{\partial{J_N(\theta)}}{\partial \theta} = \frac{2}{N}\sum\limits_{t=1}^
 
 $$ (\sum\limits_{t=1}^{N} \phi(t)\phi(t)^T)\theta = \sum\limits_{t=1}^{N} y(t) \phi
 (t)$$
-Assuming that the $n_{\theta} x n_{\theta} $ matrix $\sum\limits_{t=1}^{N}\phi(t)\phi(t)^T$ matrix is \textbf{non singular } and thus \textbf{invertible}:
+Assuming that the $n_{\theta} $ x $ n_{\theta} $ matrix $\sum\limits_{t=1}^{N}\phi(t)\phi(t)^T$ matrix is \textbf{non singular } and thus \textbf{invertible}:
 \[
 \boxed{\hat{\theta}_N= (\sum\limits_{t=1}^{N}\phi(t)\phi(t)^T)^{-1}(\sum\limits_{t=1}^{N}y(t)\phi(t))}
 \] 
@@ -111,9 +111,9 @@ This is the \textbf{explicit} solution of the ARX identification problem also kn
 
 \subsubsection{Example}
 Consider a dataset of length N=10 and 
-$$ y(t) = \frac{b}{1+aZ^{-1}u(t-1)+\frac{1}{1+aZ^{-1}}e(t), e(t) \sim WN(0,\lambda^2)}$$
+$$ y(t) = \frac{b}{1+aZ^{-1}}u(t-1)+\frac{1}{1+aZ^{-1}}e(t), e(t) \sim WN(0,\lambda^2)$$
 an ARX(1,1) general model class.
-Assuming that the process is in canonical representation so $|a|<1$.
+Assuming that the process is in canonical representation ( $|a|<1$ must hold).
 The predictor of the model is :
 $$ \hat{y}(t|t-1)= \frac{B(Z)}{1}u(t-1)+\frac{1-A(Z)}{1}e(t)$$
 \[
@@ -121,14 +121,14 @@ $$ \hat{y}(t|t-1)= \frac{B(Z)}{1}u(t-1)+\frac{1-A(Z)}{1}e(t)$$
 \]
 and $\theta= [a,b]^T$.\\
 The loss function is :
-$$ J_10(\theta) = \frac{1}{10}\sum\limits_{t=1}^{10}(y(t) - bu(t-1)+ay(t-1))^2$$
+$$ J_{10}(\theta) = \frac{1}{10}\sum\limits_{t=1}^{10}(y(t) - bu(t-1)+ay(t-1))^2$$
 \begin{description}
 \item[Remark]\hfill\\
-Since we don't have data points for t=0 , starting at time t=1 doesn't allow us to compute $-bu(0)+ay(0)$ so modified version of the performance index is used:
+Since we don't have data points for t=0 , starting at time t=1 doesn't allow us to compute $-bu(0)+ay(0)$ so a modified version of the performance index is used:
 \[
 \boxed{J_N(\theta)= \frac{1}{N-h}\sum\limits_{t=h+1}^{N}(y(t)-\hat{y}(t|t-1))^2}
 \]
 where $h=max\{m,p+1\}$
 \end{description}
 In our case $h=max(1,1)=1$ so 
-$$ J_10(\theta) = \frac{1}{9}\sum\limits_{t=2}^{10}(y(t) - bu(t-1)+ay(t-1))^2$$
+$$ J_{10}(\theta) = \frac{1}{9}\sum\limits_{t=2}^{10}(y(t) - bu(t-1)+ay(t-1))^2$$
