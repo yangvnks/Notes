@@ -1,0 +1,33 @@
+\section{Chapter 4 : Identification}
+The focus of MIDA 1 are \textbf{parametric} identification or learning techniques.
+They are the most used and popular identification techniques but many non-parametric techniques are essential for identification ( ex: state-space identification ,spectrum estimation ,unsupervised learning...)\\
+Any \textbf{parametric identification technique} is based on a \textbf{five step approach}:
+\begin{enumerate}
+\item \textbf{Experiment design \& data collection}\\
+This step deals with \textbf{designing} the experiment, selecting the \textbf{length N} of the dataset and \textbf{data pre-processing}.
+\item \textbf{Selection of a class of parametric models}\\
+This steps deals with the selection of \textbf{class} of parametric models $m(\theta)$ where $\theta$ is the unknown parameter vector. Our focus will be on :\\
+-\textbf{discrete time}\\
+-\textbf{dynamic}\\
+-\textbf{linear}\\
+-\textbf{time-invariant}\\
+systems. As already seen \textbf{ARMAX \& ARMA} are the most general class of models for these systems.
+\item \textbf{Selection of a performance index}\\
+A function $J(\theta) \geq 0 $ that tells the \textbf{ordering} of different models.
+The performance index assesses the \textbf{quality} of a model.\\
+The \textbf{prediction error method} is the choice for our performance index:
+\[
+\boxed{J_N(\theta) = \frac{1}{N} \sum\limits_{t=1}^{N}(y(t)-\hat{y}(t|t-1,\theta))^2}
+\]
+that represents the \textbf{sample variance} of the prediction error computed on the available dataset of length N.\\
+The P.E.M assumes that the ability of a model to make a good prediction of the future is a good \textbf{quality index} for the model.\\
+\item \textbf{Optimization}\\
+Optimization consists in \textbf{minimizing} $J(\theta)$ with respect to $\theta$ :
+$$ \hat{\theta} = argmin_{\theta}\{J(\theta)\}$$ so that $$ m(\hat{\theta}) $$ is the \textbf{optimal model} on the class of models $m(\theta)$.
+$$ J_N(\theta) = R^{n_\theta} \rightarrow R^{+}$$
+In optimisation 3 different situations can be found:
+\begin{itemize}
+\item $J(\theta)$ is \textbf{quadratic} function of $\theta$\\
+
+\end{itemize}
+\end{enumerate}

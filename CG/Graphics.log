@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  21 MAR 2018 11:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  22 MAR 2018 16:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1201,9 +1201,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-[34 <./Pictures/3dnorm.png> <./Pictures/planes.png>])
+[34 <./Pictures/3dnorm.png> <./Pictures/planes.png>]
+<Pictures/t_ort.png, id=496, 409.53pt x 329.23pt>
+File: Pictures/t_ort.png Graphic file (type png)
+ <use Pictures/t_ort.png>
+Package pdftex.def Info: Pictures/t_ort.png used on input line 91.
+(pdftex.def)             Requested size: 125.47737pt x 100.87466pt.
+
+<Pictures/s_ort.png, id=497, 417.56pt x 330.23375pt>
+File: Pictures/s_ort.png Graphic file (type png)
+ <use Pictures/s_ort.png>
+Package pdftex.def Info: Pictures/s_ort.png used on input line 96.
+(pdftex.def)             Requested size: 125.47737pt x 99.23213pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--97
+
+ []
+
+[35 <./Pictures/t_ort.png>]
+<Pictures/m_ort.png, id=504, 336.25626pt x 192.72pt>
+File: Pictures/m_ort.png Graphic file (type png)
+ <use Pictures/m_ort.png>
+Package pdftex.def Info: Pictures/m_ort.png used on input line 102.
+(pdftex.def)             Requested size: 125.47737pt x 71.91399pt.
+
+<Pictures/comb_ort.png, id=505, 706.64pt x 379.4175pt>
+File: Pictures/comb_ort.png Graphic file (type png)
+
+<use Pictures/comb_ort.png>
+Package pdftex.def Info: Pictures/comb_ort.png used on input line 108.
+(pdftex.def)             Requested size: 209.12683pt x 112.28613pt.
+)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
- [35]
+ [36 <./Pictures/s_ort.png> <./Pictures/m_ort.png> <./Pictures/comb_ort.png>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
  (./Graphics.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
@@ -1213,10 +1243,10 @@ Package rerunfilecheck Info: File `Graphics.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 129.
  ) 
 Here is how much of TeX's memory you used:
- 17955 strings out of 493014
- 337086 string characters out of 6133351
+ 17979 strings out of 493014
+ 337529 string characters out of 6133351
  492611 words of memory out of 5000000
- 21144 multiletter control sequences out of 15000+600000
+ 21160 multiletter control sequences out of 15000+600000
  12751 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,9n,42p,10359b,2103s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1233,10 +1263,10 @@ l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/tex
 live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Graphics.pdf (36 pages, 2269665 bytes).
+Output written on Graphics.pdf (37 pages, 2432940 bytes).
 PDF statistics:
- 578 PDF objects out of 1000 (max. 8388607)
- 438 compressed objects within 5 object streams
- 158 named destinations out of 1000 (max. 500000)
- 459 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 596 PDF objects out of 1000 (max. 8388607)
+ 447 compressed objects within 5 object streams
+ 162 named destinations out of 1000 (max. 500000)
+ 479 words of extra memory for PDF output out of 10000 (max. 10000000)
 

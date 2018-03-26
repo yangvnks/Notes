@@ -77,7 +77,33 @@ Usually distance from viewport to near plane is very small. Things before the ne
 \end{description}
 \textbf{Orthogonal projections} can be implemented by \textbf{normalizing} the x,y,z coordinates of the projection box in the (-1,1) range. Then a \textbf{projection matrix} can be computed to find the normalized 3D coordinates :
 $$ p_N = P_{ort}\cdot p_W$$
-How to find $P_ort $?\\
+How to find $P_{ort} $?\\
 Coordinates l,r are the \textbf{x-coordinates} in the 3D space that will be displayed on the left and right borders of the screen. Everything on the left of l or right of r will be \textbf{cut}.\\
-Similarly t,b are the \textbf{y-coordinates} of the top and bottom borders of the screen.\\
+Similarly t,b are the \textbf{y-coordinates} of the top and bottom borders of the screen.\\ 
 Finally we call -n ,-f the \textbf{z-coordinates} of the near and far planes . Since the z-axis is oriented in the opposite direction the positive distance is used over the negative one. Also using this annotation means that $n>f$ even if n is closer than f!
+Bottom left front point will have coordinates (-1,-1,-1) while the top right back point has coordinates (1,1,1).\\
+To create the $P_{ort}$ matrix:
+\begin{enumerate}
+\item Move the center of the box to correspond to the center of the space\\The center of the box will have coordinates :$$ c = ( \frac{l+r}{2}, \frac{t+b}{2}, \frac{f+n}{2})$$
+So to align the center we must \textbf{inverse translate} $$ c' = T^{-1}(\frac{l+r}{2}, \frac{t+b}{2}, \frac{f+n}{2}) \cdot c$$ so that the center now corresponds to the origin. 
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.3\linewidth]{t_ort}
+\end{figure}
+\item Then normalise the coordinates \\
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.3\linewidth]{s_ort}
+\end{figure}
+\item Z goes to the viewer : points closer should have inverse Z coordinate\\
+Changing the sign of Z is done by mirroring :
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.3\linewidth]{m_ort}
+\end{figure}
+\end{enumerate}
+Which can be resumed by using a single combined matrix:
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.5\linewidth]{comb_ort}
+\end{figure}
