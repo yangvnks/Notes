@@ -56,3 +56,6 @@
 \BOOKMARK [3][-]{subsubsection.3.4.3}{Example 3 - ARMAX \046 ARX}{subsection.3.4}% 56
 \BOOKMARK [3][-]{subsubsection.3.4.4}{Example ARMA with non-zero mean}{subsection.3.4}% 57
 \BOOKMARK [1][-]{section.4}{Chapter 4 : Identification}{}% 58
+\BOOKMARK [2][-]{subsection.4.1}{Identification of ARX models}{section.4}% 59
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Loss function: Least Squares}{subsection.4.1}% 60
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Example}{subsection.4.1}% 61
