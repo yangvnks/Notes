@@ -123,7 +123,7 @@ the \textbf{projection matrix } must take care of this adding a \textbf{scaling 
 Considering the viewport the \textbf{width} is r-l and the height is t-b so the ratio of the window is $ \frac{r-l}{t-b}$ if : 
 $$\frac{r-l}{t-b} = a =\frac{D_x}{D_y} $$ 
 then the image will not be \textbf{distorted}. 
-
+\newpage
 \subsubsection{Projection matrices and aspect ratio}
 Usually the \textbf{projection box} is centred vertically and horizontally in the world. Using the half-width \textbf{w} from the center to the left/right border we can use less information to computed the matrix. The vertical equivalent of the w is computed using the \textbf{aspect ratio} \textbf{a} : $\frac{a}{w}$.
 This way we can compute the position of left,right, bottom and top only knowing the half-width and the aspect ratio.
@@ -133,3 +133,55 @@ This way we can compute the position of left,right, bottom and top only knowing 
 \end{figure}
 Note that the element in position (1,3)=(1,4)= 0 because the projection box is \textbf{already} centred in the origin.
  
+
+\subsection{Perspective Projections}
+Parallel projections do \textbf{not} change the apparent size of an object with the distance from the observer. It is used mainly for drawings and is not that suitable for 3D computer graphics.\\
+\textbf{Prospective projection} on the other hand represent an object with a different size depending on its \textbf{distance} from the \textbf{projection plane} : this makes it suitable for \textbf{immersive visualisations}. This is the result of all the projections rays \textbf{passing through the same point}.
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.4\linewidth]{par_per}
+\end{figure}
+Rays intersect the \textbf{projection plane} at different points depending on the distance of the object : if two objects have the same size but are at different distances than the ones \textbf{closer} to the plane have a \textbf{larger} projection.
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.4\linewidth]{larger_proj}
+\end{figure}
+As for the parallel projections	also perspective projections make us of \textbf{normalized screen coordinates} to project objects on the projection plane.
+Given the space coordinates $(x,y,z) \to (x_s,y_s,z_s)$. Now we will focus only on 
+$ x_s,y_s$. \\
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.4\linewidth]{y_s}
+\end{figure}
+\begin{itemize}
+\item $y_s$\\
+To simplify the computation the \textbf{center of projection} (yellow dot) corresponds to the origin $(0,0,0)$. The projection plane is located at distance d on the z-axis from the center of projection.\\
+Tracing the projection ray from point $(x,y,z)$ to the center of projection we obtain two \textbf{similar} triangles $ABC , ADE $. It is easy to see that $y_s$ is the height of ABC while $y$ the height of ADE $\to y_s : d = y:z$ which leads to
+\[
+\boxed{y_s = \frac{d \cdot y}{z}}	
+\] 
+\item $x_s$ \\
+The same computation as for $y_s$ occur : 
+\[
+\boxed{x_s = \frac{d \cdot x}{z}}	
+\]
+\end{itemize}
+The distance \textbf{d} from center of projection to projection plane plays an important role .It acts like the \textbf{camera lens}  so changing parameter d has the effect of performing a \textbf{zoom}:\\
+\begin{itemize}
+\item \textbf{Short d}\\
+Like a wide lens, emphasizes the distances of objects from the plane.
+Allows to capture a larger number of objects producing smaller images
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.4\linewidth]{shortd}
+\end{figure}
+\item \textbf{Long d}\\
+Like tele-lens, reducing the differences in size for objects at different distances.
+It reduces the number of objects visible in the scene producing \textbf{enlarged} objects.
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.4\linewidth]{larged}
+\end{figure}
+\item  $D \to \infty$\\
+If distance d tends to infinity we obtain \textbf{parallel projections}
+\end{itemize}
