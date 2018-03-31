@@ -120,6 +120,9 @@ $$ \hat{y}(t|t-1)= \frac{B(Z)}{1}u(t-1)+\frac{1-A(Z)}{1}e(t)$$
 \boxed{\hat{y}(t|t-1)=bu(t-1)-ay(t-1)}
 \]
 and $\theta= [a,b]^T$.\\
+\begin{description}
+\item[Method 1]\hfill\\
+
 The loss function is :
 $$ J_{10}(\theta) = \frac{1}{10}\sum\limits_{t=1}^{10}(y(t) - bu(t-1)+ay(t-1))^2$$
 \begin{description}
@@ -132,3 +135,40 @@ where $h=max\{m,p+1\}$
 \end{description}
 In our case $h=max(1,1)=1$ so 
 $$ J_{10}(\theta) = \frac{1}{9}\sum\limits_{t=2}^{10}(y(t) - bu(t-1)+ay(t-1))^2$$
+To obtain the best parameter vector $\to \frac{\partial{J_{10}(\theta)}}{\partial{\theta}} = 0$ where $\theta = [a,b]^T$ :
+\[ \frac{\partial{J_{10}(\theta)}}{\partial{\theta}} =
+  \begin{cases}
+        \frac{\partial{J_{10}(\theta)}}{\partial{a}} = \frac{2}{9} \sum\limits_{t=2}^{10}(y(t)-bu(t-1)+ay(t-1))\cdot y(t-1) = 0  \\
+    		\frac{\partial{J_{10}(\theta)}}{\partial{b}} = \frac{2}{9} \sum\limits_{t=2}^{10}(y(t)-bu(t-1)+ay(t-1))\cdot (-u(t-1)) = 0  
+  \end{cases}
+\]
+Which can be rewritten as : 
+$$ 			\begin{bmatrix}
+          \sum\limits_{t=2}^{10}y(t-1)^2 & -\sum\limits_{t=2}^{10}y(t-1)u(t-1) \\
+          -\sum\limits_{t=2}^{10}y(t-1)u(t-1) & \sum\limits_{t=2}^{10}u(t-1)^2
+             \end{bmatrix} \cdot
+             \begin{bmatrix}
+          	   a\\
+               b
+             \end{bmatrix}= 
+             \begin{bmatrix}
+          -\sum\limits_{t=2}^{10}y(t-1)y(t) \\
+          \sum\limits_{t=2}^{10}y(t)u(t-1) 
+             \end{bmatrix}
+              $$ 
+so
+$$ 	\begin{bmatrix}
+          	   \hat{a}_{10}\\
+               \hat{b}_{10}
+             \end{bmatrix} =
+			\begin{bmatrix}
+		\sum\limits_{t=2}^{10}y(t-1)^2 & -\sum\limits_{t=2}^{10}y(t-1)u(t-1) \\
+		-\sum\limits_{t=2}^{10}y(t-1)u(t-1) & \sum\limits_{t=2}^{10}u(t-1)^2	
+			\end{bmatrix}^{-1}
+			\begin{bmatrix}
+			-\sum\limits_{t=2}^{10}y(t-1)y(t) \\
+			\sum\limits_{t=2}^{10}y(t)u(t-1)
+\end{bmatrix}					             
+             $$ 
+
+\end{description}
