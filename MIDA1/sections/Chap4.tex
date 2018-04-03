@@ -170,5 +170,51 @@ $$ 	\begin{bmatrix}
 			\sum\limits_{t=2}^{10}y(t)u(t-1)
 \end{bmatrix}					             
              $$ 
-
+\item[Method 2]\hfill\\
+Consider the predictor $\hat{y}(t|t-1)= bu(t-1)+ay(t-1) $ and the available data.
+Assuming that the predictor makes the \textbf{perfect prediction} on the measured data :
+\[ 
+\begin{cases}
+ -ay(1)+bu(1)=y(2) \\
+ -ay(2)+bu(2)=y(3) \\
+ ...\\
+ -ay(9)+bu(9)=y(10)
+\end{cases}
+\]
+Which can be separated into two matrices:
+$$ 	\Phi = \begin{bmatrix}
+          	  -y(1) & u(1) \\
+              -y(2) & u(2) \\
+              ...   & ...  \\
+              -y(9) & u(9) 
+             \end{bmatrix}
+            Y= \begin{bmatrix}
+             y(2)\\
+             y(3) \\
+             ... \\
+             y(10)
+             \end{bmatrix}$$
+Obtaining a \textbf{linear} system of 9 equations and 2 unknowns :
+\[
+\boxed{\Phi \cdot \theta = Y} 
+\]\newpage
+---------------------------------------------------------------------------------------------------
+\begin{description}
+\item[Remark]\hfill\\
+\begin{itemize}
+\item \textbf{Undetermined linear system}\\
+Number of unknowns > number of equations $\to$ \textbf{infinite solutions}
+\item \textbf{Square linear system}\\
+Number of unknowns = number of equations $\to$ \textbf{1! solution}
+\item \textbf{Over determined linear system}\\
+Number of unknowns < number of equations $\to$ \textbf{No solutions!}
+\end{itemize}
+\end{description}
+---------------------------------------------------------------------------------------------------
+\\Unfortunately our case is the last one with no solutions! In this case a \textbf{least squares} (\textbf{approximate)} solution can be found using the square matrix  :\\ $ \Phi \theta = Y \to \Phi^T \Phi \theta = \Phi^T Y $
+\[
+\boxed{ \hat{\theta} = [\Phi^T \Phi]^{-1} \Phi^T Y} 
+\]
+where $ [\Phi^T \Phi]^{-1} \Phi^T = \Phi^{+} $ is the \textbf{pseudo inverse} of $\Phi$. By creating the matrices above we obtain the \textbf{same} result for 
+$\hat{\theta}$
 \end{description}
