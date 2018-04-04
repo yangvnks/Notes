@@ -185,3 +185,31 @@ It reduces the number of objects visible in the scene producing \textbf{enlarged
 \item  $D \to \infty$\\
 If distance d tends to infinity we obtain \textbf{parallel projections}
 \end{itemize}
+
+As for the parallel projections , also \textbf{perspective projections} can be obtained with a \textbf{matrix-vector product}.As the world coordinate system is oriented  in the \textbf{opposite} direction of the z-axis , the z-coordinates are \textbf{negative} :
+\[
+\boxed{x_s = \frac{d \cdot x}{-z}}
+\]
+\[
+\boxed{y_s = \frac{d \cdot y}{-z}}
+\]
+The projection matrix for perspective with \textbf{center in the origin} and projection plane at distance \textbf{d} on the z-axis:
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.4\linewidth]{persp_mat}
+\end{figure}
+The last row is no longer $|0 0 0 1|$ as per usual : the result is a vector which no longer has component \textbf{w =1}:
+\[
+\boxed{[d\cdot x d\cdot y d\cdot z -z]}
+\]
+To obtain the equivalent Cartesian coordinates we must divide by the w component ( -z ) : 
+$$ [x_s  y_s -d 1] $$
+Now the z-coordinate is always -d  which means that all information about \textbf{distance} is lost $\to$ no proper 3D normalized screen coordinates can be defined.\\
+The solution to not flat the z component is to \textbf{add} an element = 1 in the third row of the fourth column:
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.4\linewidth]{persp_mat_improved}
+\end{figure}
+which leads to normalized screen coordinates :
+$$ |x_s y_s -d-\frac{1}{z} 1|$$
+
