@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  1 APR 2018 13:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  7 APR 2018 19:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -415,20 +415,20 @@ LaTeX Info: Redefining \nameref on input line 53.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.33 ...ntation of MA(n)}{23}{subsubsection.2.1.1}
-                                                   [1])
+l.33 ...ntation of MA(n)}{24}{subsubsection.2.1.1}
+                                                   [1] [2])
 \tf@toc=\write4
 \openout4 = `MIDA1_v1.toc'.
 
- [2]
+ [3]
 (./sections/Intro.tex
-<Pictures/ts_system.png, id=332, 341.275pt x 137.51375pt>
+<Pictures/ts_system.png, id=357, 341.275pt x 137.51375pt>
 File: Pictures/ts_system.png Graphic file (type png)
 
 <use Pictures/ts_system.png>
 Package pdftex.def Info: Pictures/ts_system.png used on input line 22.
 (pdftex.def)             Requested size: 146.38814pt x 58.98708pt.
- <Pictures/ts.png, id=334, 462.528pt x 346.896pt>
+ <Pictures/ts.png, id=359, 462.528pt x 346.896pt>
 File: Pictures/ts.png Graphic file (type png)
 
 <use Pictures/ts.png>
@@ -441,38 +441,38 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 44.
- [3 <./Pictures/ts_system.png> <./Pictures/ts.png>]
-<Pictures/IO.png, id=347, 433.62pt x 152.57pt>
+ [4 <./Pictures/ts_system.png> <./Pictures/ts.png>]
+<Pictures/IO.png, id=371, 433.62pt x 152.57pt>
 File: Pictures/IO.png Graphic file (type png)
  <use Pictures/IO.png>
 Package pdftex.def Info: Pictures/IO.png used on input line 57.
 (pdftex.def)             Requested size: 209.12683pt x 73.58197pt.
 
-<Pictures/IO_control.png, id=348, 788.9475pt x 264.99pt>
+<Pictures/IO_control.png, id=372, 788.9475pt x 264.99pt>
 File: Pictures/IO_control.png Graphic file (type png)
 
 <use Pictures/IO_control.png>
 Package pdftex.def Info: Pictures/IO_control.png used on input line 71.
 (pdftex.def)             Requested size: 250.95476pt x 84.28905pt.
- [4 <./Pictures/IO.png> <./Pictures/IO_control.png>] [5]
+ [5 <./Pictures/IO.png> <./Pictures/IO_control.png>] [6]
 Underfull \hbox (badness 10000) in paragraph at lines 117--121
 
  []
 
-<Pictures/ts_model.png, id=362, 697.60625pt x 259.97125pt>
+<Pictures/ts_model.png, id=387, 697.60625pt x 259.97125pt>
 File: Pictures/ts_model.png Graphic file (type png)
 
 <use Pictures/ts_model.png>
 Package pdftex.def Info: Pictures/ts_model.png used on input line 125.
 (pdftex.def)             Requested size: 146.38814pt x 54.55193pt.
 
-<Pictures/io_model.png, id=363, 695.59875pt x 295.1025pt>
+<Pictures/io_model.png, id=388, 695.59875pt x 295.1025pt>
 File: Pictures/io_model.png Graphic file (type png)
 
 <use Pictures/io_model.png>
 Package pdftex.def Info: Pictures/io_model.png used on input line 130.
 (pdftex.def)             Requested size: 146.38814pt x 62.10393pt.
- [6pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
+ [7pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -485,7 +485,7 @@ l.137 \newpage
                                                   \fi \fi 
 l.137 \newpage
                <./Pictures/ts_model.png> <./Pictures/io_model.png>]
-<Pictures/massmodel.png, id=373, 567.11874pt x 252.945pt>
+<Pictures/massmodel.png, id=397, 567.11874pt x 252.945pt>
 File: Pictures/massmodel.png Graphic file (type png)
 
 <use Pictures/massmodel.png>
@@ -496,34 +496,34 @@ Overfull \hbox (72.94748pt too wide) in paragraph at lines 163--169
  [][] 
  []
 
-[7pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
+[8pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.169 \end{table}
-                  <./Pictures/massmodel.png>] [8pdfTeX warning (ext4): destinat
+                  <./Pictures/massmodel.png>] [9pdfTeX warning (ext4): destinat
 ion with the same identifier (name{table.1}) has been already used, duplicate i
 gnored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.184 ...( v(t_1,S) - m(t_1))(v(t_2,S)-m(t_2))] $$
-                                                  ] [9]
-<Pictures/correlation.png, id=392, 551.05875pt x 266.9975pt>
+                                                  ] [10]
+<Pictures/correlation.png, id=416, 551.05875pt x 266.9975pt>
 File: Pictures/correlation.png Graphic file (type png)
 
 <use Pictures/correlation.png>
 Package pdftex.def Info: Pictures/correlation.png used on input line 214.
 (pdftex.def)             Requested size: 209.12683pt x 101.32565pt.
 
-<Pictures/no_cov.png, id=393, 512.91624pt x 233.87375pt>
+<Pictures/no_cov.png, id=417, 512.91624pt x 233.87375pt>
 File: Pictures/no_cov.png Graphic file (type png)
 
 <use Pictures/no_cov.png>
 Package pdftex.def Info: Pictures/no_cov.png used on input line 228.
 (pdftex.def)             Requested size: 292.77629pt x 133.49854pt.
- [10 <./Pictures/correlation.png> <./Pictures/no_cov.png>]
+ [11 <./Pictures/correlation.png> <./Pictures/no_cov.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 239--240
 
  []
@@ -533,7 +533,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 259--263
 
  []
 
-[11]
+[12]
 Overfull \hbox (38.7143pt too wide) in paragraph at lines 283--285
 \OML/cmm/m/it/12 E\OT1/cmr/m/n/12 [[](\OML/cmm/m/it/12 ^^\\OT1/cmr/m/n/12 )] = 
 \OML/cmm/m/it/12 E\OT1/cmr/m/n/12 [[] [] \OML/cmm/m/it/12 y\OT1/cmr/m/n/12 (\OM
@@ -545,15 +545,15 @@ mr/m/n/12 + \OML/cmm/m/it/12 ^^\\OT1/cmr/m/n/12 )] = [] [] \OML/cmm/m/it/12 ^^M
 \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^\\OT1/cmr/m/n/12 ) =
  []
 
-[12]) [13] (./sections/Chap1.tex
-<Pictures/modelclasses.png, id=418, 911.405pt x 355.3275pt>
+[13]) [14] (./sections/Chap1.tex
+<Pictures/modelclasses.png, id=442, 911.405pt x 355.3275pt>
 File: Pictures/modelclasses.png Graphic file (type png)
 
 <use Pictures/modelclasses.png>
 Package pdftex.def Info: Pictures/modelclasses.png used on input line 15.
 (pdftex.def)             Requested size: 209.12683pt x 81.52841pt.
- [14 <./Pictures/modelclasses.png>]
-<Pictures/movingavg.png, id=424, 964.60374pt x 458.71375pt>
+ [15 <./Pictures/modelclasses.png>]
+<Pictures/movingavg.png, id=448, 964.60374pt x 458.71375pt>
 File: Pictures/movingavg.png Graphic file (type png)
 
 <use Pictures/movingavg.png>
@@ -565,7 +565,7 @@ Overfull \hbox (27.592pt too wide) in paragraph at lines 49--51
  a WN e(t) is an ARMA of or-der (n,m) \OT1/cmr/bx/n/12 ARMA(n,m)
  []
 
-[15pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
+[16pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -586,13 +586,13 @@ n/12 (\OML/cmm/m/it/12 t \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 n\OT1/cmr/m/n/12
  \OML/cmm/m/it/12 k \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 )
  []
 
-<Pictures/armax.png, id=431, 980.66376pt x 580.1675pt>
+<Pictures/armax.png, id=455, 980.66376pt x 580.1675pt>
 File: Pictures/armax.png Graphic file (type png)
 
 <use Pictures/armax.png>
 Package pdftex.def Info: Pictures/armax.png used on input line 68.
 (pdftex.def)             Requested size: 292.77629pt x 173.20172pt.
- [16 <./Pictures/armax.png>]
+ [17 <./Pictures/armax.png>]
 Overfull \hbox (18.77145pt too wide) detected at line 104
 \OML/cmm/m/it/12 y\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) = \OML/c
 mm/m/it/12 a[]Z[]y\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) + \OML/c
@@ -605,14 +605,14 @@ cmm/m/it/12 t\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 c[]e\OT1/cmr/m/n/12 (\OML/cmm
 m/it/12 t\OT1/cmr/m/n/12 )
  []
 
-[17] <Pictures/blockio.png, id=441, 679.53876pt x 219.82124pt>
+[18] <Pictures/blockio.png, id=466, 679.53876pt x 219.82124pt>
 File: Pictures/blockio.png Graphic file (type png)
 
 <use Pictures/blockio.png>
 Package pdftex.def Info: Pictures/blockio.png used on input line 118.
 (pdftex.def)             Requested size: 146.38814pt x 47.35455pt.
 
-<Pictures/blockts.png, id=442, 489.83pt x 206.7725pt>
+<Pictures/blockts.png, id=467, 489.83pt x 206.7725pt>
 File: Pictures/blockts.png Graphic file (type png)
 
 <use Pictures/blockts.png>
@@ -643,7 +643,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 126.
 
-[18 <./Pictures/blockio.png> <./Pictures/blockts.png>]
+[19 <./Pictures/blockio.png> <./Pictures/blockts.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
@@ -658,21 +658,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
-[19] <Pictures/wnsys.png, id=454, 692.5875pt x 190.7125pt>
+[20] <Pictures/wnsys.png, id=479, 692.5875pt x 190.7125pt>
 File: Pictures/wnsys.png Graphic file (type png)
 
 <use Pictures/wnsys.png>
 Package pdftex.def Info: Pictures/wnsys.png used on input line 157.
 (pdftex.def)             Requested size: 167.2989pt x 46.06584pt.
 
-<Pictures/disstab.png, id=455, 550.055pt x 463.7325pt>
+<Pictures/disstab.png, id=480, 550.055pt x 463.7325pt>
 File: Pictures/disstab.png Graphic file (type png)
 
 <use Pictures/disstab.png>
 Package pdftex.def Info: Pictures/disstab.png used on input line 171.
 (pdftex.def)             Requested size: 146.38814pt x 123.41214pt.
 
-<Pictures/contstab.png, id=456, 542.025pt x 425.59pt>
+<Pictures/contstab.png, id=481, 542.025pt x 425.59pt>
 File: Pictures/contstab.png Graphic file (type png)
 
 <use Pictures/contstab.png>
@@ -683,12 +683,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--177
 
  []
 
-[20 <./Pictures/wnsys.png> <./Pictures/disstab.png> <./Pictures/contstab.png>]
+[21 <./Pictures/wnsys.png> <./Pictures/disstab.png> <./Pictures/contstab.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 181--182
 
  []
 
-<Pictures/stabex.png, id=464, 690.58pt x 354.32375pt>
+<Pictures/stabex.png, id=489, 690.58pt x 354.32375pt>
 File: Pictures/stabex.png Graphic file (type png)
 
 <use Pictures/stabex.png>
@@ -703,12 +703,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 209--210
 
  []
 
-[21 <./Pictures/stabex.png>]
+[22 <./Pictures/stabex.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 217--218
 
  []
 
-) [22] (./sections/Chap2.tex
+) [23] (./sections/Chap2.tex
 Underfull \hbox (badness 10000) in paragraph at lines 21--24
 
  []
@@ -728,7 +728,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
  []
 
-[23]
+[24]
 Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
@@ -753,7 +753,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--73
 
  []
 
-[24]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
@@ -778,7 +778,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
-[25] <Pictures/stableplot.png, id=493, 921.4425pt x 484.81125pt>
+[26] <Pictures/stableplot.png, id=517, 921.4425pt x 484.81125pt>
 File: Pictures/stableplot.png Graphic file (type png)
 
 <use Pictures/stableplot.png>
@@ -789,7 +789,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--108
 
  []
 
-<Pictures/unstableplot.png, id=494, 936.49875pt x 472.76625pt>
+<Pictures/unstableplot.png, id=518, 936.49875pt x 472.76625pt>
 File: Pictures/unstableplot.png Graphic file (type png)
 
 <use Pictures/unstableplot.png>
@@ -812,19 +812,19 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 115.
 
-[26 <./Pictures/stableplot.png> <./Pictures/unstableplot.png>]
+[27 <./Pictures/stableplot.png> <./Pictures/unstableplot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 149--151
 
  []
 
-<Pictures/varspec.png, id=501, 614.295pt x 378.41376pt>
+<Pictures/varspec.png, id=525, 614.295pt x 378.41376pt>
 File: Pictures/varspec.png Graphic file (type png)
 
 <use Pictures/varspec.png>
 Package pdftex.def Info: Pictures/varspec.png used on input line 160.
 (pdftex.def)             Requested size: 209.12683pt x 128.82642pt.
- [27] [28 <./Pictures/varspec.png>]
-<Pictures/unpredic.png, id=515, 1000.73875pt x 395.4775pt>
+ [28] [29 <./Pictures/varspec.png>]
+<Pictures/unpredic.png, id=539, 1000.73875pt x 395.4775pt>
 File: Pictures/unpredic.png Graphic file (type png)
 
 <use Pictures/unpredic.png>
@@ -835,27 +835,27 @@ File: Pictures/no_cov.png Graphic file (type png)
 Package pdftex.def Info: Pictures/no_cov.png used on input line 178.
 (pdftex.def)             Requested size: 167.2989pt x 76.28284pt.
 
-<Pictures/ftwn.png, id=516, 618.31pt x 399.4925pt>
+<Pictures/ftwn.png, id=540, 618.31pt x 399.4925pt>
 File: Pictures/ftwn.png Graphic file (type png)
  <use Pictures/ftwn.png>
 Package pdftex.def Info: Pictures/ftwn.png used on input line 187.
 (pdftex.def)             Requested size: 167.2989pt x 108.08995pt.
 
-[29 <./Pictures/unpredic.png> <./Pictures/ftwn.png>]
-<Pictures/tf_fr.png, id=526, 947.54pt x 517.935pt>
+[30 <./Pictures/unpredic.png> <./Pictures/ftwn.png>]
+<Pictures/tf_fr.png, id=551, 947.54pt x 517.935pt>
 File: Pictures/tf_fr.png Graphic file (type png)
  <use Pictures/tf_fr.png>
 Package pdftex.def Info: Pictures/tf_fr.png used on input line 201.
 (pdftex.def)             Requested size: 125.47737pt x 68.58258pt.
 
-[30 <./Pictures/tf_fr.png>]
-<Pictures/FRgraph.png, id=533, 718.685pt x 562.1pt>
+[31 <./Pictures/tf_fr.png>]
+<Pictures/FRgraph.png, id=557, 718.685pt x 562.1pt>
 File: Pictures/FRgraph.png Graphic file (type png)
  <use Pictures/FRgraph.png>
 Package pdftex.def Info: Pictures/FRgraph.png used on input line 220.
 (pdftex.def)             Requested size: 167.2989pt x 130.84985pt.
 
-<Pictures/nqplot.png, id=534, 592.2125pt x 393.47pt>
+<Pictures/nqplot.png, id=558, 592.2125pt x 393.47pt>
 File: Pictures/nqplot.png Graphic file (type png)
  <use Pictures/nqplot.png>
 Package pdftex.def Info: Pictures/nqplot.png used on input line 227.
@@ -865,41 +865,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--228
 
  []
 
-[31 <./Pictures/FRgraph.png> <./Pictures/nqplot.png>]
-<Pictures/bodeplot.png, id=541, 557.08125pt x 413.545pt>
+[32 <./Pictures/FRgraph.png> <./Pictures/nqplot.png>]
+<Pictures/bodeplot.png, id=565, 557.08125pt x 413.545pt>
 File: Pictures/bodeplot.png Graphic file (type png)
 
 <use Pictures/bodeplot.png>
 Package pdftex.def Info: Pictures/bodeplot.png used on input line 234.
 (pdftex.def)             Requested size: 167.2989pt x 124.19064pt.
 
-<Pictures/domainscheme.png, id=542, 473.77pt x 373.395pt>
+<Pictures/domainscheme.png, id=566, 473.77pt x 373.395pt>
 File: Pictures/domainscheme.png Graphic file (type png)
 
 <use Pictures/domainscheme.png>
 Package pdftex.def Info: Pictures/domainscheme.png used on input line 271.
 (pdftex.def)             Requested size: 167.2989pt x 131.85251pt.
- [32 <./Pictures/bodeplot.png>]
-<Pictures/ex1_q.png, id=552, 937.5025pt x 560.0925pt>
+ [33 <./Pictures/bodeplot.png>]
+<Pictures/ex1_q.png, id=576, 937.5025pt x 560.0925pt>
 File: Pictures/ex1_q.png Graphic file (type png)
  <use Pictures/ex1_q.png>
 Package pdftex.def Info: Pictures/ex1_q.png used on input line 281.
 (pdftex.def)             Requested size: 167.2989pt x 99.94911pt.
 
-<Pictures/ex1_s.png, id=553, 928.46875pt x 622.325pt>
+<Pictures/ex1_s.png, id=577, 928.46875pt x 622.325pt>
 File: Pictures/ex1_s.png Graphic file (type png)
  <use Pictures/ex1_s.png>
 Package pdftex.def Info: Pictures/ex1_s.png used on input line 285.
 (pdftex.def)             Requested size: 167.2989pt x 112.12761pt.
 
-[33pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
+[34pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.288 \newpage
                <./Pictures/domainscheme.png> <./Pictures/ex1_q.png> <./Pictures
-/ex1_s.png>] <Pictures/ex2_g.png, id=562, 929.4725pt x 351.3125pt>
+/ex1_s.png>] <Pictures/ex2_g.png, id=586, 929.4725pt x 351.3125pt>
 File: Pictures/ex2_g.png Graphic file (type png)
 
 <use Pictures/ex2_g.png>
@@ -910,14 +910,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
 
-<Pictures/ex2_p.png, id=563, 950.55125pt x 436.63126pt>
+<Pictures/ex2_p.png, id=587, 950.55125pt x 436.63126pt>
 File: Pictures/ex2_p.png Graphic file (type png)
 
 <use Pictures/ex2_p.png>
 Package pdftex.def Info: Pictures/ex2_p.png used on input line 323.
 (pdftex.def)             Requested size: 292.77629pt x 134.4815pt.
- [34 <./Pictures/ex2_g.png>] [35 <./Pictures/ex2_p.png>] <Pictures/ex3_g.png, i
-d=574, 642.4pt x 285.065pt>
+ [35 <./Pictures/ex2_g.png>] [36 <./Pictures/ex2_p.png>] <Pictures/ex3_g.png, i
+d=599, 642.4pt x 285.065pt>
 File: Pictures/ex3_g.png Graphic file (type png)
  <use Pictures/ex3_g.png>
 Package pdftex.def Info: Pictures/ex3_g.png used on input line 333.
@@ -937,12 +937,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 364--368
 
  []
 
-[36 <./Pictures/ex3_g.png>]
+[37 <./Pictures/ex3_g.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 369--370
 
  []
 
-<Pictures/ex4_g.png, id=581, 411.5375pt x 220.825pt>
+<Pictures/ex4_g.png, id=605, 411.5375pt x 220.825pt>
 File: Pictures/ex4_g.png Graphic file (type png)
  <use Pictures/ex4_g.png>
 Package pdftex.def Info: Pictures/ex4_g.png used on input line 376.
@@ -952,20 +952,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 373--377
 
  []
 
-<Pictures/ex4_g2.png, id=582, 539.01375pt x 328.22626pt>
+<Pictures/ex4_g2.png, id=606, 539.01375pt x 328.22626pt>
 File: Pictures/ex4_g2.png Graphic file (type png)
 
 <use Pictures/ex4_g2.png>
 Package pdftex.def Info: Pictures/ex4_g2.png used on input line 382.
 (pdftex.def)             Requested size: 167.2989pt x 101.87428pt.
 
-<Pictures/ex4_g3.png, id=583, 561.09625pt x 254.9525pt>
+<Pictures/ex4_g3.png, id=607, 561.09625pt x 254.9525pt>
 File: Pictures/ex4_g3.png Graphic file (type png)
 
 <use Pictures/ex4_g3.png>
 Package pdftex.def Info: Pictures/ex4_g3.png used on input line 386.
 (pdftex.def)             Requested size: 167.2989pt x 76.01561pt.
- [37 <./Pictures/ex4_g.png> <./Pictures/ex4_g2.png> <./Pictures/ex4_g3.png>]
+ [38 <./Pictures/ex4_g.png> <./Pictures/ex4_g2.png> <./Pictures/ex4_g3.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 393--394
 
  []
@@ -975,8 +975,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 395--402
 
  []
 
-[38]) [39] (./sections/Chap3.tex
-<Pictures/prediction.png, id=599, 945.5325pt x 436.63126pt>
+[39]) [40] (./sections/Chap3.tex
+<Pictures/prediction.png, id=623, 945.5325pt x 436.63126pt>
 File: Pictures/prediction.png Graphic file (type png)
 
 <use Pictures/prediction.png>
@@ -987,45 +987,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-[40 <./Pictures/prediction.png>]
+[41 <./Pictures/prediction.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 29--32
 
  []
 
-<Pictures/allpass.png, id=611, 686.565pt x 476.78125pt>
+<Pictures/allpass.png, id=636, 686.565pt x 476.78125pt>
 File: Pictures/allpass.png Graphic file (type png)
 
 <use Pictures/allpass.png>
 Package pdftex.def Info: Pictures/allpass.png used on input line 48.
 (pdftex.def)             Requested size: 250.95476pt x 174.26741pt.
 
-<Pictures/armaxallpass.png, id=612, 955.57pt x 429.605pt>
+<Pictures/armaxallpass.png, id=637, 955.57pt x 429.605pt>
 File: Pictures/armaxallpass.png Graphic file (type png)
 
 <use Pictures/armaxallpass.png>
 Package pdftex.def Info: Pictures/armaxallpass.png used on input line 52.
 (pdftex.def)             Requested size: 209.12683pt x 94.01518pt.
- [41 <./Pictures/allpass.png>]
+ [42 <./Pictures/allpass.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
-[42 <./Pictures/armaxallpass.png>]
-<Pictures/canonical.png, id=629, 1015.795pt x 308.15125pt>
+[43 <./Pictures/armaxallpass.png>]
+<Pictures/canonical.png, id=653, 1015.795pt x 308.15125pt>
 File: Pictures/canonical.png Graphic file (type png)
 
 <use Pictures/canonical.png>
 Package pdftex.def Info: Pictures/canonical.png used on input line 83.
 (pdftex.def)             Requested size: 209.12683pt x 63.43942pt.
 
-<Pictures/remark_simple.png, id=630, 643.40375pt x 383.4325pt>
+<Pictures/remark_simple.png, id=654, 643.40375pt x 383.4325pt>
 File: Pictures/remark_simple.png Graphic file (type png)
 
 <use Pictures/remark_simple.png>
 Package pdftex.def Info: Pictures/remark_simple.png used on input line 100.
 (pdftex.def)             Requested size: 209.12683pt x 124.62578pt.
- [43 <./Pictures/canonical.png>] [44 <./Pictures/remark_simple.png>]
-<Pictures/predictoropt.png, id=641, 925.4575pt x 251.94125pt>
+ [44 <./Pictures/canonical.png>] [45 <./Pictures/remark_simple.png>]
+<Pictures/predictoropt.png, id=665, 925.4575pt x 251.94125pt>
 File: Pictures/predictoropt.png Graphic file (type png)
 
 <use Pictures/predictoropt.png>
@@ -1041,7 +1041,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--147
 
  []
 
-[45 <./Pictures/predictoropt.png>]
+[46 <./Pictures/predictoropt.png>]
 Overfull \hbox (22.04268pt too wide) detected at line 170
 []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 t \OMS/
 cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1) = (1 + \OML/cmm/m/it/12 c[]Z[] \OT1/cmr/m/n/
@@ -1052,13 +1052,13 @@ S/cmsy/m/n/12 ! []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OMS/cmsy/m/n/12 j\OML/cmm
 mr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )
  []
 
-<Pictures/mapredictor.png, id=649, 1021.8175pt x 364.36125pt>
+<Pictures/mapredictor.png, id=673, 1021.8175pt x 364.36125pt>
 File: Pictures/mapredictor.png Graphic file (type png)
 
 <use Pictures/mapredictor.png>
 Package pdftex.def Info: Pictures/mapredictor.png used on input line 177.
 (pdftex.def)             Requested size: 209.12683pt x 74.56667pt.
- [46 <./Pictures/mapredictor.png>]
+ [47 <./Pictures/mapredictor.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 183--187
 
  []
@@ -1073,7 +1073,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
-<Pictures/poldivision.png, id=655, 939.51pt x 714.67pt>
+<Pictures/poldivision.png, id=679, 939.51pt x 714.67pt>
 File: Pictures/poldivision.png Graphic file (type png)
 
 <use Pictures/poldivision.png>
@@ -1084,22 +1084,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 203--211
 
  []
 
-[47]
+[48]
 Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
-[48 <./Pictures/poldivision.png>]
+[49 <./Pictures/poldivision.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 236--237
 
  []
 
-[49]
+[50]
 Underfull \hbox (badness 10000) in paragraph at lines 289--290
 
  []
 
-[50]
+[51]
 Underfull \hbox (badness 10000) in paragraph at lines 304--305
 
  []
@@ -1109,14 +1109,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 314--316
 
  []
 
-[51] [52] [53] <Pictures/ex_division.png, id=688, 752.8125pt x 529.98pt>
+[52] [53] [54] <Pictures/ex_division.png, id=713, 752.8125pt x 529.98pt>
 File: Pictures/ex_division.png Graphic file (type png)
 
 <use Pictures/ex_division.png>
 Package pdftex.def Info: Pictures/ex_division.png used on input line 357.
 (pdftex.def)             Requested size: 209.12683pt x 147.22078pt.
- [54 <./Pictures/ex_division.png>]
-<Pictures/ex_vark.png, id=696, 971.63pt x 486.81876pt>
+ [55 <./Pictures/ex_division.png>]
+<Pictures/ex_vark.png, id=720, 971.63pt x 486.81876pt>
 File: Pictures/ex_vark.png Graphic file (type png)
 
 <use Pictures/ex_vark.png>
@@ -1127,59 +1127,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 386--389
 
  []
 
-<Pictures/ex_poles.png, id=697, 501.875pt x 335.2525pt>
+<Pictures/ex_poles.png, id=721, 501.875pt x 335.2525pt>
 File: Pictures/ex_poles.png Graphic file (type png)
 
 <use Pictures/ex_poles.png>
 Package pdftex.def Info: Pictures/ex_poles.png used on input line 393.
 (pdftex.def)             Requested size: 125.47737pt x 83.81802pt.
 
-<Pictures/ex_spectrum.png, id=698, 615.29875pt x 351.3125pt>
+<Pictures/ex_spectrum.png, id=722, 615.29875pt x 351.3125pt>
 File: Pictures/ex_spectrum.png Graphic file (type png)
 
 <use Pictures/ex_spectrum.png>
 Package pdftex.def Info: Pictures/ex_spectrum.png used on input line 397.
 (pdftex.def)             Requested size: 188.21286pt x 107.45837pt.
- [55 <./Pictures/ex_vark.png>]
+ [56 <./Pictures/ex_vark.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 413--414
 
  []
 
-[56 <./Pictures/ex_poles.png> <./Pictures/ex_spectrum.png>]
+[57 <./Pictures/ex_poles.png> <./Pictures/ex_spectrum.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 421--422
 
  []
 
-[57]
+[58]
 Underfull \hbox (badness 10000) in paragraph at lines 439--443
 
  []
 
-<Pictures/ex_division2.png, id=716, 667.49374pt x 380.42125pt>
+<Pictures/ex_division2.png, id=740, 667.49374pt x 380.42125pt>
 File: Pictures/ex_division2.png Graphic file (type png)
 
 <use Pictures/ex_division2.png>
 Package pdftex.def Info: Pictures/ex_division2.png used on input line 455.
 (pdftex.def)             Requested size: 209.12683pt x 119.18318pt.
- [58 <./Pictures/ex_division2.png>]
+ [59 <./Pictures/ex_division2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 472--475
 
  []
 
-[59] <Pictures/ex_division3.png, id=726, 797.98125pt x 393.47pt>
+[60] <Pictures/ex_division3.png, id=751, 797.98125pt x 393.47pt>
 File: Pictures/ex_division3.png Graphic file (type png)
 
 <use Pictures/ex_division3.png>
 Package pdftex.def Info: Pictures/ex_division3.png used on input line 513.
 (pdftex.def)             Requested size: 209.12683pt x 103.1163pt.
 
-<Pictures/ex_varplot.png, id=727, 953.5625pt x 392.46625pt>
+<Pictures/ex_varplot.png, id=752, 953.5625pt x 392.46625pt>
 File: Pictures/ex_varplot.png Graphic file (type png)
 
 <use Pictures/ex_varplot.png>
 Package pdftex.def Info: Pictures/ex_varplot.png used on input line 523.
 (pdftex.def)             Requested size: 209.12683pt x 86.07335pt.
- [60 <./Pictures/ex_division3.png>]
+ [61 <./Pictures/ex_division3.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 525--527
 
  []
@@ -1194,17 +1194,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 550--553
 
  []
 
-[61 <./Pictures/ex_varplot.png>]
+[62 <./Pictures/ex_varplot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 563--566
 
  []
 
-) [62] (./sections/Chap4.tex
+) [63] (./sections/Chap4.tex
 Underfull \hbox (badness 10000) in paragraph at lines 21--24
 
  []
 
-[63] <Pictures/quadratic.png, id=750, 684.5575pt x 249.93375pt>
+[64] <Pictures/quadratic.png, id=775, 684.5575pt x 249.93375pt>
 File: Pictures/quadratic.png Graphic file (type png)
 
 <use Pictures/quadratic.png>
@@ -1215,7 +1215,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--34
 
  []
 
-<Pictures/n_quadratic.png, id=751, 762.85pt x 369.38pt>
+<Pictures/n_quadratic.png, id=776, 762.85pt x 369.38pt>
 File: Pictures/n_quadratic.png Graphic file (type png)
 
 <use Pictures/n_quadratic.png>
@@ -1231,7 +1231,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
-<Pictures/n_quadratic_local.png, id=752, 734.745pt x 359.3425pt>
+<Pictures/n_quadratic_local.png, id=777, 734.745pt x 359.3425pt>
 File: Pictures/n_quadratic_local.png Graphic file (type png)
 
 <use Pictures/n_quadratic_local.png>
@@ -1242,8 +1242,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--47
 
  []
 
-[64 <./Pictures/quadratic.png> <./Pictures/n_quadratic.png>] [65 <./Pictures/n_
-quadratic_local.png>] [66]
+[65 <./Pictures/quadratic.png> <./Pictures/n_quadratic.png>] [66 <./Pictures/n_
+quadratic_local.png>] [67]
 Underfull \hbox (badness 10000) in paragraph at lines 121--123
 
  []
@@ -1253,25 +1253,77 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
-[67]
+[68]
 Overfull \hbox (14.26004pt too wide) detected at line 172
 [] \OT1/cmr/m/n/12 = [][] []
  []
 
-[68]
+[69]
 Underfull \hbox (badness 10000) in paragraph at lines 203--204
+
+ []
+
+[70] [71] [72] <Pictures/iterative.png, id=817, 929.4725pt x 607.26875pt>
+File: Pictures/iterative.png Graphic file (type png)
+
+<use Pictures/iterative.png>
+Package pdftex.def Info: Pictures/iterative.png used on input line 267.
+(pdftex.def)             Requested size: 209.12683pt x 136.62956pt.
+ [73]
+<Pictures/iterative_minima.png, id=822, 887.315pt x 568.1225pt>
+File: Pictures/iterative_minima.png Graphic file (type png)
+
+<use Pictures/iterative_minima.png>
+Package pdftex.def Info: Pictures/iterative_minima.png used on input line 272.
+(pdftex.def)             Requested size: 209.12683pt x 133.89023pt.
+
+<Pictures/newton.png, id=823, 956.57375pt x 655.44875pt>
+File: Pictures/newton.png Graphic file (type png)
+
+<use Pictures/newton.png>
+Package pdftex.def Info: Pictures/newton.png used on input line 280.
+(pdftex.def)             Requested size: 250.95476pt x 171.95285pt.
+ [74 <./Pictures/iterative.png> <./Pictures/iterative_minima.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
+
+ []
+
+[75 <./Pictures/newton.png>]
+<Pictures/hessian.png, id=835, 945.5325pt x 622.325pt>
+File: Pictures/hessian.png Graphic file (type png)
+
+<use Pictures/hessian.png>
+Package pdftex.def Info: Pictures/hessian.png used on input line 310.
+(pdftex.def)             Requested size: 250.95476pt x 165.17172pt.
+ [76 <./Pictures/hessian.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--335
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--337
 
  []
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 107.
- [69]
+ [77]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 107.
  (./MIDA1_v1.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 107.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 107.
 Package rerunfilecheck Info: File `MIDA1_v1.out' has not changed.
-(rerunfilecheck)             Checksum: 67C230FD7B643CE8E68EDAC83B54D862;4844.
+(rerunfilecheck)             Checksum: A43D0912DC2DDD96465764AA3069015F;5176.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1279,10 +1331,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 107.
  ) 
 Here is how much of TeX's memory you used:
- 7399 strings out of 493014
- 107635 string characters out of 6133351
+ 7438 strings out of 493014
+ 108352 string characters out of 6133351
  302578 words of memory out of 5000000
- 10609 multiletter control sequences out of 15000+600000
+ 10629 multiletter control sequences out of 15000+600000
  10797 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,14n,38p,508b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1300,10 +1352,10 @@ live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texliv
 e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on MIDA1_v1.pdf (70 pages, 2210495 bytes).
+Output written on MIDA1_v1.pdf (78 pages, 2408172 bytes).
 PDF statistics:
- 872 PDF objects out of 1000 (max. 8388607)
- 671 compressed objects within 7 object streams
- 186 named destinations out of 1000 (max. 500000)
- 759 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 941 PDF objects out of 1000 (max. 8388607)
+ 723 compressed objects within 8 object streams
+ 201 named destinations out of 1000 (max. 500000)
+ 811 words of extra memory for PDF output out of 10000 (max. 10000000)
 

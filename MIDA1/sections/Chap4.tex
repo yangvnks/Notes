@@ -52,7 +52,7 @@ In this case the function has local minima so using an \textbf{iterative algorit
 The validation step checks if $m(\hat{\theta})$ can be considered a \textbf{valid} model for our purposes. Usually a technique called \textbf{cross-validation} is used.
 \end{enumerate}
 
-
+\newpage
 \subsection{Identification of ARX models}
 Given an available dataset of length N :
 $$ \{ u(1),u(2),...,u(N)\}$$
@@ -197,7 +197,7 @@ $$ 	\Phi = \begin{bmatrix}
 Obtaining a \textbf{linear} system of 9 equations and 2 unknowns :
 \[
 \boxed{\Phi \cdot \theta = Y} 
-\]\newpage
+\]
 ---------------------------------------------------------------------------------------------------
 \begin{description}
 \item[Remark]\hfill\\
@@ -218,3 +218,128 @@ Number of unknowns < number of equations $\to$ \textbf{No solutions!}
 where $ [\Phi^T \Phi]^{-1} \Phi^T = \Phi^{+} $ is the \textbf{pseudo inverse} of $\Phi$. By creating the matrices above we obtain the \textbf{same} result for 
 $\hat{\theta}$
 \end{description}
+
+\subsubsection{Example 2}
+Assume a dataset of 5 points collected from an SSP with zero mean.
+$ y(1)= \frac{1}{2}, y(2) = 0 , y(3) = -1 , y(4) = -\frac{1}{2}, y(5)= \frac{1}{4}$
+and we want to make a prediction $ \hat{y}(6|5) $
+\begin{description}
+\item[1.Build the model]\hfill\\
+We selected a class of model \textbf{AR(1)} (reason discussed further on ).
+$$ y(t) = ay(t-1)+e(t) e(t) \sim WN(0,\lambda^2)$$ is our $ m(\theta) $.
+Transforming $ \to y(t) = \frac{1}{1-aZ^{-1}}e(t) $ which is in canonical representation if $|a<1|$.
+The corresponding k=1 predictor is $$ \hat{y}(t|t-1) =\frac{C(Z) - A(Z)}{C(Z)}y(t) \to \hat{y}(t|t-1) = ay(t-1) $$ with \textbf{performance index}:
+$$ J_5(a)= \frac{1}{4} \sum\limits_{t=2}^{5} (y(t) -ay(t-1))^2$$
+After some easy computation we find that $ J_5(a) = \frac{1}{4}[\frac{3}{2}a^2 -\frac{3}{4}a+\frac{21}{16}]$ which is the measure to be \textbf{minimized}:
+$$ \frac{\partial{J_5(a)}}{\partial{a}}= \frac{1}{4}[3a-\frac{3}{4}]=0$$
+Which has solution $$ \hat{a}_5=\frac{1}{4}$$ So best model identified in AR(1) class is : 
+\[
+\boxed{y(t) = \frac{1}{1-\frac{1}{4}Z^{-1}}e(t)}
+\]
+\item[2.Compute prediction]\hfill\\
+$ \hat{y}(6|5) = \frac{1}{4}y(5) = \frac{1}{16}$
+\item[3. First remark]\hfill\\
+Is $\hat{a}= \frac{1}{4}$ fine?Yes , it hold the condition that $|a|<1$.\\
+What if $\hat{a}=4$? In that case we have to find the \textbf{canonical form} of the system.
+\item[4. Second remark]\hfill\\
+The variance of the white noise $\lambda^2$ is not required for the model and prediction estimation.  If we wanted to estimate also $\lambda^2$ and not only a (which still is the most important parameter to estimate):
+$$ \lambda^2 = var[e(t)] \to var[\epsilon(t)]$$
+Using an \textbf{approximate estimation} using the 5 available data points :
+$$ \hat{\lambda_{5}^2} = J_5(\hat{a}_5)$$
+\end{description}
+\newpage
+\subsection{Identification of ARMAX models}
+While ARX model estimation relies on \textit{least squared method} , ARMAX model estimation relies on \textbf{maximum likelihood}.\\
+Given the available N-long data vector \textbf{u} and \textbf{y} , the model class is $m(\theta): y(t) = \frac{B(Z)}{A(Z)}u(t-1) + \frac{C(Z)}{A(Z)}e(t)$ where 
+$$A(Z) = 1+ ...+a_mZ^{-m} $$
+$$B(Z) = b_0+...+b_pZ^{-p}$$
+$$C(Z) = 1+...+c_nZ^{-n}$$
+and working under the hypothesis that $\frac{C(Z)}{A(Z)}$ is in \textbf{canonical representation} $\to$ \textbf{ARMAX(m,n,p+1)} where k=1 is \textbf{not} a restriction but indeed the \textbf{most general case}.\\
+Using the P.E.M. approach : $$ \hat{\theta} = argmin_{\theta}=\{J_N(\theta)\}$$
+with performance index $$J_N(\theta) = \frac{1}{N} \sum\limits_{t=1}^{N}(y(t)-\hat{y}(t|t-1,\theta))^2$$ where the parameter vector has dimension $n_{\theta}=m+n+p+1$: $$ \theta =[a_1,...,a_m,b_0,...b_p,c_1,...,c_m]^T $$
+Since k=1 $\epsilon(t)= e(t)= \frac{A(Z)}{C(Z)}y(t)-\frac{B(Z)}{C(Z)}u(t-1)$ so the performance index $$ J_N(\theta) = \frac{1}{N} \sum\limits_{t=1}^{N}(\frac{A(Z)}{c(Z)}y(t) -  \frac{B(Z)}{C(Z)}u(t-1))^2$$
+This performance index is now an issue as it kills the optimisation : C(Z) is a \textbf{non-linear} function of $\theta$ so it is not a quadratic function of $\theta$. So the \textbf{minimization} requires an \textbf{iterative approach}.
+
+\subsubsection{Loss function :Maximum Likelihood Method}
+The \textbf{iterative} loss function of ARMAX models starts from an initial condition $\theta^1 \to \theta^2...\to \hat{\theta}_N$  until a final solution is reached
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.5\linewidth]{iterative.png}
+\end{figure}
+Unfortunately usually $J_N(\theta)$ has lots of \textbf{local minima}:
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.5\linewidth]{iterative_minima.png}
+\end{figure}
+To attenuate this disturbance many \textbf{different} initial conditions  $\theta^1$ should me used , each time trying to reach the best solution. The problem is that there is no \textbf{theoretical guarantee} that solution converges to the global minimum.\\
+The key problem for iterative methods is building the \textbf{step} : 
+$$ \theta^i \to \theta^{i+1} $$.
+The basic idea is to compute the \textbf{local quadratic approximation} of $J_N(\theta)$ around the point $\theta^i$ and \textbf{minimize the local approximation} using the \textbf{Newton method} 
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.6\linewidth]{newton.png}
+\end{figure}
+Using \textbf{Taylor's expansion} around $\theta^i$:
+$$\gamma(\theta)=  J_N(\theta^i) + \left[\left. \frac{\partial{J_N(\theta)}}{\partial{\theta}}\right|_{\theta^i} \right](\theta-\theta^i)+ \frac{1}{2}(\theta-\theta^i)^T\left[\left. \frac{\partial^2{J_N(\theta)}}{\partial^2{\theta}}\right|_{\theta^i} \right](\theta-\theta^i)...$$
+Minimizing the function $\gamma(\theta) \to \frac{\partial{\gamma(\theta)}}{\partial{\theta}}=0$:
+$$  \left[\left. \frac{\partial{J_N(\theta)}}{\partial{\theta}}\right|_{\theta^i} \right] + \frac{1}{2} \cdot 2 \left[\left. \frac{\partial^2{J_N(\theta)}}{\partial^2{\theta}}\right|_{\theta^i} \right] (\theta - \theta^i) =0$$
+
+\[
+ \boxed{\theta  = \theta^i -  \left[\left. \frac{\partial^2{J_N(\theta)}}{\partial^2{\theta}}\right|_{\theta^i} \right]^{-1} \cdot  \left[\left. \frac{\partial{J_N(\theta)}}{\partial{\theta}}\right|_{\theta^i} \right]}
+\]
+Where the first is matrix is the inverse of the second order derivative ( \textbf{Hessian Matrix} ) of $J_N(\theta)$ around $\theta^i$ and the second matrix is the first order (\textbf{Gradient Vector}) of $J_N(\theta)$ around $\theta^i$.
+\begin{itemize}
+\item \textbf{Gradient vector}\\
+ $$\frac{\partial{J_N(\theta)}}{\partial{\theta}} = \frac{2}{N}\sum\limits_{t=1}^{N}\epsilon(t) \cdot \frac{\partial{\epsilon(t)}}{\partial{\theta}}$$
+ \item \textbf{Hessian matrix}\\
+$$\frac{\partial^2{J_N(\theta)}}{\partial^2{\theta}}= \frac{2}{N}\sum\limits_{t=1}^{N} \frac{\partial{\epsilon(t)}}{\partial{\theta}} \cdot \frac{\partial{\epsilon(t)}}{\partial{\theta}}^T + \frac{2}{N}\sum\limits_{t=1}^{N}\epsilon(t)\frac{\partial^2{\epsilon(t)}}{\partial{\theta^2}}$$
+Which can be approximated to :
+$$\frac{\partial^2{J_N(\theta)}}{\partial^2{\theta}}= \frac{2}{N}\sum\limits_{t=1}^{N} \frac{\partial{\epsilon(t)}}{\partial{\theta}} \cdot \frac{\partial{\epsilon(t)}}{\partial{\theta}}^T $$
+The approximation holds because of three reasons:
+\begin{enumerate}
+\item \textbf{Reason}\\
+We can compute the Hessian using only $\frac{\partial{\epsilon(t)}}{\partial{\theta}}$ without the burden of computing $\frac{\partial^2{\epsilon(t)}}{\partial{\theta}^2} $
+\item \textbf{Reason}\\
+Since $\epsilon(t,\theta)= y(t) - \hat{y}(t|t-1;\theta)$ notice that $\frac{\partial^2{\epsilon(t)}}{\partial{\theta}^2} $ does \textbf{not} depend on y(t) but only on $\hat{y}(t|t-1;\theta) \to y(t-1),y(t-2),...$.\\
+Moreover if $\theta^i$ is close to the \textbf{optimum} , $\epsilon(t;\theta) \approx e(t)$. So under these assumptions $\epsilon(t;\theta^i)$ and $\left. \frac{\partial^2{\epsilon(t)}}{\partial{\theta}^2} \right|_{\theta^i}$ are \textbf{uncorrelated} (orthogonal).
+\item \textbf{Reason}\\
+By neglecting the second Hessian term we can guarantee that the approximation is \textbf{semi-definite positive } $(\geq 0)$
+\end{enumerate}
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.6\linewidth]{hessian}
+\end{figure}
+In conclusion the approximation \textbf{guarantees} that the updating step always goes in the \textbf{right direction!}
+\end{itemize}
+The final updating rule is :
+\[
+\boxed{\theta^{i+1} = \theta^i - \left[ \sum\limits_{t=1}^{N} \frac{\partial \epsilon(t;\theta^i)}{\partial{\theta}} \cdot \frac{\partial \epsilon(t;\theta^i)^T}{\partial{\theta}} \right]^{-1} \cdot  \left[ \sum\limits_{t=1}^{N} \epsilon(t;\theta) \cdot \frac{\partial \epsilon(t;\theta^i)}{\partial{\theta}} \right]}
+\]
+
+How to calculate $\frac{\partial \epsilon(t;\theta)}{\partial{\theta}}$?\\
+$$\epsilon(t,\theta)= \frac{A(Z)}{C(Z)}y(t) - \frac{B(Z)}{C(Z)}u(t-1)$$
+
+
+\subsubsection{Possible updating rules}
+There are different \textbf{updating rules} which have all the same general expression : 
+\[
+\boxed{\theta^{i+1} = \theta^i - \bigcirc  \cdot \left[ \frac{\partial{J_N(\theta)}}{\partial{\theta}}\right]}
+\] 
+
+\begin{itemize}
+\item \textbf{Gradient method}\\
+$$ \bigcirc = \mu $$  $\mu$ is a scalar number called \textbf{step}.
+Characteristics :\\
++ simplest method\\
++ correct direction \textbf{guaranteed}\\
+- slow when near to minimum\\
+- sensitive to choice of $\mu$ (too small = slow, too big = instability)\\
+This method is the backpropagation rule in NN.
+\item \textbf{Newton method}\\
+$$ \bigcirc = \text{Inverse of hessian matrix of performance index} $$ 
+\item \textbf{Quasi- Newton method}\\
+$$ \bigcirc = \text{Inverse of} \geq \text{approximation of the Hessian} $$ 
+This is the one seen in 4.2.1.\\
+Has all the positive aspects of Newton method ( variable step tuned to the specific point of optimisation )but can guarantee the right direction of the step.\\
+To avoid the singularity of matrix $ \sum\limits_{t=1}^{N} \frac{\partial \epsilon(t;\theta^i)}{\partial{\theta}} \cdot \frac{\partial \epsilon(t;\theta^i)^T}{\partial{\theta}} $ usually $\delta I$ is added where $\delta$ is a small number and $I$ the identity matrix. 
+\end{itemize}
