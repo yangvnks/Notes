@@ -271,9 +271,9 @@ Unfortunately usually $J_N(\theta)$ has lots of \textbf{local minima}:
  \centering
   \includegraphics[width=.5\linewidth]{iterative_minima.png}
 \end{figure}
-To attenuate this disturbance many \textbf{different} initial conditions  $\theta^1$ should me used , each time trying to reach the best solution. The problem is that there is no \textbf{theoretical guarantee} that solution converges to the global minimum.\\
+To attenuate this disturbance many \textbf{different} initial conditions  $\theta^1$ should be used , each time trying to reach the best solution. The problem is that there is no \textbf{theoretical guarantee} that solution converges to the global minimum.\\
 The key problem for iterative methods is building the \textbf{step} : 
-$$ \theta^i \to \theta^{i+1} $$.
+$$ \theta^i \to \theta^{i+1} $$
 The basic idea is to compute the \textbf{local quadratic approximation} of $J_N(\theta)$ around the point $\theta^i$ and \textbf{minimize the local approximation} using the \textbf{Newton method} 
 \begin{figure}[H]
  \centering
@@ -318,6 +318,45 @@ The final updating rule is :
 
 How to calculate $\frac{\partial \epsilon(t;\theta)}{\partial{\theta}}$?\\
 $$\epsilon(t,\theta)= \frac{A(Z)}{C(Z)}y(t) - \frac{B(Z)}{C(Z)}u(t-1)$$
+$$ \epsilon(t,\theta)= \frac{1+a_1Z^{-1}+...+a_mZ^{-m}}{1+c_1Z^{-1}+...+c_nZ^{-n}} y(t) - \frac{b_0+...+b_pZ^{-p}}{1+c_1Z^{-1}+...+c_nZ^{-n}}u(t-1)$$
+where $\theta =[a_1,...,a_m,b_0,...,b_p,c_1,...,c_n]^T$. Deriving for each element in the parameter vector:
+\begin{description}
+\item[Parameters a]\hfill\\
+$$ \frac{\partial{\epsilon(t,\theta)}}{\partial{a_1}}= \frac{Z^{-1}}{C(Z)}y(t)=\frac{1}{C(Z)}y(t-1) = \alpha(t-1) \text{defined!}$$
+$$ \text{...}$$
+$$ \frac{\partial{\epsilon(t,\theta)}}{\partial{a_m}}= \frac{Z^{-m}}{C(Z)}y(t)=\frac{1}{C(Z)}y(t-m) = \alpha(t-m) \text{defined!}$$
+\item[Parameters b]\hfill\\
+$$ \frac{\partial{\epsilon(t,\theta)}}{\partial{b_0}}= -\frac{1}{C(Z)}u(t-1)= \beta(t-1) \text{defined!}$$
+$$ \text{...}$$
+$$ \frac{\partial{\epsilon(t,\theta)}}{\partial{b_p}}= \frac{Z^{-p}}{C(Z)}u(t-1)=\frac{1}{C(Z)}u(t-p-1) = \beta(t-p-1) \text{defined!}$$
+\item[Parameters c]\hfill\\
+$$ (1+c_1Z^{-1}+...+c_nZ^{-n})\epsilon(t,\theta)=A(Z)y(t)-B(Z)u(t-1)$$
+$$ Z^{-1}\epsilon(t,\theta)+C(Z)\frac{\partial{\epsilon(t,\theta)}}{\partial{c_1}}=0$$
+$$ \frac{\partial{\epsilon(t,\theta)}}{\partial{c_1}} = - \frac{1}{C(Z)}\epsilon(t-1,\theta)= \gamma(t-1) \text{defined!}$$
+$$ \text{...}$$
+$$ \frac{\partial{\epsilon(t,\theta)}}{\partial{c_n}} = - \frac{1}{C(Z)}\epsilon(t-n,\theta)= \gamma(t-n) \text{defined!} $$
+\end{description}
+In conclusion :
+\[
+\boxed{\frac{\partial{\epsilon(t,\theta)}}{\partial{\theta}}= [\alpha(t-1),...,\alpha(t-m),\beta(t-1),...,\beta(t-p-1),\gamma(t-1),...,\gamma(t-n)]^T}
+\]
+We obtain a vector m+n+p+1 of \textbf{defined signals}.\\
+A \textbf{filtering scheme} can used to compute the vector:
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.6\linewidth]{filtering}
+\end{figure}
+
+\subsubsection{Possible issues}
+\begin{enumerate}
+\item The Hessian approximation might not be \textbf{invertible} $\to$ solution : add term $\delta I$
+\item The polynomial $C(Z)^i$ might have roots \textbf{outside} the unit circle. The resulting filtering is not asymptotically stable $\to$ solution : canonical form
+\end{enumerate}
+
+
+
+
+
 
 
 \subsubsection{Possible updating rules}

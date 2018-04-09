@@ -62,4 +62,14 @@
 \BOOKMARK [3][-]{subsubsection.4.1.3}{Example 2}{subsection.4.1}% 62
 \BOOKMARK [2][-]{subsection.4.2}{Identification of ARMAX models}{section.4}% 63
 \BOOKMARK [3][-]{subsubsection.4.2.1}{Loss function :Maximum Likelihood Method}{subsection.4.2}% 64
-\BOOKMARK [3][-]{subsubsection.4.2.2}{Possible updating rules}{subsection.4.2}% 65
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Possible issues}{subsection.4.2}% 65
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Possible updating rules}{subsection.4.2}% 66
+\BOOKMARK [1][-]{section.5}{Identification analysis and complements}{}% 67
+\BOOKMARK [2][-]{subsection.5.1}{Asymptotic analysis of P.E.M}{section.5}% 68
+\BOOKMARK [2][-]{subsection.5.2}{Model-order selection}{section.5}% 69
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Discontinuity search}{subsection.5.2}% 70
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Cross validation}{subsection.5.2}% 71
+\BOOKMARK [3][-]{subsubsection.5.2.3}{Estimation criteria}{subsection.5.2}% 72
+\BOOKMARK [3][-]{subsubsection.5.2.4}{Comparison between FPE and AIC}{subsection.5.2}% 73
+\BOOKMARK [3][-]{subsubsection.5.2.5}{Comparison between AIC and MDL}{subsection.5.2}% 74
+\BOOKMARK [2][-]{subsection.5.3}{Design of experiment}{section.5}% 75
