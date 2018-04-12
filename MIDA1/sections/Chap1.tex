@@ -8,8 +8,7 @@
   %\includegraphics[width=.7\linewidth]{ts}
 %\end{minipage}%
 %\end{figure}
-\section{Chapter 1}
-\subsection{Model classes}
+\section{Chapter 1 : Model classes}
 \begin{figure}[!h]
   \centering
   \includegraphics[width=.5\linewidth]{modelclasses}
@@ -28,10 +27,9 @@ The models can be described with:
 \item \textbf{Transfer functions}
 \end{itemize}
 %---------------------------------------------------------------------------------------
-\subsubsection{Time-Series model classes}
+\subsection{Time-Series model classes}
 The following processes are modelled with \textbf{differential equations}
-\begin{description}
-\item[1.Moving Average Models (MA):]\hfill\\
+\subsubsection{Moving Average Models (MA)}
 A process y(t) \textbf{generated} by a WN e(t) is a moving average of order n   
  \textbf{MA(n)} process if: 
 $$ y(t) = c_0e(t)+c_1e(t-1)+...+c_ne(t-n)$$ 
@@ -42,23 +40,23 @@ with parameter vector $ \theta = \{c_0 ,...,c_n\}$
   \includegraphics[width=.7\linewidth]{movingavg}
   \caption{y(t) is linear combination of past n e(t) values}
 \end{figure}
-\item[2.Autoregressive Models (AR):]\hfill\\
+\subsubsection{Autoregressive Models (AR)}
 A process y(t) \textbf{generated} by a WN e(t) is an autoregressive of order m \textbf{AR(m)} process if:
 $$ y(t) = a_1y(t-1)+a_2y(t-2)+...+a_my(t-m)+c_0e(t)$$ 
 with parameter vector $ \theta = \{c_0,a_1,...,a_m\}$
-\item[3.Autoregressive Moving Average Models (ARMA):]\hfill\\
+\subsubsection{Autoregressive Moving Average Models (ARMA)}
 A process y(t) \textbf{generated} by a WN e(t) is an ARMA of order (n,m) \textbf{ARMA(n,m)} process if:
 $$ y(t) = a_1y(t-1)+a_2y(t-2)+...+a_my(t-m)+ c_0e(t)+c_1e(t-1)+...+c_ne(t-n)$$ 
 with parameter vector $ \theta = \{c_0 ,...,c_n,a_1,...,a_m\}$\\
 ARMA(0,n) $\to$ MA(n) : MA(n) is \textbf{subclass} of ARMA\\
 ARMA(m,0) $\to$ AR(m) : AR(m) is \textbf{subclass} of ARMA
-\end{description}
+
 %---------------------------------------------------------------------------------------
 \newpage
-\subsubsection{Input/Output model classes}
+\subsection{Input/Output model classes}
 The following processes are modelled with \textbf{differential equations}
-\begin{description}
-\item[1.Autoregressive Moving Average Exogenous (ARMAX):]\hfill\\
+
+\subsubsection{Autoregressive Moving Average Exogenous (ARMAX)}
 A process y(t) \textbf{generated} by a WN e(t) and \textbf{exogenous} signal u(t) is an ARMAX of order (n,m, p+k) process if:
 $$ y(t) = a_1y(t-1)+...+a_my(t-m)+ c_0e(t)+...+c_ne(t-n)+ b_0u(t-k)+...+b_pu(t-k-p)$$ 
 with parameter vector $ \theta = \{c_0 ,...,c_n,a_1,...,a_m,b_0,...,b_p\}$\\
@@ -74,10 +72,12 @@ Sampling (red dots) gives a discrete approximation : when the input slope rises 
 $ y(t)=\frac{1}{2}y(t-1)+\frac{1}{3}y(t-2)+e(t)+e(t-3)+u(t-2)+\frac{1}{2}u(t-4) $
 The process is an ARMAX (2,3,2+2)\\
 Observation : missing values as above can be present!
+\newpage
+\par\noindent\rule{\textwidth}{0.4pt}
 \item[Remark]\hfill\\
 Armax models are the most general class models for \textbf{dynamic ,linear, time-invariant} systems.\\
 \textbf{Non-Linear} N-ARMAX $ y(t) = f(y(t-1),..,y(t-m),e(t),...,e(t-n),u(t-k),...,u(t-k-p)$ \\ depend on \textbf{non-linear functions} : polynomials , splines ,NN ,Radial Basis Functions ,Fuzzy Sets.
-\end{description}
+\par\noindent\rule{\textwidth}{0.4pt}
 \end{description}
 
 

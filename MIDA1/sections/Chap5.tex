@@ -159,13 +159,13 @@ Again the first part is increasing while the second is decreasing.
 $$ ln(FPE) = ln(\frac{N+n_{\theta}}{N-n_{\theta}} J_N(\hat{\theta}_N,n_{\theta}))$$
 $$ ln(FPE) = ln(\frac{1+\frac{n_{\theta}}{N}}{1-\frac{n_{\theta}}{N}} J_N(\hat{\theta}_N,n_{\theta}))$$
 \newpage
----------------------------------------------------------------------------------------------------
+\par\noindent\rule{\textwidth}{0.4pt}
 
 \begin{description}
 \item[Remark]\hfill\\
 Remind that $ln(1+x) \approx x \text{ when } x=0$
 \end{description}
----------------------------------------------------------------------------------------------------
+\par\noindent\rule{\textwidth}{0.4pt}
 \\If $n_{\theta}<<N \to \frac{n_{\theta}}{N} \approx 0$ so :
 $$ ln(1+\frac{n_{\theta}}{N}) - ln(1-\frac{n_{\theta}}{N}) + ln(J_N(\hat{\theta};n_{\theta})) \approx \frac{n_{\theta}}{N}-(-\frac{n_{\theta}}{N})+ln(J_N(\hat{\theta};n_{\theta}))$$
 $$ 2\frac{n_{\theta}}{N}+ln(J_N(\hat{\theta};n_{\theta})) = AIC(n_{\theta})$$
@@ -249,8 +249,7 @@ $$
 \item $\bar{R}_{u y}$\\
 Is $\bar{R}_{u y} = \bar{R}_{yu}^T$
 \end{itemize}
----------------------------------------------------------------------------------------------------
-
+\par\noindent\rule{\textwidth}{0.4pt}
 \begin{description}
 \item[Remark : Lemma di Schur]\hfill\\
 Given a \textbf{block matrix}  
@@ -266,9 +265,113 @@ $$ M=
 \item $\text{\textbf{F-KH}}^{-1}\text{\textbf{K}}^T > 0$
 \end{itemize}
 \end{description}
----------------------------------------------------------------------------------------------------
+\par\noindent\rule{\textwidth}{0.4pt}
 \\The important part from Schur's Lemma is that $H>0$ which refers to the part of $\bar{R}_{u}$ containing only u(t).
 The condition that must hold for $\bar{R}$ to be \textbf{invertible} is
 \[
 \boxed{\bar{R}_u >0}
 \]
+
+Let's define the covariance matrix of $u(t)$ of order i (i x i matrix) :
+$$
+\bar{R}^{(i)}_{u} = 
+	\begin{bmatrix}
+       \gamma_{u}(0) & \gamma_{u}(1) & ... & \gamma_{u}(i-1)            \\[0.3em]
+       \gamma_{u}(1) & \gamma_{u}(0) &...  & \gamma_{u}(i-2)          \\[0.3em]
+       ... & ... & ... 	& ...								   \\[0.3em]
+       \gamma_{u}(i-1) & ... & ... & \gamma_{u}(0)
+     \end{bmatrix} 
+$$
+
+A signal $u(t)$ is \textbf{persistently exciting} of order n if:
+\[
+\boxed{ \bar{R}^{(1)}_{u} >0, \bar{R}^{(2)}_{u} >0 ,...,\bar{R}^{(n)}_{u} > 0 , \bar{R}^{(n+1)}_{u} \geq 0,... }
+\]
+The maximum order is n so , n is the order of $\bar{R}^{(i)}_{u}$ such that this matrix is \textbf{invertible}.\\ In Conclusion:\\ \hspace{1cm}
+
+\fbox{\begin{minipage}{30em}
+\centering
+A necessary condition for the identification process of an ARX(m,p+1) model is that the input signal u(t) must be \textbf{persistently exciting} of order at least \textbf{p+1}
+\end{minipage}}
+\\
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\begin{description}
+\item[Remark 1: WN]\hfill\\
+Notice that if $u(t) \approx WN(0,\lambda^2)$ :
+$$
+\bar{R}^{(i)}_{u} = 
+	\begin{bmatrix}
+        \lambda^2 & 0 & ... & 0           \\[0.3em]
+       0 & \lambda^2 &...  & 0          \\[0.3em]
+       ... & ... & ... 	& ...								   \\[0.3em]
+       0 & ... & ... & \lambda^2
+     \end{bmatrix} = \lambda^2 I^{(i)}
+$$
+A WN is \textbf{persistently exciting} signal of order $\infty$
+\item [Remark 2: Sinusoid]\hfill\\
+$u(t) =Asen(wt)$  is a \textbf{persistently exciting signal} of order \textbf{2}.
+If possible the best choice for $u(t)$ is a WN!
+\newpage
+\item [Remark 3 : Practical application WN or BLWN?]\hfill\\
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.6\linewidth]{cruise_control}
+\end{figure}
+Problem : design a block box model of the system, starting from an \textbf{excitation} experiment.How to design the experiment?\\
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.5\linewidth]{signals}
+\end{figure}
+In principle $u(t)$ corresponding to the input of the acceleration pedal can be modelled as a WN ( allows complete excitation). This is \textbf{not} a good solution though because a lot of excitation energy is used on a \textbf{useless} bandwidth.
+Assuming that the bandwidth of the cruise control system is about 2Hz  using the \textbf{full-bandwidth} up to $w = \pi $ is \textbf{useless}. A better choice would be a \textbf{band limited white noise (BLWN)} which focuses its attention of the system identification procedure on the \textbf{relevant frequency range} $[0 , \text{just beyond control bandwith}]$.
+\end{description}
+\par\noindent\rule{\textwidth}{0.4pt}
+
+\subsection{Uncertainty evaluation of a parametric identification algorithm}
+Assume that \textbf{S} $\in m(\theta)$ then there exists a single parameter vector which represents the \textbf{true} system:$$ \theta^0 = \bar{\theta}$$
+In practice we can only use a \textbf{finite number} of data points (\textbf{N}) which means that $\hat{\theta}_N$ depends on N.Notice that $\hat{\theta}_N$ is also a vector of  \textbf{random variables} such that $$ E[\hat{\theta}_N]=\theta^0$$
+But is it also true that $$ var[\hat{\theta}_N]=?=E[(\hat{\theta}_N - \theta^0)(\hat{\theta}_N - \theta^0)^T]$$
+The covariance matrix of $\hat{\theta}_N$ provides an estimation of the \textbf{uncertainty}  in the estimation of $\theta^0$ using $\hat{\theta}_N$.\\
+It can be proven that :
+\[
+\boxed{var[\hat{\theta}_N] = \frac{1}{N}\lambda^2 \bar{C}^{-1}}
+\]
+where 
+$$ \lambda^2 = var[e(t)]=var[y(t) - \hat{y}(t|t-1,\theta^0)]$$
+$$ \bar{C}= E\left[ \left. \frac{\partial{\epsilon(t,\theta)}}{\partial{\theta}}\right|_{\theta=\theta^0} \cdot \left. \frac{\partial{\epsilon(t,\theta)}}{\partial{\theta}}\right|^{T}_{\theta=\theta^0} \right]$$
+Practical computation of $var[\hat{\theta}_N]$:
+$$ \lambda^2 = E[e(t)^2] \approx \frac{1}{N} \sum\limits_{t=1}^{N}(y(t) - \hat{y}(t|t-1,\hat{\theta}_N)$$
+
+$$\bar{C} \approx \frac{1}{N}\sum\limits_{t=1}^{N}\left( \left. \frac{\partial{\epsilon(t,\theta)}}{\partial{\theta}}\right|_{\theta=\hat{\theta}_N} \cdot \left. \frac{\partial{\epsilon(t,\theta)}}{\partial{\theta}}\right|^{T}_{\theta=\hat{\theta}_N} \right)$$
+
+First approximation : instead  of using expected value $\to$ average over \textbf{time}.\\
+Second approximation : instead of using $\theta^0 \to \hat{\theta}_N$
+
+\subsubsection{Interpretation of $\bar{C}$}
+$$\bar{J}(\theta) = E[\epsilon(t,\theta)^2]$$
+$$ \frac{\partial{\bar{J}(\theta}}{\partial{\theta}}=E \left[ 2\epsilon(t,\theta)\frac{\partial{\epsilon(t,\theta)})}{\partial{\theta}}\right] $$
+$$ \frac{\partial^2{\bar{J}(\theta)}}{\partial{\theta^2}}=E \left[ 2\frac{\partial{\epsilon(t,\theta)}}{\partial{\theta}}\frac{\partial{\epsilon(t,\theta)}}{\partial{\theta}}^T + 2\epsilon(t,\theta)\frac{\partial^2{\epsilon(t,\theta)}}{\partial{\theta^2}}\right] $$
+If $\hat{\theta}_N = \theta ^0 \to \epsilon(t,\theta) = e(t)$ :
+$$ \left. \frac{\partial^2{\bar{J}(\theta)}}{\partial{\theta^2}} \right|_{\theta=\theta^0}=E \left[ \left. 2\frac{\partial{\epsilon(t,\theta)}}{\partial{\theta}}\right|_{\theta=\theta^0} \left. \frac{\partial{\epsilon(t,\theta)}}{\partial{\theta}}\right|^{T}_{\theta=\theta^0} + \left. 2e(t)\frac{\partial^2{\epsilon(t,\theta)}}{\partial{\theta^2}}\right|_{\theta=\theta^0} \right] $$
+Due to \textbf{non} correlation :
+$$ \left. \frac{\partial^2{\bar{J}(\theta)}}{\partial{\theta^2}} \right|_{\theta=\theta^0}=E \left[ \left. 2\frac{\partial{\epsilon(t,\theta)}}{\partial{\theta}}\right|_{\theta=\theta^0} \left. \frac{\partial{\epsilon(t,\theta)}}{\partial{\theta}}\right|^{T}_{\theta=\theta^0} \right] =2\bar{C} $$
+\[
+\boxed{\bar{C} = \frac{1}{2}\left. \frac{\partial^2{\bar{J}(\theta)}}{\partial{\theta^2}} \right|_{\theta=\theta^0}}
+\]
+\begin{itemize}
+\item The estimation error has a \textbf{larger} variance for \textbf{larger} values of $\lambda^2$ (size of of the WN at the input of the system)
+\item The estimation error has a \textbf{larger} variance for \textbf{smaller} values of N.
+\item The estimation error  has a \textbf{larger } variance if the \textbf{second derivative} of the performance index around the global minimum $\theta^0$ is \textbf{smaller}
+\begin{figure}[!h]
+\begin{minipage}{.5\textwidth}
+ \centering
+  \includegraphics[width=.8\linewidth]{small_hessian}
+\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{big_hessian}
+\end{minipage}%
+\end{figure}
+\end{itemize}
+With this formula we can understand if the number of data is \textbf{enough} to provide the requested level of uncertainty in parameter estimation.
