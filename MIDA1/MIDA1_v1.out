@@ -78,3 +78,9 @@
 \BOOKMARK [2][-]{subsection.5.3}{Design of experiment}{section.5}% 78
 \BOOKMARK [2][-]{subsection.5.4}{Uncertainty evaluation of a parametric identification algorithm}{section.5}% 79
 \BOOKMARK [3][-]{subsubsection.5.4.1}{Interpretation of }{subsection.5.4}% 80
+\BOOKMARK [1][-]{section.6}{Pre-Processing}{}% 81
+\BOOKMARK [2][-]{subsection.6.1}{Removing a linear trend}{section.6}% 82
+\BOOKMARK [2][-]{subsection.6.2}{Removing seasonal behaviour}{section.6}% 83
+\BOOKMARK [2][-]{subsection.6.3}{Missing data}{section.6}% 84
+\BOOKMARK [3][-]{subsubsection.6.3.1}{Linear interpolation}{subsection.6.3}% 85
+\BOOKMARK [3][-]{subsubsection.6.3.2}{Model estimation}{subsection.6.3}% 86
