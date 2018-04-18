@@ -31,8 +31,8 @@ Said vectors are considered in the \textbf{time-domain} : y(t) is a signal or \t
 \subsubsection{TS Applications}
 TS are used for two problems : 
 \begin{enumerate}
-\item \textbf{Prediction problem} : $\{ y(1) ... y(N) \} \rightarrow \hat{y} (\frac{N+K}{N})$ \\ Given N measurements \textbf{estimate} the measurement K timesteps ahead
-\item \textbf{Filtering problem} : $\{ x_1(t) ... x_N(t) \} \rightarrow \hat{x} (\frac{t}{t})$ \\Where $\{ x_1(t) ... x_N(t) \}$ are internal variables of the system
+\item \textbf{Prediction problem} : $\{ y(1) ... y(N) \} \rightarrow \hat{y}(N+K|N)$ \\ Given N measurements \textbf{estimate} the measurement K timesteps ahead
+\item \textbf{Filtering problem} : $\{ x_1(t) ... x_N(t) \} \rightarrow \hat{x} (t|t)$ \\Where $\{ x_1(t) ... x_N(t) \}$ are internal variables of the system
 \end{enumerate}
 \vfill
 %-----------------------------------------------------------------------------------%
@@ -61,8 +61,8 @@ Input signal $ u(t) $ can be of two types:
 \subsubsection{I/O Applications}
 I/O systems are used for three problems : 
 \begin{enumerate}
-\item \textbf{Prediction problem} : $\{ y(1) ... y(N) \} \rightarrow \hat{y} (\frac{N+K}{N})$ \\ Given N measurements \textbf{estimate} the measurement K timesteps ahead
-\item \textbf{Filtering problem} : $\{ x_1(t) ... x_N(t) \} \rightarrow \hat{x} (\frac{t}{t})$ \\Where $\{ x_1(t) ... x_N(t) \}$ are internal variables of the system
+\item \textbf{Prediction problem} : $\{ y(1) ... y(N) \} \rightarrow \hat{y} (N+K|N)$ \\ Given N measurements \textbf{estimate} the measurement K timesteps ahead
+\item \textbf{Filtering problem} : $\{ x_1(t) ... x_N(t) \} \rightarrow \hat{x} (t|t)$ \\Where $\{ x_1(t) ... x_N(t) \}$ are internal variables of the system
 \item \textbf{System control problem} : given a desired output $ \bar{y}(t) $ , control $ u(t) $ so that $y(t)$ is as close as possible to  $ \bar{y}(t) $
 \end{enumerate}
 

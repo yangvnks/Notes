@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  12 APR 2018 19:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 APR 2018 15:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1085,17 +1085,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 236--237
  []
 
 [50]
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
 
 [51]
-Underfull \hbox (badness 10000) in paragraph at lines 304--305
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--316
+Underfull \hbox (badness 10000) in paragraph at lines 317--319
 
  []
 
@@ -1103,17 +1103,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 314--316
 File: Pictures/ex_division.png Graphic file (type png)
 
 <use Pictures/ex_division.png>
-Package pdftex.def Info: Pictures/ex_division.png used on input line 357.
+Package pdftex.def Info: Pictures/ex_division.png used on input line 360.
 (pdftex.def)             Requested size: 209.12683pt x 147.22078pt.
  [55 <./Pictures/ex_division.png>]
 <Pictures/ex_vark.png, id=826, 971.63pt x 486.81876pt>
 File: Pictures/ex_vark.png Graphic file (type png)
 
 <use Pictures/ex_vark.png>
-Package pdftex.def Info: Pictures/ex_vark.png used on input line 374.
+Package pdftex.def Info: Pictures/ex_vark.png used on input line 377.
 (pdftex.def)             Requested size: 209.12683pt x 104.7754pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--389
+Underfull \hbox (badness 10000) in paragraph at lines 389--392
 
  []
 
@@ -1121,27 +1121,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 386--389
 File: Pictures/ex_poles.png Graphic file (type png)
 
 <use Pictures/ex_poles.png>
-Package pdftex.def Info: Pictures/ex_poles.png used on input line 393.
+Package pdftex.def Info: Pictures/ex_poles.png used on input line 396.
 (pdftex.def)             Requested size: 125.47737pt x 83.81802pt.
 
 <Pictures/ex_spectrum.png, id=828, 615.29875pt x 351.3125pt>
 File: Pictures/ex_spectrum.png Graphic file (type png)
 
 <use Pictures/ex_spectrum.png>
-Package pdftex.def Info: Pictures/ex_spectrum.png used on input line 397.
+Package pdftex.def Info: Pictures/ex_spectrum.png used on input line 400.
 (pdftex.def)             Requested size: 188.21286pt x 107.45837pt.
  [56 <./Pictures/ex_vark.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
+Underfull \hbox (badness 10000) in paragraph at lines 416--417
 
  []
 
 [57 <./Pictures/ex_poles.png> <./Pictures/ex_spectrum.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
 
  []
 
 [58]
-Underfull \hbox (badness 10000) in paragraph at lines 439--443
+Underfull \hbox (badness 10000) in paragraph at lines 442--446
 
  []
 
@@ -1149,10 +1149,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 439--443
 File: Pictures/ex_division2.png Graphic file (type png)
 
 <use Pictures/ex_division2.png>
-Package pdftex.def Info: Pictures/ex_division2.png used on input line 455.
+Package pdftex.def Info: Pictures/ex_division2.png used on input line 458.
 (pdftex.def)             Requested size: 209.12683pt x 119.18318pt.
  [59 <./Pictures/ex_division2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 472--475
+Underfull \hbox (badness 10000) in paragraph at lines 475--478
 
  []
 
@@ -1160,32 +1160,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 472--475
 File: Pictures/ex_division3.png Graphic file (type png)
 
 <use Pictures/ex_division3.png>
-Package pdftex.def Info: Pictures/ex_division3.png used on input line 513.
+Package pdftex.def Info: Pictures/ex_division3.png used on input line 516.
 (pdftex.def)             Requested size: 209.12683pt x 103.1163pt.
 
 <Pictures/ex_varplot.png, id=858, 953.5625pt x 392.46625pt>
 File: Pictures/ex_varplot.png Graphic file (type png)
 
 <use Pictures/ex_varplot.png>
-Package pdftex.def Info: Pictures/ex_varplot.png used on input line 523.
+Package pdftex.def Info: Pictures/ex_varplot.png used on input line 526.
 (pdftex.def)             Requested size: 209.12683pt x 86.07335pt.
  [61 <./Pictures/ex_division3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 525--527
+Underfull \hbox (badness 10000) in paragraph at lines 528--530
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 535--537
+Underfull \hbox (badness 10000) in paragraph at lines 538--540
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 550--553
+Underfull \hbox (badness 10000) in paragraph at lines 553--556
 
  []
 
 [62 <./Pictures/ex_varplot.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 563--566
+Underfull \hbox (badness 10000) in paragraph at lines 566--569
 
  []
 
@@ -1588,7 +1588,7 @@ live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texliv
 e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on MIDA1_v1.pdf (101 pages, 3449336 bytes).
+Output written on MIDA1_v1.pdf (101 pages, 3448924 bytes).
 PDF statistics:
  1217 PDF objects out of 1440 (max. 8388607)
  934 compressed objects within 10 object streams

@@ -79,7 +79,7 @@ The loss function for the ARX models is the \textbf{P.E.M.}:
 \boxed{J_N(\theta) = \frac{1}{N} \sum\limits_{t=1}^{N}(y(t)-\hat{y}(t|t-1,\theta))^2}
 \]
 The predictor for the model , deriving it from the  general ARMAX model, is :
-$$ \hat{y}(t|t-1;\theta) = \frac{B(Z)}u(t-1)+ (1-A(Z))y(t)$$
+$$ \hat{y}(t|t-1;\theta) = \frac{B(Z)}{1}\cdot 1\cdot u(t-1)+ (1-A(Z))y(t)$$
 \[
 \boxed{\hat{y}(t|t-1;\theta) = b_0u(t-1)+...+b_pu(t-p-1)-a_1y(t-1)-...-a_my(t-m)}
 \]

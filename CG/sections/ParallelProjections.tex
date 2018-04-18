@@ -200,16 +200,37 @@ The projection matrix for perspective with \textbf{center in the origin} and pro
 \end{figure}
 The last row is no longer $|0 0 0 1|$ as per usual : the result is a vector which no longer has component \textbf{w =1}:
 \[
-\boxed{[d\cdot x d\cdot y d\cdot z -z]}
+\boxed{[d\cdot x, d\cdot y ,d\cdot z, -z]}
 \]
 To obtain the equivalent Cartesian coordinates we must divide by the w component ( -z ) : 
-$$ [x_s  y_s -d 1] $$
-Now the z-coordinate is always -d  which means that all information about \textbf{distance} is lost $\to$ no proper 3D normalized screen coordinates can be defined.\\
+$$ [x_s,y_s,-d,1] $$
+The z-coordinate is always \textbf{-d} regardless of the what the z-coordinate is, which means that all information about \textbf{distance} is lost $\to$ no proper 3D normalized screen coordinates can be defined.\\
 The solution to not flat the z component is to \textbf{add} an element = 1 in the third row of the fourth column:
 \begin{figure}[H]
  \centering
   \includegraphics[width=.4\linewidth]{persp_mat_improved}
 \end{figure}
 which leads to normalized screen coordinates :
-$$ |x_s y_s -d-\frac{1}{z} 1|$$
+$$ |x_s,y_s,-d-\frac{1}{z},1|$$
+Now we have a third component depending on d but also on \textbf{z}.
+Depending on the distance:
+\begin{itemize}
+\item Negative but smaller when closer to the viewer.
+\item Negative but larger when farther away from the viewer.
+\item Tends to $-d$ as the distance goes to $\infty$.
+\end{itemize}
 
+\subsubsection{Perspective matrix on screen}
+Now that we have basic tools for creating (after normalization) proper normalized screen coordinates that respect the distance of objects. We need to combine these new tools with transformations to be able to show correctly on screen the desired coordinates.\\
+In the case of perspective projections instead of a view box like in parallel projections we have a \textbf{frustum}:
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.4\linewidth]{frustum}
+\end{figure}
+The frustum is defined by it's \textbf{near} and \textbf{far} plane and \textbf{top},\textbf{bottom} ,\textbf{left} and \textbf{right} coordinates.
+The coordinates are \textbf{not constant} any more: now they depend on the \textbf{distance}.\\
+By default t,b,l,r are defined on the \textbf{near plane} so the distance \textbf{d} corresponds to the value \textbf{n} of the near plane. The resulting projection matrix is:
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=.4\linewidth]{persp_mat_near}
+\end{figure}
