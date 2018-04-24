@@ -382,7 +382,7 @@ $$ \hat{y}(t|t-2) = \frac{\frac{1}{12}}{1+\frac{1}{3}Z^{-1}}y(t-2)$$
 - $ var[y(t) -\hat{y}(t|t-k)] $ is a \textbf{monotonic (not strictly) increasing} function
 
 \item \textbf{Prediction goodness}\\
-The \textbf{Error to signal ratio} is a useful prediction measure:
+The ESR is a useful prediction measure:
 $$ ESR(k) = \frac{var[y(t) - \hat{y}(t|t-k)]}{var[y(t)]}$$
 For k=1 $$ESR(1) = \frac{\frac{9}{4}}{\frac{7}{3}} = 0.97$$
 Which is a very bad prediction. The most trivial prediction that can be done is 
