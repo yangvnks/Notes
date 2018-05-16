@@ -33,3 +33,22 @@
 \contentsline {subsubsection}{\numberline {5.1.2}Projection matrices and aspect ratio}{38}{subsubsection.5.1.2}
 \contentsline {subsection}{\numberline {5.2}Perspective Projections}{38}{subsection.5.2}
 \contentsline {subsubsection}{\numberline {5.2.1}Perspective matrix on screen}{42}{subsubsection.5.2.1}
+\contentsline {section}{\numberline {6}View and World Transformations}{43}{section.6}
+\contentsline {subsection}{\numberline {6.1}View Matrix}{43}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {6.1.1}Look-in-direction matrix}{44}{subsubsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.2}Look-at matrix}{46}{subsubsection.6.1.2}
+\contentsline {subsection}{\numberline {6.2}Local coordinates and World Matrix}{48}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}World Matrix : scaling}{48}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2}World Matrix : rotating}{49}{subsubsection.6.2.2}
+\contentsline {subsubsection}{\numberline {6.2.3}World Matrix : positioning}{50}{subsubsection.6.2.3}
+\contentsline {subsubsection}{\numberline {6.2.4}Final World Matrix}{51}{subsubsection.6.2.4}
+\contentsline {subsection}{\numberline {6.3}Gimbal Lock}{51}{subsection.6.3}
+\contentsline {section}{\numberline {7}A complete projection example}{53}{section.7}
+\contentsline {subsection}{\numberline {7.1}World-View-Projection Matrices}{53}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}The example}{55}{subsection.7.2}
+\contentsline {section}{\numberline {8}Meshes and Clipping}{59}{section.8}
+\contentsline {subsection}{\numberline {8.1}Meshes}{59}{subsection.8.1}
+\contentsline {subsubsection}{\numberline {8.1.1}Mesh encoding}{61}{subsubsection.8.1.1}
+\contentsline {subsubsection}{\numberline {8.1.2}Indexed Primitives}{62}{subsubsection.8.1.2}
+\contentsline {subsection}{\numberline {8.2}Clipping}{64}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}Clipping triangles}{66}{subsubsection.8.2.1}

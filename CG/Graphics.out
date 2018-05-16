@@ -33,3 +33,22 @@
 \BOOKMARK [3][-]{subsubsection.5.1.2}{Projection matrices and aspect ratio}{subsection.5.1}% 33
 \BOOKMARK [2][-]{subsection.5.2}{Perspective Projections}{section.5}% 34
 \BOOKMARK [3][-]{subsubsection.5.2.1}{Perspective matrix on screen}{subsection.5.2}% 35
+\BOOKMARK [1][-]{section.6}{View and World Transformations}{}% 36
+\BOOKMARK [2][-]{subsection.6.1}{View Matrix}{section.6}% 37
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Look-in-direction matrix}{subsection.6.1}% 38
+\BOOKMARK [3][-]{subsubsection.6.1.2}{Look-at matrix}{subsection.6.1}% 39
+\BOOKMARK [2][-]{subsection.6.2}{Local coordinates and World Matrix}{section.6}% 40
+\BOOKMARK [3][-]{subsubsection.6.2.1}{World Matrix : scaling}{subsection.6.2}% 41
+\BOOKMARK [3][-]{subsubsection.6.2.2}{World Matrix : rotating}{subsection.6.2}% 42
+\BOOKMARK [3][-]{subsubsection.6.2.3}{World Matrix : positioning}{subsection.6.2}% 43
+\BOOKMARK [3][-]{subsubsection.6.2.4}{Final World Matrix}{subsection.6.2}% 44
+\BOOKMARK [2][-]{subsection.6.3}{Gimbal Lock}{section.6}% 45
+\BOOKMARK [1][-]{section.7}{A complete projection example}{}% 46
+\BOOKMARK [2][-]{subsection.7.1}{World-View-Projection Matrices}{section.7}% 47
+\BOOKMARK [2][-]{subsection.7.2}{The example}{section.7}% 48
+\BOOKMARK [1][-]{section.8}{Meshes and Clipping}{}% 49
+\BOOKMARK [2][-]{subsection.8.1}{Meshes}{section.8}% 50
+\BOOKMARK [3][-]{subsubsection.8.1.1}{Mesh encoding}{subsection.8.1}% 51
+\BOOKMARK [3][-]{subsubsection.8.1.2}{Indexed Primitives}{subsection.8.1}% 52
+\BOOKMARK [2][-]{subsection.8.2}{Clipping}{section.8}% 53
+\BOOKMARK [3][-]{subsubsection.8.2.1}{Clipping triangles}{subsection.8.2}% 54
