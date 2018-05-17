@@ -52,3 +52,8 @@
 \contentsline {subsubsection}{\numberline {8.1.2}Indexed Primitives}{62}{subsubsection.8.1.2}
 \contentsline {subsection}{\numberline {8.2}Clipping}{64}{subsection.8.2}
 \contentsline {subsubsection}{\numberline {8.2.1}Clipping triangles}{66}{subsubsection.8.2.1}
+\contentsline {section}{\numberline {9}Hidden Surfaces}{69}{section.9}
+\contentsline {subsection}{\numberline {9.1}Back-face culling}{70}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Z-Buffering}{75}{subsection.9.2}
+\contentsline {subsubsection}{\numberline {9.2.1}Z-Buffering issues}{75}{subsubsection.9.2.1}
+\contentsline {subsubsection}{\numberline {9.2.2}Stencil buffer}{77}{subsubsection.9.2.2}

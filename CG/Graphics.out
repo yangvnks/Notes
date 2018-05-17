@@ -52,3 +52,8 @@
 \BOOKMARK [3][-]{subsubsection.8.1.2}{Indexed Primitives}{subsection.8.1}% 52
 \BOOKMARK [2][-]{subsection.8.2}{Clipping}{section.8}% 53
 \BOOKMARK [3][-]{subsubsection.8.2.1}{Clipping triangles}{subsection.8.2}% 54
+\BOOKMARK [1][-]{section.9}{Hidden Surfaces}{}% 55
+\BOOKMARK [2][-]{subsection.9.1}{Back-face culling}{section.9}% 56
+\BOOKMARK [2][-]{subsection.9.2}{Z-Buffering}{section.9}% 57
+\BOOKMARK [3][-]{subsubsection.9.2.1}{Z-Buffering issues}{subsection.9.2}% 58
+\BOOKMARK [3][-]{subsubsection.9.2.2}{Stencil buffer}{subsection.9.2}% 59
