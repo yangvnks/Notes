@@ -1,0 +1,16 @@
+\newpage
+\section{Ambient Light Emissions}
+Using only direct light sources (directional,point or spotlight ) can lead to \textbf{dark} images. Realistic lightning techniques try to incorporate also \textbf{indirect lighting} : illumination caused by lights that \textbf{bounce} from object to object.The simplest approximation of such indirect lights is \textbf{Ambient Lightning}.\\
+The \textbf{ambient light emission factor} ( constant for the entire scene) accounts for all the light reflected by all the objects in all the directions.The \textbf{ambient light emission} is specified by an RGB color value : $$ l_A= (l_{AR},l_{AG}, l_{AB}) $$
+Each \textbf{material} has an \textbf{ambient light reflection color} ( usually same as diffuse color):
+$$ m_A= (m_{AR},m_{AG}, m_{AB}) $$
+The contribution to the color of the object is computed by multiplying the ambient light emission with the ambient light reflection $$ l_A \cdot m_A$$
+For example in the Phong specular model with single directional light :
+$$ r_x=2n_x \cdot ( d \cdot n_x)-d$$
+$$ L(x,\omega_r) = \text{clamp}(l_D \cdot (m_D \cdot \text{clamp}(d \cdot n_x)+m_s \cdot \text{clamp}(\omega_r \cdot r_x)^{\gamma})+ l_A \cdot m_A)$$
+The \textbf{emission} term of a material accounts for small amounts of light emitted directly by an object ( for example modem lights, television button lights...). Usually such light is \textbf{equal} in all directions.  
+$$ m_E= (m_{ER},m_{EG}, m_{EB}) $$ 
+$$ L(x,\omega_r) = \text{clamp}(l_D \cdot (m_D \cdot \text{clamp}(d \cdot n_x)+m_s \cdot \text{clamp}(\omega_r \cdot r_x)^{\gamma})+ l_A \cdot m_A + m_E)$$
+As seen in the last equations the ambient lights terms are considered \textbf{once} while the BRDF terms are considered for \textbf{each light}.\\
+Both ambient light and emission are \textbf{independent} of the \textbf{direction} of the \textbf{light} and \textbf{observer}. Considering these two \textbf{without} other direct light sources result in \textbf{flat images}.\\
+Finally , the ambient light term of the material $m_A$ is \textbf{scaled} by the ambient color of the scheme $l_A$ which allows controlling the color of the objects in a scene-dependent way, adapting the illumination to dark or lit scenes.

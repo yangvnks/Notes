@@ -1,59 +1,116 @@
-\contentsline {section}{\numberline {1}Graphic Adapters}{3}{section.1}
-\contentsline {subsection}{\numberline {1.1}Vector Graphic Adapters}{3}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Raster Graphic Adapters}{3}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}Accelerated Graphic Adapters}{4}{subsection.1.3}
-\contentsline {subsection}{\numberline {1.4}Color vision}{5}{subsection.1.4}
-\contentsline {subsubsection}{\numberline {1.4.1}Human Vision}{5}{subsubsection.1.4.1}
-\contentsline {subsubsection}{\numberline {1.4.2}Color reproduction}{6}{subsubsection.1.4.2}
-\contentsline {subsection}{\numberline {1.5}Image Resolution}{7}{subsection.1.5}
-\contentsline {section}{\numberline {2}2D Graphics}{8}{section.2}
-\contentsline {subsection}{\numberline {2.1}Point primitives}{8}{subsection.2.1}
-\contentsline {subsubsection}{\numberline {2.1.1}Linear Interpolation}{9}{subsubsection.2.1.1}
-\contentsline {subsection}{\numberline {2.2}Line primitives}{10}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Interpolation Algorithm}{11}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Bresenham Algorithm}{12}{subsubsection.2.2.2}
-\contentsline {subsection}{\numberline {2.3}Triangle Primitives}{15}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Triangles with edge // to x-axis}{15}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Triangle splitting}{16}{subsubsection.2.3.2}
-\contentsline {subsection}{\numberline {2.4}Normalized coordinates}{17}{subsection.2.4}
-\contentsline {section}{\numberline {3}3D Graphics}{18}{section.3}
-\contentsline {subsection}{\numberline {3.1}Affine Transformations}{18}{subsection.3.1}
-\contentsline {subsubsection}{\numberline {3.1.1}Translation}{19}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}Scaling}{20}{subsubsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.3}Rotation}{22}{subsubsection.3.1.3}
-\contentsline {subsection}{\numberline {3.2}Shear}{25}{subsection.3.2}
-\contentsline {section}{\numberline {4}3D Transform}{26}{section.4}
-\contentsline {subsection}{\numberline {4.1}Inversion of transformations}{27}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Composition}{28}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Properties of composition of transformations}{28}{subsubsection.4.2.1}
-\contentsline {subsection}{\numberline {4.3}Transformations around an arbitrary axis or center}{30}{subsection.4.3}
-\contentsline {section}{\numberline {5}Projections}{32}{section.5}
-\contentsline {subsection}{\numberline {5.1}Parallel Projections}{34}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {5.1.1}Aspect Ratio}{37}{subsubsection.5.1.1}
-\contentsline {subsubsection}{\numberline {5.1.2}Projection matrices and aspect ratio}{38}{subsubsection.5.1.2}
-\contentsline {subsection}{\numberline {5.2}Perspective Projections}{38}{subsection.5.2}
-\contentsline {subsubsection}{\numberline {5.2.1}Perspective matrix on screen}{42}{subsubsection.5.2.1}
-\contentsline {section}{\numberline {6}View and World Transformations}{43}{section.6}
-\contentsline {subsection}{\numberline {6.1}View Matrix}{43}{subsection.6.1}
-\contentsline {subsubsection}{\numberline {6.1.1}Look-in-direction matrix}{44}{subsubsection.6.1.1}
-\contentsline {subsubsection}{\numberline {6.1.2}Look-at matrix}{46}{subsubsection.6.1.2}
-\contentsline {subsection}{\numberline {6.2}Local coordinates and World Matrix}{48}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}World Matrix : scaling}{48}{subsubsection.6.2.1}
-\contentsline {subsubsection}{\numberline {6.2.2}World Matrix : rotating}{49}{subsubsection.6.2.2}
-\contentsline {subsubsection}{\numberline {6.2.3}World Matrix : positioning}{50}{subsubsection.6.2.3}
-\contentsline {subsubsection}{\numberline {6.2.4}Final World Matrix}{51}{subsubsection.6.2.4}
-\contentsline {subsection}{\numberline {6.3}Gimbal Lock}{51}{subsection.6.3}
-\contentsline {section}{\numberline {7}A complete projection example}{53}{section.7}
-\contentsline {subsection}{\numberline {7.1}World-View-Projection Matrices}{53}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}The example}{55}{subsection.7.2}
-\contentsline {section}{\numberline {8}Meshes and Clipping}{59}{section.8}
-\contentsline {subsection}{\numberline {8.1}Meshes}{59}{subsection.8.1}
-\contentsline {subsubsection}{\numberline {8.1.1}Mesh encoding}{61}{subsubsection.8.1.1}
-\contentsline {subsubsection}{\numberline {8.1.2}Indexed Primitives}{62}{subsubsection.8.1.2}
-\contentsline {subsection}{\numberline {8.2}Clipping}{64}{subsection.8.2}
-\contentsline {subsubsection}{\numberline {8.2.1}Clipping triangles}{66}{subsubsection.8.2.1}
-\contentsline {section}{\numberline {9}Hidden Surfaces}{69}{section.9}
-\contentsline {subsection}{\numberline {9.1}Back-face culling}{70}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}Z-Buffering}{75}{subsection.9.2}
-\contentsline {subsubsection}{\numberline {9.2.1}Z-Buffering issues}{75}{subsubsection.9.2.1}
-\contentsline {subsubsection}{\numberline {9.2.2}Stencil buffer}{77}{subsubsection.9.2.2}
+\contentsline {section}{\numberline {1}Graphic Adapters}{5}{section.1}
+\contentsline {subsection}{\numberline {1.1}Vector Graphic Adapters}{5}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Raster Graphic Adapters}{5}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Accelerated Graphic Adapters}{6}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Color vision}{7}{subsection.1.4}
+\contentsline {subsubsection}{\numberline {1.4.1}Human Vision}{7}{subsubsection.1.4.1}
+\contentsline {subsubsection}{\numberline {1.4.2}Color reproduction}{8}{subsubsection.1.4.2}
+\contentsline {subsection}{\numberline {1.5}Image Resolution}{9}{subsection.1.5}
+\contentsline {section}{\numberline {2}2D Graphics}{10}{section.2}
+\contentsline {subsection}{\numberline {2.1}Point primitives}{10}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Linear Interpolation}{11}{subsubsection.2.1.1}
+\contentsline {subsection}{\numberline {2.2}Line primitives}{12}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Interpolation Algorithm}{13}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Bresenham Algorithm}{14}{subsubsection.2.2.2}
+\contentsline {subsection}{\numberline {2.3}Triangle Primitives}{17}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Triangles with edge // to x-axis}{17}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Triangle splitting}{18}{subsubsection.2.3.2}
+\contentsline {subsection}{\numberline {2.4}Normalized coordinates}{19}{subsection.2.4}
+\contentsline {section}{\numberline {3}3D Graphics}{20}{section.3}
+\contentsline {subsection}{\numberline {3.1}Affine Transformations}{20}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Translation}{21}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Scaling}{22}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Rotation}{24}{subsubsection.3.1.3}
+\contentsline {subsection}{\numberline {3.2}Shear}{27}{subsection.3.2}
+\contentsline {section}{\numberline {4}3D Transform}{28}{section.4}
+\contentsline {subsection}{\numberline {4.1}Inversion of transformations}{29}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Composition}{30}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Properties of composition of transformations}{30}{subsubsection.4.2.1}
+\contentsline {subsection}{\numberline {4.3}Transformations around an arbitrary axis or center}{32}{subsection.4.3}
+\contentsline {section}{\numberline {5}Projections}{34}{section.5}
+\contentsline {subsection}{\numberline {5.1}Parallel Projections}{36}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Aspect Ratio}{39}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Projection matrices and aspect ratio}{40}{subsubsection.5.1.2}
+\contentsline {subsection}{\numberline {5.2}Perspective Projections}{40}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Perspective matrix on screen}{44}{subsubsection.5.2.1}
+\contentsline {section}{\numberline {6}View and World Transformations}{45}{section.6}
+\contentsline {subsection}{\numberline {6.1}View Matrix}{45}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {6.1.1}Look-in-direction matrix}{46}{subsubsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.2}Look-at matrix}{48}{subsubsection.6.1.2}
+\contentsline {subsection}{\numberline {6.2}Local coordinates and World Matrix}{50}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}World Matrix : scaling}{50}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2}World Matrix : rotating}{51}{subsubsection.6.2.2}
+\contentsline {subsubsection}{\numberline {6.2.3}World Matrix : positioning}{52}{subsubsection.6.2.3}
+\contentsline {subsubsection}{\numberline {6.2.4}Final World Matrix}{53}{subsubsection.6.2.4}
+\contentsline {subsection}{\numberline {6.3}Gimbal Lock}{53}{subsection.6.3}
+\contentsline {section}{\numberline {7}A complete projection example}{55}{section.7}
+\contentsline {subsection}{\numberline {7.1}World-View-Projection Matrices}{55}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}The example}{57}{subsection.7.2}
+\contentsline {section}{\numberline {8}Meshes and Clipping}{61}{section.8}
+\contentsline {subsection}{\numberline {8.1}Meshes}{61}{subsection.8.1}
+\contentsline {subsubsection}{\numberline {8.1.1}Mesh encoding}{63}{subsubsection.8.1.1}
+\contentsline {subsubsection}{\numberline {8.1.2}Indexed Primitives}{64}{subsubsection.8.1.2}
+\contentsline {subsection}{\numberline {8.2}Clipping}{66}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}Clipping triangles}{68}{subsubsection.8.2.1}
+\contentsline {section}{\numberline {9}Hidden Surfaces}{71}{section.9}
+\contentsline {subsection}{\numberline {9.1}Back-face culling}{72}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Z-Buffering}{77}{subsection.9.2}
+\contentsline {subsubsection}{\numberline {9.2.1}Z-Buffering issues}{77}{subsubsection.9.2.1}
+\contentsline {subsubsection}{\numberline {9.2.2}Stencil buffer}{79}{subsubsection.9.2.2}
+\contentsline {section}{\numberline {10}Lights and rendering}{81}{section.10}
+\contentsline {subsection}{\numberline {10.1}The Bidirectional Reflectance Distribution Function}{81}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Rendering equation}{83}{subsection.10.2}
+\contentsline {subsubsection}{\numberline {10.2.1}Scan-line : considering colors}{84}{subsubsection.10.2.1}
+\contentsline {subsection}{\numberline {10.3}Light models}{85}{subsection.10.3}
+\contentsline {subsubsection}{\numberline {10.3.1}Direct light models}{85}{subsubsection.10.3.1}
+\contentsline {subsubsection}{\numberline {10.3.2}Point Lights}{86}{subsubsection.10.3.2}
+\contentsline {subsubsection}{\numberline {10.3.3}Spot lights}{88}{subsubsection.10.3.3}
+\contentsline {subsection}{\numberline {10.4}BRDF Models}{89}{subsection.10.4}
+\contentsline {subsubsection}{\numberline {10.4.1}Diffuse: Lambert Model}{89}{subsubsection.10.4.1}
+\contentsline {subsubsection}{\numberline {10.4.2}Specular: Phong Model and Blinn Model}{91}{subsubsection.10.4.2}
+\contentsline {section}{\numberline {11}Smooth Shading}{96}{section.11}
+\contentsline {subsection}{\numberline {11.1}Gouraud shading}{98}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}Phong shading}{99}{subsection.11.2}
+\contentsline {subsection}{\numberline {11.3}Transformations of normal vectors}{99}{subsection.11.3}
+\contentsline {section}{\numberline {12}Ambient Light Emissions}{100}{section.12}
+\contentsline {section}{\numberline {13}Textures}{102}{section.13}
+\contentsline {subsubsection}{\numberline {13.0.1}Perspective interpolation}{105}{subsubsection.13.0.1}
+\contentsline {section}{\numberline {14}UV Mapping}{109}{section.14}
+\contentsline {subsection}{\numberline {14.1}Magnification Filtering}{110}{subsection.14.1}
+\contentsline {subsubsection}{\numberline {14.1.1}Nearest Pixel}{110}{subsubsection.14.1.1}
+\contentsline {subsubsection}{\numberline {14.1.2}(Bi)Linear Interpolation}{111}{subsubsection.14.1.2}
+\contentsline {subsection}{\numberline {14.2}Minification Filtering}{112}{subsection.14.2}
+\contentsline {subsubsection}{\numberline {14.2.1}MultiploInParving-Mapping}{112}{subsubsection.14.2.1}
+\contentsline {subsection}{\numberline {14.3}UV Intervals}{113}{subsection.14.3}
+\contentsline {subsubsection}{\numberline {14.3.1}Clamp}{113}{subsubsection.14.3.1}
+\contentsline {subsubsection}{\numberline {14.3.2}Repeat}{114}{subsubsection.14.3.2}
+\contentsline {subsubsection}{\numberline {14.3.3}Mirror}{114}{subsubsection.14.3.3}
+\contentsline {subsubsection}{\numberline {14.3.4}Constant}{115}{subsubsection.14.3.4}
+\contentsline {section}{\numberline {15}Animations}{117}{section.15}
+\contentsline {subsection}{\numberline {15.1}Quaternions}{117}{subsection.15.1}
+\contentsline {subsection}{\numberline {15.2}Bezier Curves}{119}{subsection.15.2}
+\contentsline {subsection}{\numberline {15.3}3D Animation}{121}{subsection.15.3}
+\contentsline {section}{\numberline {16}WegGL \& Shaders}{124}{section.16}
+\contentsline {subsection}{\numberline {16.1}Intro}{124}{subsection.16.1}
+\contentsline {subsection}{\numberline {16.2}GLSL}{124}{subsection.16.2}
+\contentsline {subsection}{\numberline {16.3}WebGL - Client}{125}{subsection.16.3}
+\contentsline {subsubsection}{\numberline {16.3.1}Canvas}{125}{subsubsection.16.3.1}
+\contentsline {subsubsection}{\numberline {16.3.2}Context}{125}{subsubsection.16.3.2}
+\contentsline {subsubsection}{\numberline {16.3.3}Drawing with 2D Context}{126}{subsubsection.16.3.3}
+\contentsline {subsubsection}{\numberline {16.3.4}Drawing with webgl Context}{127}{subsubsection.16.3.4}
+\contentsline {subsubsection}{\numberline {16.3.5}Drawing with webgl context : 3D}{130}{subsubsection.16.3.5}
+\contentsline {subsection}{\numberline {16.4}GLSL - Server}{132}{subsection.16.4}
+\contentsline {subsubsection}{\numberline {16.4.1}Vertex Shader}{133}{subsubsection.16.4.1}
+\contentsline {subsubsection}{\numberline {16.4.2}Fragment Shader}{133}{subsubsection.16.4.2}
+\contentsline {subsubsection}{\numberline {16.4.3}Data Types}{134}{subsubsection.16.4.3}
+\contentsline {subsubsection}{\numberline {16.4.4}GLSL Program Language}{135}{subsubsection.16.4.4}
+\contentsline {subsubsection}{\numberline {16.4.5}GLSL Compiling}{138}{subsubsection.16.4.5}
+\contentsline {subsubsection}{\numberline {16.4.6}Workflow Recap}{139}{subsubsection.16.4.6}
+\contentsline {subsection}{\numberline {16.5}Shader spaces}{139}{subsection.16.5}
+\contentsline {subsubsection}{\numberline {16.5.1}World space}{140}{subsubsection.16.5.1}
+\contentsline {subsubsection}{\numberline {16.5.2}Camera space}{141}{subsubsection.16.5.2}
+\contentsline {subsubsection}{\numberline {16.5.3}Object space}{142}{subsubsection.16.5.3}
+\contentsline {subsubsection}{\numberline {16.5.4}Static space}{143}{subsubsection.16.5.4}
+\contentsline {subsubsection}{\numberline {16.5.5}Space recap}{143}{subsubsection.16.5.5}
+\contentsline {subsection}{\numberline {16.6}GLSL Textures}{144}{subsection.16.6}
+\contentsline {subsubsection}{\numberline {16.6.1}Using texture : steps}{145}{subsubsection.16.6.1}

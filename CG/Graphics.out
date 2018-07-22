@@ -57,3 +57,60 @@
 \BOOKMARK [2][-]{subsection.9.2}{Z-Buffering}{section.9}% 57
 \BOOKMARK [3][-]{subsubsection.9.2.1}{Z-Buffering issues}{subsection.9.2}% 58
 \BOOKMARK [3][-]{subsubsection.9.2.2}{Stencil buffer}{subsection.9.2}% 59
+\BOOKMARK [1][-]{section.10}{Lights and rendering}{}% 60
+\BOOKMARK [2][-]{subsection.10.1}{The Bidirectional Reflectance Distribution Function}{section.10}% 61
+\BOOKMARK [2][-]{subsection.10.2}{Rendering equation}{section.10}% 62
+\BOOKMARK [3][-]{subsubsection.10.2.1}{Scan-line : considering colors}{subsection.10.2}% 63
+\BOOKMARK [2][-]{subsection.10.3}{Light models}{section.10}% 64
+\BOOKMARK [3][-]{subsubsection.10.3.1}{Direct light models}{subsection.10.3}% 65
+\BOOKMARK [3][-]{subsubsection.10.3.2}{Point Lights}{subsection.10.3}% 66
+\BOOKMARK [3][-]{subsubsection.10.3.3}{Spot lights}{subsection.10.3}% 67
+\BOOKMARK [2][-]{subsection.10.4}{BRDF Models}{section.10}% 68
+\BOOKMARK [3][-]{subsubsection.10.4.1}{Diffuse: Lambert Model}{subsection.10.4}% 69
+\BOOKMARK [3][-]{subsubsection.10.4.2}{Specular: Phong Model and Blinn Model}{subsection.10.4}% 70
+\BOOKMARK [1][-]{section.11}{Smooth Shading}{}% 71
+\BOOKMARK [2][-]{subsection.11.1}{Gouraud shading}{section.11}% 72
+\BOOKMARK [2][-]{subsection.11.2}{Phong shading}{section.11}% 73
+\BOOKMARK [2][-]{subsection.11.3}{Transformations of normal vectors}{section.11}% 74
+\BOOKMARK [1][-]{section.12}{Ambient Light Emissions}{}% 75
+\BOOKMARK [1][-]{section.13}{Textures}{}% 76
+\BOOKMARK [2][-]{subsubsection.13.0.1}{Perspective interpolation}{section.13}% 77
+\BOOKMARK [1][-]{section.14}{UV Mapping}{}% 78
+\BOOKMARK [2][-]{subsection.14.1}{Magnification Filtering}{section.14}% 79
+\BOOKMARK [3][-]{subsubsection.14.1.1}{Nearest Pixel}{subsection.14.1}% 80
+\BOOKMARK [3][-]{subsubsection.14.1.2}{\(Bi\)Linear Interpolation}{subsection.14.1}% 81
+\BOOKMARK [2][-]{subsection.14.2}{Minification Filtering}{section.14}% 82
+\BOOKMARK [3][-]{subsubsection.14.2.1}{MultiploInParving-Mapping}{subsection.14.2}% 83
+\BOOKMARK [2][-]{subsection.14.3}{UV Intervals}{section.14}% 84
+\BOOKMARK [3][-]{subsubsection.14.3.1}{Clamp}{subsection.14.3}% 85
+\BOOKMARK [3][-]{subsubsection.14.3.2}{Repeat}{subsection.14.3}% 86
+\BOOKMARK [3][-]{subsubsection.14.3.3}{Mirror}{subsection.14.3}% 87
+\BOOKMARK [3][-]{subsubsection.14.3.4}{Constant}{subsection.14.3}% 88
+\BOOKMARK [1][-]{section.15}{Animations}{}% 89
+\BOOKMARK [2][-]{subsection.15.1}{Quaternions}{section.15}% 90
+\BOOKMARK [2][-]{subsection.15.2}{Bezier Curves}{section.15}% 91
+\BOOKMARK [2][-]{subsection.15.3}{3D Animation}{section.15}% 92
+\BOOKMARK [1][-]{section.16}{WegGL \046 Shaders}{}% 93
+\BOOKMARK [2][-]{subsection.16.1}{Intro}{section.16}% 94
+\BOOKMARK [2][-]{subsection.16.2}{GLSL}{section.16}% 95
+\BOOKMARK [2][-]{subsection.16.3}{WebGL - Client}{section.16}% 96
+\BOOKMARK [3][-]{subsubsection.16.3.1}{Canvas}{subsection.16.3}% 97
+\BOOKMARK [3][-]{subsubsection.16.3.2}{Context}{subsection.16.3}% 98
+\BOOKMARK [3][-]{subsubsection.16.3.3}{Drawing with 2D Context}{subsection.16.3}% 99
+\BOOKMARK [3][-]{subsubsection.16.3.4}{Drawing with webgl Context}{subsection.16.3}% 100
+\BOOKMARK [3][-]{subsubsection.16.3.5}{Drawing with webgl context : 3D}{subsection.16.3}% 101
+\BOOKMARK [2][-]{subsection.16.4}{GLSL - Server}{section.16}% 102
+\BOOKMARK [3][-]{subsubsection.16.4.1}{Vertex Shader}{subsection.16.4}% 103
+\BOOKMARK [3][-]{subsubsection.16.4.2}{Fragment Shader}{subsection.16.4}% 104
+\BOOKMARK [3][-]{subsubsection.16.4.3}{Data Types}{subsection.16.4}% 105
+\BOOKMARK [3][-]{subsubsection.16.4.4}{GLSL Program Language}{subsection.16.4}% 106
+\BOOKMARK [3][-]{subsubsection.16.4.5}{GLSL Compiling}{subsection.16.4}% 107
+\BOOKMARK [3][-]{subsubsection.16.4.6}{Workflow Recap}{subsection.16.4}% 108
+\BOOKMARK [2][-]{subsection.16.5}{Shader spaces}{section.16}% 109
+\BOOKMARK [3][-]{subsubsection.16.5.1}{World space}{subsection.16.5}% 110
+\BOOKMARK [3][-]{subsubsection.16.5.2}{Camera space}{subsection.16.5}% 111
+\BOOKMARK [3][-]{subsubsection.16.5.3}{Object space}{subsection.16.5}% 112
+\BOOKMARK [3][-]{subsubsection.16.5.4}{Static space}{subsection.16.5}% 113
+\BOOKMARK [3][-]{subsubsection.16.5.5}{Space recap}{subsection.16.5}% 114
+\BOOKMARK [2][-]{subsection.16.6}{GLSL Textures}{section.16}% 115
+\BOOKMARK [3][-]{subsubsection.16.6.1}{Using texture : steps}{subsection.16.6}% 116
