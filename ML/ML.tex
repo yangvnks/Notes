@@ -1,0 +1,1338 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Simple Sectioned Essay Template
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing essay content.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article} % Default font size is 12pt, it can be changed here
+
+\usepackage{geometry} % Required to change the page size to A4
+\geometry{a4paper} % Set the page size to be A4 as opposed to the default US Letter
+
+\usepackage{graphicx} % Required for including pictures
+\usepackage{amsmath}
+\usepackage[ampersand]{easylist}
+\usepackage{import}
+\usepackage{listings}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{hyperref}
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+
+
+
+\usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{wrapfig} % Allows in-line images such as the example fish picture
+\usepackage{bm}
+
+
+\linespread{1.2} % Line spacing
+
+%\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
+
+\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+\HRule \\[0.5cm]
+{ \LARGE  MACHINE LEARNING - FORMULAS}\\[0.8cm] % Title of your document
+\HRule \\[1.5cm]
+\textsc{\large by Yannick Giovanakis}\\[5.5cm] % Minor heading such as course title
+
+\vfill
+{\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Include a table of contents
+
+\newpage % Begins the essay on a new page instead of on the same page as the table of contents 
+
+\section{Linear Regression}
+\begin{itemize}
+\item Simple linear regression with D-dimensional input vector \textbf{x}
+$$ y(\bm{x,b}) = w_0 + \sum \limits_{j=1}^{D-1}w_jx_j = \bm{w}^T \bm{x}$$
+
+\item Linear regression with M fixed non-linear functions ( \textbf{basis functions})
+$$ y(\bm{x,b}) = w_0 + \sum \limits_{j=1}^{M-1}w_j \phi_j(\bm{x}) = \bm{w}^T \phi (\bm{x})$$
+\begin{itemize}
+\item Polynomial :$\phi_j(x) = x^j$
+\item Gaussian : $\phi(x) = e^{-\frac{(x-\mu_j)^2}{2 \sigma ^2}}$
+\item Sigmoid : $\phi(x) = \frac{1}{1+e^{\frac{(\mu_j - x)}{\sigma}}}$
+\end{itemize}
+\end{itemize}
+
+\subsection{Direct Approach - OLS}
+\begin{itemize}
+\item Half of \textbf{residual sum of squares} RSS/SSE 
+$$ L(w) = \frac{1}{2} \sum \limits_{n=1}^{N} (y(x_n , \bm{w}) -t_n)^2$$
+$$ RSS(\bm{w}) = || \epsilon||^2_2 = \sum \limits^N \epsilon_i^2$$
+
+\item RSS in matrix form and $\epsilon = \bm{t} -\bm{\phi w}$
+$$ L(w)  = \frac{1}{2} RSS(\bm{w}) = \frac{1}{2}( \bm{t} - \bm{\phi w})^T(\bm{t} - \bm{\phi w})$$
+
+\item Minimize LS 
+$$ \frac{\partial L(w)}{\partial w} = - \bm{\phi}^T(\bm{t} - \bm{\phi w}) \quad 
+   \frac{\partial^2 L(w)}{\partial w \partial w^T} = \bm{\phi}^T \bm{\phi} $$
+
+\begin{itemize}
+\item If $\bm{\phi}^T \bm{\phi}$ \textbf{singular} $\rightarrow$ infinite solutions
+\item If $\bm{\phi}^T \bm{\phi}$ \textbf{non - singular} , all \textbf{eigenvalues} $ \geq 0 $ :
+$$ - \bm{\phi}^T(\bm{t}- \bm{\phi w}) = 0 \rightarrow \bm{\phi ^T \phi w} = \bm{\phi^T t} $$
+$$ \hat{\bm{w}}_{OLS} = (\bm{\phi^T \phi })^{-1} \bm{\phi^T t}$$
+$$ \hat{\bm{t}} = \bm{\phi \hat{w}} = \bm{\phi (\phi^T \phi)}^{-1} \bm{\phi^T t}$$
+\[\underbrace{\bm{\phi (\phi^T \phi)}^{-1} \bm{\phi^T}}_{\text{Hat matrix}} \]
+\end{itemize}
+\end{itemize}
+
+\subsection{Direct Approach - Gradient Optimization}
+\begin{itemize}
+\item Weight update with \textbf{stochastic gradient descent} and learning rate $\alpha$
+$$ \bm{w}^{(k+1)} = \bm{w}^{(k)} - \alpha^{(k)}\nabla L(X_n)$$
+$$ \bm{w}^{(k+1)} = \bm{w}^{(k)} - \alpha^{(k)} (\bm{w}^{(k)^T \phi}(x_n) - \bm{t_n}) \bm{\phi}(x_n)$$
+
+\item Condition 1 for convergence $\sum \limits_{k=0}^{\infty} \frac{1}{\alpha^{(k)}} = + \infty$
+\item Condition 2 for convergence $\sum \limits_{k=0}^{\infty} \frac{1}{\alpha^{(k)^2}} < + \infty$
+\end{itemize}
+
+\subsection{Discriminative approach - MLE}
+\begin{itemize}
+\item Target t given by \textbf{deterministic} function y with a \textbf{Gaussian noise} $ \epsilon \sim \mathcal{N}(0,\sigma^2)$
+$$ t= y(\bm{x,w}) + \epsilon$$
+So that $t \sim \mathcal{N}(y(x,w), \sigma^2)$
+
+\item Given N samples i.i.d  and outputs , the \textbf{likelihood} is :
+$$ p(\bm{t} | \bm{X,w},\sigma^2) = \prod \limits_{n=1}^N \mathcal{N}(t_n| \bm{w}^T \bm{\phi}(x_n),\sigma^2 ) = \prod \limits_{n=1}^N \frac{1}{\sqrt{2 \pi \sigma^2}}e^{- \frac{(t-y(x,w))^2}{2\sigma^2}}$$
+
+\item Use  \textbf{w} to approximate Gaussian mean using \textbf{MLE} (log-likelihood)
+ $$ l(\bm{w}) = ln p(\bm{t}| \bm{X,w},\sigma^2) = \sum \limits_{n=1}^N ln p(t_n | x_n , \bm{w} , \sigma^2)=$$
+ $$ -\frac{N}{2}ln(2\pi \sigma^2) - \frac{1}{2\sigma^2}RSS(w) = -\frac{N}{2}ln(2\pi \sigma^2)- \frac{1}{4\sigma^2}(\bm{t-w \phi})^T(t-w\phi)$$
+$$ \nabla l(\bm{w})= -\bm{\phi}^T (\bm{t- \phi w})=  -\bm{\phi^T \phi} + \bm{\phi^T \phi w}= 0$$
+$$ \bm{w}_{ML} = (\bm{\phi^T \phi})^{-1} \bm{\phi}^T t$$
+$$\text{Assuming Gaussian distribution } \hat{w}_{ML} = \hat{w}_{OLS})$$
+
+\item Case of \textbf{multiple outputs} 
+$$ \hat{\bm{W}}_{ML} = (\bm{\phi^T \phi}^{-1} \bm{\phi^T T}$$
+$$ \hat{\bm{w}}_{ML} = (\bm{\phi^T \phi}^{-1} \bm{\phi^T t}_k)$$
+\end{itemize}
+
+\subsection{Regularization}
+\begin{itemize}
+
+\item Empirical loss on data ($L_D$) + size of parameters ($L_W$):
+$$ L(w) = L_D(w) + \lambda L_W(w)$$
+
+\item \textbf{Ridge Regression} with l2-norm
+$$ L_W(w) = \frac{1}{2}\bm{w^T w}= \frac{1}{2}||\bm{w}||^2_2$$
+$$ L(\bm{w}) = \frac{1}{2} \sum \limits_{i=1}^{N} (t_i -\bm{w}^T \phi(x_i))^2 + \frac{\lambda}{2}||w||^2_2$$
+\begin{itemize}
+\item Closed form solution:  $\hat{\bm{w}}_{ridge} = (\lambda \bm{I} + \bm{\phi^T \phi})^{-1} \phi^T t$
+\end{itemize}
+
+\item \textbf{Lasso Regression} with l1-norm
+$$ L_W(w) = \frac{1}{2}\bm{w}= \frac{1}{2}||\bm{w}||_1$$
+$$ L(\bm{w}) = \frac{1}{2} \sum \limits_{i=1}^{N} (t_i -\bm{w}^T \phi(x_i))^2 + \frac{\lambda}{2}||w||_1$$
+\begin{itemize}
+\item \textbf{No} closed-form solution (it's non-linear)
+\end{itemize}
+\end{itemize}
+
+\subsection{Bayesian Regression}
+\begin{itemize}
+\item Posterior distribution $\propto$ likelihood $\cdot$ prior
+$$ p(\bm{w}|D) =\frac{p(D| \bm{w})p(\bm{w})}{p(D)}$$
+$$ p(D) = \int p(D|\bm{w})p(\bm{w}) dw \rightarrow \text{\textbf{ normalizing constant }}$$
+
+\item Obtain most probable value for $w$ given the data using \textbf{Maximum a Posteriori} which is the \textbf{mode} of $p(\bm{w}|D)$
+
+\item Prediction of new point $x^*$ given data D (predictive distribution)
+$$ p(x^*|D) = \int p(x^*|\bm{w},D)p(\bm{w}|D)dw = E[p(x^* |\bm{w},D)]$$
+
+\item Assuming \textbf{Gaussian} likelihood, conjugate prior is also \textbf{Gaussian}
+\begin{itemize}
+\item Prior : $p(\bm{w}) = \mathcal{N}(\bm{w}|\bm{w_0}m,S_0)$
+\item Posterior : $p(\bm{w}|\bm{t,\Phi},\sigma^2) \propto \mathcal{N}(\bm{w}|\bm{w_0,S_0}) \mathcal{N}(\bm{t}|\bm{\Phi w},\sigma^2 \bm{I_N})) = \mathcal{N}(\bm{w}|\bm{w_N,S_N})$
+\item $\bm{w}_N = \bm{S}_N \left( \bm{S}_0^{-1}\bm{w}_0 + \frac{\bm{\phi^T t}}{\sigma^2}  \right) \rightarrow$ \textbf{MAP Estimator}
+\item $\bm{S_N}^{-1} = \bm{S_0}^{-1} + \frac{\bm{\Phi^T \Phi}}{\sigma^2}$
+\end{itemize}
+
+\item Degeneration to ML if $\bm{S}_0 \rightarrow \infty$ 
+$$ \bm{S_N}^{-1} = 0 + \frac{\bm{\Phi^T \Phi}}{\sigma^2}$$
+$$ \bm{S_N} = \sigma^2 (\bm{\phi^T \phi})^{-1}$$
+$$ \bm{w_N} = \sigma^2 (\bm{\phi^T \phi})^{-1} \frac{\bm{\Phi^T t}}{\sigma^2} = (\bm{\phi^T \phi})^{-1} \bm{\phi^T t}  $$
+
+\item Degeneration to Ridge if $\bm{w_0}=0 , \bm{S_0} =\tau^2\bm{I}$
+$$ \lambda = \frac{\sigma^2}{\tau^2}$$
+
+\item \textbf{Posterior predictive distribution} takes into account all the models
+$$ p(\bm{t} | \bm{x,D} ,\sigma^2) = \int \mathcal{N} (\bm{t}| \bm{w}^T \phi(x),\sigma^2)\mathcal{N}(\bm{w}| \bm{w_N, S_N})d\bm{w}$$
+$$ = \mathcal{N}(t| \bm{w_N}^T \phi(\bm{x},\sigma^2_N(\bm{x})))$$
+$$ \sigma^2_N(\bm{x}) = \underbrace{\sigma^2}_{noise in target values} + \underbrace{\phi(\bm{x})^T\bm{S_}N \bm{\phi(x)}}_{uncertainty with parameter values}$$
+$$\text{if \textbf{N}} \rightarrow \infty  : \bm{\phi}(\bm{x})^T\bm{S}_N \bm{\phi}(\bm{x}) \rightarrow 0 $$
+$$ \text{Variance depends only on  } \sigma^2$$ 
+\end{itemize}
+
+\section{Classification}
+\begin{itemize}
+\item Function f can be \textbf{non-linear} so non-linear in parameters but linear in \textbf{decision surfaces}
+ $$ y(\bm{x},\bm{w})= f( \bm{x}^T \bm{w} + w_0)  $$
+ 
+\item Approaches:
+\begin{itemize}
+\item \textbf{Discriminant} : (direct approach) build function that directly maps input to class
+\item \textbf{Probabilistic discriminative} : model conditional probability $p(C_k|x)$ directly using parametric models
+\item \textbf{Probabilistic generative} : mode $p(x|C_k)$ , class conditional density , and $p(C_k)$ then use Bayes' Rule
+\end{itemize}
+\end{itemize}
+
+\subsection{Discriminant approach}
+
+\subsubsection{Considerations}
+\begin{itemize}
+\item Two class problem with model $y(x) = \bm{x}^T \bm{w} + w_0$
+\item Assign $C_1$ if $y(x) \geq 0$ , $C_2$ otherwise
+\item Leads to decision boundary $y(x) = 0$  
+\end{itemize}
+\newpage
+\textbf{Direction of decision boundary}
+\begin{itemize}
+\item  Two points on surface $x_A$ , $x_B$
+$$ y(x_A)=y(x_B) = 0$$
+$$ \begin{cases}
+x_A^T \bm{w}+w_0 =0\\
+x_B^T \bm{w}+w_0 =0
+\end{cases}
+$$
+The difference vector identifies the decision boundary and \textbf{w} is \textbf{orthogonal} to it (because scalar product is 0)
+$$ (x_A - x_B) \bm{w}=0$$
+This means that \textbf{w} changes the \textbf{direction} of the decision boundary.
+\end{itemize}
+\textbf{Location of decision boundary}
+\begin{itemize}
+\item Point x on decision boundary 	
+$$ d(0,y(x) = \frac{|\bm{0} \cdot y(x)|}{||\bm{w}||}= \frac{|\sum 0 \cdot w_i + w_0|}{||\bm{w}||} = \frac{w_0}{||\bm{w}||}$$
+\end{itemize}
+Which means that the \textbf{location} is given by the bias term $w_0$
+
+\subsubsection{Multi-class problem}
+\begin{itemize}
+\item \textbf{One-versus-the-rest} : $K-1$ classifiers (each solves a 2 class problem)
+\item \textbf{One-versus-one} : $\frac{K(K-1)}{2}$ classifiers
+\item  Using \textbf{k-linear discriminant} functions: $y_k(\bm{x}) = \bm{x}^T \bm{w}_k + w_{k0} $.\\
+In this case the decision boundary between k,j is $y_k(x) = y_j(x)$.
+\end{itemize}
+
+
+\subsubsection{Least Squares for classification}
+\begin{itemize}
+\item General model with 1-of-k encoding for target t
+$$ y_k = \bm{x}^T \bm{w}_k + w_{k0} = \bm{\tilde{W}}^T \bm{\tilde{x}}$$
+$$ \tilde{W} = \begin{bmatrix}
+w_{0,1} & ... & w_{0,k} \\
+... & ... & ... \\
+w_{D,1} & ... & w_{D,k}
+\end{bmatrix}  \quad \tilde{x} = \begin{bmatrix}
+1 \\ x_0 \\ ... \\x_D
+\end{bmatrix} $$
+\item Aim : find optimal weight matrix $\tilde{W}$ (same as OLS)
+$$ \bm{\tilde{W}} = (\bm{\tilde{X}^T \tilde{X}})^{-1} \bm{\tilde{X}}^T \bm{T} $$
+$$ \text{Assign input to class for which }t_k = \tilde{\bm{x}}^T \tilde{\bm{w}}_k \text{ is largest}$$
+
+\item Method very bad because of \textbf{outliers}
+\end{itemize}
+
+\subsubsection{Perceptron}
+\begin{itemize}
+\item On-line algorithm with model
+$$ y(x) = f(\bm{w}^T \phi(x))$$
+$$ f = \begin{cases}
++1 \quad a \geq 0\\
+-1 \quad a < 0
+\end{cases}
+$$
+\item Finds hyperplane by minimizing distance of \textbf{missclassified points} to boundary
+$$ L_P(x) = - \sum \limits_{n \in M }\bm{w}^T \phi(x_n)t_n $$
+$$ M = \text{ set of missclassified points}$$
+
+\item Minimizing with \textbf{stochastic gradient descent}
+$$ w^{(k+1)} = w_{(k)}-\alpha \nabla L_P(w)= w^{(k)} + \alpha \phi(x_n)t_n$$
+\end{itemize}
+
+\subsection{Probabilistic Discriminative Approach}
+\begin{itemize}
+\item In \textbf{logistic regression} the \textbf{posterior probability} of class $C_1$ can be written as \textbf{logistic sigmoid function} 
+$$ p(C_1|\phi) = \frac{1}{e^{-\bm{w}^\phi}} = \sigma(\bm{w}^ \sigma)$$
+$$ p(C_2|\phi) = 1- p(C_1|\phi)$$
+
+\item Maximize probability of getting right label by using ML
+$$ y_n = \sigma(\bm{w}^T \phi_n)$$ 
+$$ p(\bm{t}|\bm{X,w}) = \prod \limits_{n=1}^N y_n^{t_n}(1-y_n)^{1-t_n}$$
+$$ L(w) = - ln p(\bm{t}|\bm{X,w})= - \sum \limits_{n=1}^N (t_n ln(y_n)+(1-t_n)ln(1-y_n))= \sum \limits_{n=1}^N  L_n $$
+
+\item Minimize now $L_n$
+$$ \frac{\partial L_n}{\partial y_n} = \frac{y_n-t_n}{y_n(1-t_n)}$$
+$$ \frac{\partial y_n}{\partial \bm{w}} = y_n(1-y_n)\phi_n$$
+$$ \frac{\partial L_n}{\partial \bm{w}} = \frac{\partial L_n}{\partial y_n} \cdot \frac{\partial y_n}{\partial \bm{w}} = (y_n-t_n)\phi_n$$
+$$ \nabla L(\bm{w}) = \sum \limits_{n=1}^N (y_n - t_n)\phi_n$$
+\end{itemize}
+
+
+\subsubsection{Multi-class using Softmax}
+\begin{itemize}
+\item Softmax transformation of linear functions of feature variables
+$$ p(C_k|\phi) = y_k(\phi)= \frac{e^{\bm{w}^T_{k}}\phi}{\sum \limits_j e^{\bm{w}^T_j \phi}}$$
+\item Determine parameters using ML (differently done in \textbf{generative approaches})
+$$ p(\bm{T} |\bm{\Phi ,w_1,...,w_k}) = \prod \limits_{n=1}^N \left(\underbrace{ \prod \limits_{k=1}^K p(C_k |\Phi_n)^{t_{nk}}}_{\text{only one term corresponding to right class}} \right) = \prod\limits_{n=1}^{N} \left( \prod \limits_{k=1}^K  y_{nk}^{t_{nk}}\right)$$
+where $y_{nk} = p(C_k|\phi_n)= \frac{e^{\bm{w}^T_{k}}\phi}{\sum \limits_j e^{\bm{w}^T_j \phi}}$
+
+\item Minimize with negative logarithm to get the \textbf{cross-entropy} function
+$$ L(\bm{w_1,...,w_k}) = - ln(p(\bm{T}| \bm{\Phi,w_1,...,w_k}))= -\sum
+\limits_{n=1}^N \left( \sum \limits_{k=1}^k t_{nk}ln(y_{nk})\right)$$
+$$ \nabla L_{\bm{w_j}} (\bm{w_1,...,w_k})= \sum \limits_{n=1} ^{N} (y_{nj} - t_{nj})\phi_n$$
+\end{itemize}
+
+
+
+\section{Bias-Variance trade-off and model selection}
+\subsection{Free Lunch Theorem}
+\begin{itemize}
+\item Generalization accuracy (= on test set) of learner L =
+$ Acc_G(L)$
+\item All possible concepts $\mathcal{F}$
+\item True models to be learnt $y=f(x)$
+\item \textbf{No-Free Lunch Theorem}
+$$ \text{For any learner L: } \frac{1}{|\mathcal{F}|} \sum \limits_{\mathcal{F}}Acc_G(L) = \frac{1}{2}$$
+\item For learner $L_1, L_2$ 
+$$ \text{if } \exists \text{ learning problem so that } Acc_G(L_1)>Acc_G(L_2) $$
+$$ \text{then }\exists \text{ learning problem } Acc_G(L_2)>Acc_G(L_1)$$
+\end{itemize}
+
+\subsection{Bias-Variance}
+\begin{itemize}
+\item Dataset D with N samples obtained by function $t_i = f(x_i)+\epsilon$
+$$ E[\epsilon]=0$$
+$$ Var[\epsilon] = \sigma^2$$
+\item Aim is to find model $y(x)$  that approximates f as well as possible. Expected square error on unseen samples x
+\begin{align*}
+ E[(t-y(x))^2] &= E[t^2+y(x)^2 -2ty(x)]=E[t^2]+E[y(x)^2]-2E[ty(x)]  \\
+ &= E[t^2] \pm E[t]^2 + E[y(x)^2] \pm E[y(x)]^2 -2tE[y(x)] \\
+ &= Var[t]+E[t]^2+Var[y(x)]+E[y(x)]^2-2tE[y(x)] \\
+ &= Var[t]+Var[y(x)]+ (E[t]^2 + E[y(x)]^2 - 2tE[y(x)])\\
+ &= \underbrace{Var[t]}_{\sigma^2}+\underbrace{Var[y(x)]}_{Variance}+\underbrace{E[(t-y(x)]^2}_{Bias^2}
+\end{align*}
+
+\item \textbf{Bias} is difference between truth and what is expected to be learnt 
+$$ bias^2= \int (f(\bm{x})-E[y(\bm{x})])^2p(\bm{x})d\bm{x}$$
+\begin{itemize}
+\item Decreases with \textbf{more complex models}
+\end{itemize}
+
+\item \textbf{Variance} is difference between what is learnt from a particular dataset and what is expected to be learnt 
+$$ \int E[(y(\bm{x}) - \bar{y}(\bm{x}))^2]p(\bm{x})d\bm{x}$$
+$$ \bar{y}(\bm{x})=E[y(\bar{x})]$$
+\begin{itemize}
+\item Decreases with \textbf{simpler models}
+\item Decreases with \textbf{more samples}
+\end{itemize}
+
+\item Bias-Variance can be calculated analytically in KNN
+$$ E[(t-y(x))^2]=  \sigma^2 + \frac{\sigma^2}{K}+\left(  f(\bm{x}) -\frac{1}{K} \sum \limits_{i=1}^Kf(\bm{x}_i) \right)^2$$
+
+\subsection{Train-Test Errors}
+\item \textbf{Training error} $\rightarrow$ optimistically biased estimate of prediction
+\begin{itemize}
+\item Regression $ L_{train} = \frac{1}{N} \sum \limits_{n=1}^N (t_n - y(\bm{x}_n))^2$
+\item Classification $ L_{train} = \frac{1}{N} \sum \limits_{n=1}^N (I(t_n \neq y(\bm{x}_n)))$
+\end{itemize}
+
+\item \textbf{Prediction error} 
+\begin{itemize}
+\item Regression : $L_{true} = \int (f(\bm{x}) - y(\bm{x}))^2p(\bm{x})d\bm{x}$
+\item Classification : $L_{true} = \int I(f(\bm{x}) \neq y(\bm{x}))p(\bm{x})d\bm{x}$
+\end{itemize}
+
+
+\item \textbf{Test error} $\rightarrow$ unbiased if not used during training
+ $$ L_{train} = \frac{1}{N_{test}} \sum \limits_{n=1}^{N_{test}} (t_n - y(\bm{x}_n))^2$$
+Different estimation methods for test error (never use \textbf{test data!}):\\
+Direct approach
+\begin{itemize}
+\item \textbf{Leave-One-Out Cross Validation} : $D-\{n\}$ n-th data point moved to validation set (almost unbiased, slightly pessimistic)
+$$ L_{LOO} = \frac{1}{N} \sum \limits_{n=1}^N (t_n - y_{D-\{n\}}(\bm{x}_n))^2 $$
+
+\item \textbf{K-Fold Cross Validation} : divide training data into k equal parts $D_1 ,...,D_k$ and train on $D-D_i$ (faster but more pessimistically biased)
+$$ L_{D_i} = \frac{k}{N} \sum \limits_{(x_n,t_n) \in D_i}(t_n - y_{D-D_i}(\bm{x}))^2$$
+$$ L_{k-fold} = \frac{1}{k} \sum \limits_{i=1}^k L_{D_i}$$
+
+Adjustment techniques on training error to take into account model complexity:
+\item $\bm{C_p}$ : d total number of parameters, $(\tilde\sigma )^2$ estimate of variance of $\epsilon$
+$$ C_p = \frac{1}{N}(RSS + 2d\tilde{\sigma}^2)$$
+\item \textbf{AIC} : L maximized value for likelihood of model 
+$$ AIC = -2logL+2d$$
+\item \textbf{BIC} : since $logN > 2$ for any $n>7$ , BIC selects smaller models
+$$ BIC = \frac{1}{N}(RSS+ log(N)d \tilde{\sigma}^2)$$
+
+\item \textbf{Adjusted R2} : large values indicate small test error
+$$ AdjR^2 = 1 - \frac{RSS (N-1)}{TSS(N-d-1)}$$
+\end{itemize}
+
+\end{itemize}
+
+
+\subsection{Model selection}
+\begin{itemize}
+\item \textbf{Feature selection} 
+\begin{enumerate}
+\item $M_0$ null model ,no features,predicts mean
+\item $k=1,...M$ fit all $\binom{M}{k}$ model with k features
+\item Pick best among these $\binom{M}{k}$ called $M_k$
+\item Selected single best with CV,AIC,BIC...
+\end{enumerate}
+Bad if M too large (overfitting + computational cost) 
+\begin{itemize}
+\item Filter method = \textbf{PCA}, \textbf{SVD}...
+\item Embedded = \textbf{Decision Tree,Lasso}...
+\item Wrapper  = GA + Algorithm to find weights with \textbf{forward} or \textbf{backward} step-wise selection
+\end{itemize}
+
+\item \textbf{Regularization} : Ridge ,Lasso
+\item \textbf{Dimension Reduction} : unsupervised, transforms original features.\\
+\textbf{PCA} : project on the input subspace that account for most of the variance (repeat for m lines)
+\begin{enumerate}
+\item Mean center data : $\bar{\bm{x}} = \frac{1}{N} \sum \bm{x}_n$
+\item Compute covariance matrix \textbf{S}
+\item Compute eigenvalues/eigenvectors  of \textbf{S} : $$S= \frac{1}{N-1}\sum_{n=1}^N (\bm{x_n-\bar{x}}) (\bm{x_n-\bar{x}})^T$$
+\item Eigenvector $e_1$ with largest eigenvalue $\lambda_1$ is first principal component , $\frac{\lambda_k}{\sum \limits_i \lambda_i}$ is portion of \textbf{explained variance}
+\end{enumerate}
+\end{itemize}
+
+\subsection{Model Ensembles}
+\begin{itemize}
+\item \textbf{Bagging} : reduces variance,without increasing bias
+$$ Var(\bar{x}) =\frac{Var(x)}{N} $$
+Multiple models $\rightarrow$ More training sets : \textbf{Bootstrap aggregation}, random sampling with replacement. Only good with \textbf{unstable learners} (bad when there is high bias).
+\item \textbf{Boosting} : sequentially learn weak classifiers  ( start from equal weights then penalize samples with misspredictions)
+\end{itemize}
+
+
+\section{PAC-Learning and VC Dimensions}
+\subsection{Intro and Version Space}
+\begin{itemize}
+\item Set of instances X
+\item Set of hypothesis H (finite)
+\item Set of possible target concepts C
+\item Training instances generated by a fixed,unknown probability distribution P over \textbf{X}.
+
+
+
+\begin{center}
+\fbox{\begin{minipage}{30em}
+The learner observers a sequence D of training samples $ \langle x,c(x) \rangle $  for some target concept $c \in C$ and it must output a hypothesis h estimating c,  which is evaluated by its performance on subsequent instances drawn from P 
+$$ L_{true} =Pr_{x \in P}[c(x) \neq h(x)]$$
+\end{minipage}}
+\end{center}
+
+\item $L_{true}$ cannot be measured as P is unknown so aim is to \textbf{bound} $L_{train}$ given $L_{true}$
+\item Given a \textbf{Version Space} ( subset of hypotheses in H consistent with training data : $L_{train}=0$) , can $L_{true}$ also be bounded to be in the VS?
+
+
+\begin{center}
+\fbox{\begin{minipage}{30em}
+If the hypothesis space H is finite and D is a sequence of N $\geq 1$  independent random samples of some target concept c, the for any  $0 \leq \epsilon \leq 1$,  the probability that  $VS_{H,D}$ ,contains an hypothesis error greater than  $\epsilon$  is less than  $|H|e^{-\epsilon N}$
+$$ Pr(\exists h \in H : L_{train} =0 \land L_{true} \geq \epsilon) \leq |H|e^{-\epsilon N}$$
+\end{minipage}}
+\end{center}
+Proof:
+\begin{align*}
+ Pr((&L_{train}(h_1) = 0 \land L_{true}(h_1) \geq \epsilon) \lor
+ ... \lor (L_{train}(h_{|H|})= 0 \land L_{true}(h_{|H|}) \geq \epsilon))\\
+  &\leq \sum \limits_{h \in H} Pr(L_{train}(h)= 0 \land L_{true}(h) \geq \epsilon)\\
+&\leq \sum \limits_{h \in H} Pr(L_{train}(h)= 0 | L_{true}(h) \geq \epsilon)\\
+&\leq \sum \limits_{h \in H} (1-\epsilon)^N\\
+&\leq |H|(1-\epsilon)^N \\
+&\leq |H|e^{-\epsilon N}
+\end{align*}
+
+\item That probability should be at most $\delta$
+$$ |H|e^{-\epsilon N} \leq \delta$$
+\item  N can be computed as
+$$ N \geq \frac{1}{\epsilon}(ln |H| + ln(\frac{1}{\delta})$$
+\item $\epsilon$ can be computed as
+$$ \epsilon \geq \frac{1}{N} (ln |H| + ln(\frac{1}{\delta})$$
+N.B. $ln |H| $ is still exponential as $|H| = 2^{2^M}$
+
+\subsection{PAC-Learning}
+\newpage
+\item \textbf{PAC Learning}
+\begin{center}
+\fbox{\begin{minipage}{30em}
+Given a class C of possible target concepts defined over a set of instances X of length n , and a Learner L using hypothesis space H. C is \textbf{PAC- LEARNABLE} if there exists an algorithm L such that for every $f \in C$ for any distribution P , for any $\epsilon$ such that $0 \leq \epsilon \leq \frac{1}{2}$ and $\delta$ such that $0 \leq \delta \leq \frac{1}{2}$ , algorithm L with probability at least $1-\delta$ outputs a concept h such that $L_{true} \leq \epsilon$ using a number of samples that is polynomial of $\frac{1}{\epsilon} $ and $\frac{1}{\delta}$ 
+\end{minipage}}
+\end{center}
+
+\item \textbf{Efficient PAC-Learnable} 
+\begin{center}
+\fbox{\begin{minipage}{30em}
+ C is \textbf{efficiently PAC- LEARNABLE} if there exists an algorithm L such that for every $f \in C$ for any distribution P , for any $\epsilon$ such that $0 \leq \epsilon \leq \frac{1}{2}$ and $\delta$ such that $0 \leq \delta \leq \frac{1}{2}$ , algorithm L with probability at least $1-\delta$ outputs a concept h such that $L_{true} \leq \epsilon$ using a number of samples that is polynomial of $\frac{1}{\epsilon} $ and $\frac{1}{\delta}$ , M and size(c). 
+\end{minipage}}
+\end{center}
+
+\item \textbf{Agnostic Learning} : empty VS ( no $L_{train} = 0$ )
+$$ L_{true} (h)  \leq L_{train} + \epsilon$$
+$$ \text{Hoeffding bound: } Pr(E[\bar{X}] - \bar{X} > \epsilon) < e^{-2n\epsilon^2}$$
+\begin{center}
+\fbox{\begin{minipage}{30em}
+Hypothesis space H finite, dataset D with i.i.d samples ,$0 \leq \epsilon \leq 1$ , for any learned hypothesis h :
+$$ Pr(L_{true}(h)-L_{train}(h) > \epsilon ) \leq |H|e^{-2N\epsilon^2}$$
+\end{minipage}}
+\end{center}
+
+\item \textbf{PAC-Bound vs B/V Trade-off}
+$$ L_{true}(h) \leq \underbrace{L_{train}(h)}_{Bias} + \underbrace{\sqrt{\frac{ln|H|+ ln \frac{1}{\delta}}{2N}}}_{Variance}$$
+Large $|H|$: \textbf{low bias} , \textbf{high variance}\\
+Small $|H| $: \textbf{high bias} , \textbf{low variance} (tighter bound)
+\end{itemize}
+
+\subsection{VC Dimension}
+\begin{itemize}
+\item For $|H| \rightarrow \infty$ PAC-Learning bound cannot be used but number of points N required can be found using an alternative method ( "Axis -aligned rectangles" ) $$ N \geq \left( \frac{4}{\epsilon} \right) ln \left( \frac{4}{\delta} \right)$$
+The best way for $|H| \rightarrow \infty$ is to bound the error as a function of the number of points that can be completely labeled
+
+\item \textbf{Dichotomy}
+\begin{center}
+\fbox{\begin{minipage}{30em}
+A \textbf{dichotomy} of a set S is a partition of S into two disjoint subsets.
+\end{minipage}}
+\end{center}
+
+\item \textbf{Shattering}
+\begin{center}
+\fbox{\begin{minipage}{30em}
+A set of instances S is \textbf{shattered} by a hypothesis space H if and only if for every dichotomy of S there exists some hypothesis in H \textbf{consistent} (= classify correctly) with this dichotomy.
+\end{minipage}}
+\end{center}
+
+\item \textbf{VC-Dimension}
+\begin{center}
+\fbox{\begin{minipage}{30em}
+The VC dimension, VC(H) , of an hypothesis space H defined over instance space X is the size of the \textbf{largest finite subset} shattered by H. If arbitrarily large finite sets of X can be shattered by H , then VC(H) = $\infty$  
+\end{minipage}}\\
+Rule of thumb : number of parameters = max number of points
+\end{center}
+
+\item Number of samples to guarantee an error of at most $\epsilon$ with probability at least $(1-\delta)$
+$$ N \geq \frac{1}{\epsilon} \left( 4log_2\left( \frac{2}{\delta}\right) + 8VC(H)log_2\left( \frac{13}{\epsilon}\right)\right)$$
+\item PAC Bound and VC Dimension
+$$ L_{true} \leq L_{train} + \sqrt{\frac{VC(H)\left( ln \frac{2N}{VC(H)} + 1 \right)+ ln \frac{4}{\delta}}{N}} $$
+Choose hypothesis space H so to minimize the bound on expected true error
+
+\item VC-Dimension properties
+\begin{center}
+\fbox{\begin{minipage}{30em}
+The VC Dimension of a space $|H| \leq \infty$ is bounded from above
+$$ VC(H) \leq log_2(|H|)$$
+If $|H|=d$ then there are at least $2^d$ functions in H. Since there are at least $2^d$ labelings : $|H| \geq 2^d$
+\end{minipage}}
+\end{center}
+\begin{center}
+\fbox{\begin{minipage}{30em}
+A concept class C with $VC(C) = \infty $ is \textbf{not} PAC -Learnable
+\end{minipage}}
+\end{center}
+\end{itemize}
+
+\section{Kernel Methods}
+\begin{itemize}
+\item Make linear models work in non-linear settings by mapping data into higher dimensions where it exhibits linear patterns. Mapping changes feature representation, which can be expensive but made "affordable" with the \textbf{kernel trick}.Can be used if algorithm used scalar product than can be replaced by kernel function.
+$$ \text{Mapping } \phi : \bm{x} \rightarrow \{ x^2_1, x_m^2,x_1x_2,...,x_1x_M,...,x_{M-1}x_M\}$$ 
+$$ \text{Inefficient and many features (can blow up)}$$
+$$\text{Solution : dual problem with kernels}$$
+$$ k(x,x') = \phi(\bm{x})^T \phi(\bm{x'})$$
+$$ \phi \text{ fixed non-linear feature space mapping (\textbf{basis function})}$$
+
+\item $k(\bm{x},\bm{x'})$ = similarity between \textbf{x ,x'}
+
+\item Simplest kernel = linear kernel 
+$$ k(\bm{x,x'}) = \bm{x^Tx'}$$
+
+\item Kernel is symmetric in its arguments
+$$ k(\bm{x,x'})=k(\bm{x',x})$$
+
+\item \textbf{Stationary kernels}
+$$ k(\bm{x,x'}) = k(\bm{x-x'})$$
+
+\item \textbf{Homogeneous kernels}
+$$ k(\bm{x,x'}) = k(||\bm{x-x'}||)$$
+
+\subsection{Dual representation}
+\begin{itemize}
+\item Linear regression model with L2 regularized RSS 
+$$ L(\bm{w}) = \frac{1}{2}\sum \limits_{n=1}^{N} (\bm{w}^T \phi(x_n)-t_n)^2 + \frac{\lambda}{2}\bm{w^Tw}$$
+$$ \bm{w} = -\frac{1}{\lambda} \sum \limits_{n=1}^N (\bm{w^T}\phi(\bm{x_n} -t_n)\phi(\bm{x}_n) = \sum \limits_{n=1}^N a_n \phi(\bm{x_n})= \bm{\Phi^T a} $$
+
+\item Design matrix $\bm{\Phi}$ has $n^{th}$ row = $\phi(\bm{x_n})^T$
+\item Coefficients $\bm{a_n}$ are functions of \textbf{w} = $-\frac{1}{\lambda}(\bm{w^T\phi(x_n)} -t_n)$
+\item \textbf{Gram matrix} $\bm{K = \Phi^T \Phi}$ , $N x N$ matrix:
+$$ K_{nm} = \phi(x_n)^T \phi(x_m)= k(\bm{x_n,x_m})$$
+$$ K =\begin{bmatrix}
+k(\bm{x_1,x_1}) & ... & k(\bm{x_1,x_N}) \\
+... & ... &...\\
+k(\bm{x_N,x_1}) & ... & k(\bm{x_N,x_N})
+\end{bmatrix} $$
+
+\item Error function in terms of Gram Matrix of Kernel 
+$$ L(\bm{w}) = \frac{1}{2} \bm{a^T \Phi\Phi^T\Phi\Phi^Ta - a^T\Phi\Phi^Tt}+ \frac{1}{2} \bm{t^Tt} + \frac{\lambda}{2}\bm{a^T\Phi\Phi^Ta}$$
+$$ L_a = \frac{1}{2} \bm{a^T}KK\bm{a} - \bm{a}^TK \bm{t} + \frac{1}{2}\bm{t^Tt} + \frac{\lambda}{2} \bm{a^T}K\bm{a}$$
+Solving for a using $\bm{w = \Phi^Ta}$ and $a = -\frac{1}{\lambda}(\bm{w^T}\phi(x_n)-t_n)$
+$$ \bm{a} = (K+\lambda \bm{I}_N)^{-1}\bm{t}$$
+Solution for \textbf{a} can be expressed as linear combination of elements of $\phi(x)$ whose coefficients depends entirely in terms of $k(x,x')$ from which the original formulation of w can be recovered.
+
+\item \textbf{Prediction} for new input \textbf{x}
+$$ y(\bm{x}) = \bm{w}^T\phi(\bm{x}) = \bm{a}^T\Phi \phi(\bm{x})= \bm{k}(\bm{x})^T(K+ \lambda \bm{I}_N)^{-1}\bm{t}$$
+$$ \text{where } \bm{k(x)} = k(\bm{x_n,x}) $$
+\end{itemize}
+
+\item Advantages
+\begin{itemize}
+\item avoid working with feature vector $\phi(x)$
+\item build a feature space with high dimensionality
+\item leverage possibility to use not only vectors of real numbers but also over objects (sets,logic formulas...)
+\end{itemize}
+
+\item Disadvantage
+\begin{itemize}
+\item Invert big $N x N$ matrix instead of (possibly) smaller $M x M$ matrix
+\end{itemize}
+\end{itemize}
+
+\subsection{Constructing Kernels}
+\begin{itemize}
+\item 1. Method :Choose feature space mapping $\phi(x)$ and use it to find kernel.Example with 1-D input space:
+$$ k(\bm{x,x'})=\phi(\bm{x})^T \phi(\bm{x'}) = \sum \limits_{i=1}^N \phi_i(\bm{x})\phi_i(\bm{x'})$$
+
+\item 2.Method : Construct kernels directly , making sure it is valid ( = corresponds to some \textbf{scalar product} in some feature space). Example $k(x,z) =(x^Tz)^2$ in 2-D space: 
+\begin{align*}
+ k(x,z)=(x^Tz)^2 &=(x_1z_1+x_2z_2)^2=x_1^2z_1^2+2x_1z_1x_2z_2+x_2^2z_2^2\\
+ &=(x^2_1,\sqrt{2}x_1x_2,x^2_2)(z_1^2,\sqrt{2}z_1z_2,z^2_2)^T=\phi(\bm{x})^T\phi(\bm{z})
+\end{align*}
+
+\item Necessary and sufficient condition for a function $k(\bm{x,x'})$ to be a kernel is that the Gram matrix K is \textbf{semi-definite} for all possible choices of the set $\{ x_n \}$:
+$$ \bm{x}^TK\bm{x} \geq 0 \text{ for non-zero vectors } \bm{x}$$
+$$ \sum \limits_n \sum \limits_m K_{n,m}\bm{x_n}\bm{x_m}$$
+\begin{center}
+\fbox{\begin{minipage}{30em}
+Mercer's theorem : Any continuous, symmetric,positive semi-definite (= no negative eigenvalues) kernel function K(x,y) can be expressed as a \textbf{dot product} in a high-dimensional space
+\end{minipage}}
+\end{center}
+\end{itemize}
+
+\subsection{List of valid kernels}
+Given kernels $k_1(\bm{x,x'}), k_2{\bm{x,x'}}$
+\begin{enumerate}
+\item $k(\bm{x,x'}) = ck_1(\bm{x,x'})$
+\item $k(\bm{x,x'}) = f(\bm{x})k_1(\bm{x,x'})f(\bm{x})$
+\item $k(\bm{x,x'}) = q(k_1(\bm{x,x'})), \text{ q() polynomial with non negative coefficients}$
+\item $k(\bm{x,x'}) = exp(k_1(\bm{x,x'}))$
+\item $k(\bm{x,x'}) = k_1(\bm{x,x'}) +  k_2(\bm{x,x'})$
+\item $k(\bm{x,x'}) = k_1(\bm{x,x'}) \cdot k_2(\bm{x,x'})$
+\item $k(\bm{x,x'}) = k_3(\bm{\phi(x),\phi(x')})$
+\item $k(\bm{x,x'}) = \bm{x}^TA\bm{x'} \text{ A symmetric positive semi-definite matrix}$
+\item $k(\bm{x,x'}) = k_a(\bm{x_a,x_a'}) +  k_b(\bm{x_b,x_b'}) \text{ where xa,xb are variables with x=(xa,xb)}$
+\item $k(\bm{x,x'}) = k_a(\bm{x_a,x_a'}) \cdot k_b(\bm{x_b,x_b'}) $
+\end{enumerate}
+
+\begin{itemize}
+\item Common kernel : \textbf{Gaussian}
+$$ k(\bm{x,x'}) = e^{-\frac{||\bm{x-x'}||^2}{2\sigma^2}}$$
+$$ \text{Valid : } ||x-x'||^2= (x-x')^T(x-x')=x^T + x'^Tx' - 2x^Tx'$$
+$$ k(x,x') = e^{-\frac{x^Tx}{2\sigma^2}}e^{-\frac{x^Tx'}{\sigma^2}}e^{-\frac{x'^Tx'}{2\sigma^2}}$$
+$$ \text{Valid by combining rules 2 and 4 + linear kernel}$$
+\end{itemize}
+
+
+\section{SVM}
+SVM use :
+\begin{itemize}
+\item Subset of training samples (\textbf{support vectors})
+\item Vector of weights \textbf{a}
+\item Similarity function $K(x,x')$ (\textbf{kernel})
+\end{itemize}
+
+\begin{itemize}
+\item Class prediction for new sample $x_q (t_i \in \{-1,1 \})$
+$$ f(x_q) = sign \left( \sum \limits_{m \in S} \alpha_mt_mk(x_q,x_m) + b \right)$$
+where \begin{itemize}
+\item S is the set of indices of \textbf{support vectors}
+\end{itemize}
+
+\item Can be seen as generalization of perceptron $f(x_q) =sign \left( \sum \limits_{j=1}^M w_j\phi_j(x_q) \right)$
+Where 
+$$ w_j = \sum \limits_{n=1}^N \alpha_nt_n\phi_j(x_n)$$
+$$ f(x_q) =sign \left( \sum \limits_{j=1}^M \left( \sum \limits_{n=1}^N \alpha_nt_n\phi_j(x_n)\right) \phi_j(x_q) \right) $$
+$$ f(x_q) =  \sum \limits_{n=1}^N \alpha_nt_n \left( \phi(x_n) \phi(x_q) \right)$$
+
+\item Get a much powerful learner by replacing dot product with \textbf{similarity function} ( kernel matrix)
+\end{itemize}
+
+
+\subsection{Learning in SVM}
+\begin{itemize}
+\item \textbf{Margin }: smallest distance between separating hyperplane and any of the samples. Aim is to \textbf{maximize margin} = maximize distance of the closest points.
+
+\item Assuming a separating hyperplane exists:
+$$ y(x_n) = \bm{w}^T\bm{\phi(x_n)}+b $$
+$$ t_ny(x_n) > 0 \quad \forall n$$
+$$ \text{Distance of point to surface} : \frac{t_ny(x_n)}{||\bm{w}||}= \frac{t_n(\bm{w}^T\phi(x_n)+b)}{||\bm{w}||}$$ 
+
+\item \textbf{Weigh optimization problem} 
+$$ \text{margin} = min_n t_n(\bm{w}^T\phi(\bm{x_n})+b)$$
+$$ \bm{w^*} = argmax_{\bm{w},b}  \left( \frac{1}{||w||_2} min_n(t_n(\bm{w}^T\phi(x_n)+b) \right)$$
+
+\item Problem hard to solve. So fix margin (it's \textbf{scale invariant}) to be 1:
+$$ t_n(\bm{w}^T\phi(\bm{x_n})+b)=1$$
+\item Now \textbf{minimize weights}
+\begin{itemize}
+\item \textbf{Minimize}: $\frac{1}{2}||\bm{w}||_2^2 $ (Equivalent to maximize $\frac{1}{||\bm{w}||}$)
+\item \textbf{Subject to}: $t_n(\bm{w}^T\phi(\bm{x_n})+b) \geq 1 ,\quad \forall n$
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Constraint optimization recap}
+\begin{itemize}
+\item \textbf{Minimize} $f(\bm{w}) \rightarrow$ quadratic
+\item \textbf{Subject to} $h_i(\bm{w})=0, for=1,2,...\rightarrow$ quadratic
+\item $\bm{w^*}, \nabla f(\bm{w^*})$ solution must lie in subspace spanned by $$ \{\nabla h_i(\bm{w^*}:i=1,2...) \}$$
+
+\item \textbf{Lagrangian function}
+$$ L(\bm{w},\lambda)= f(\bm{w})+\sum \limits_i \lambda_ih_i(\bm{w})$$
+
+\item \textbf{Lagrangian multipliers} $\lambda_i$ , to solve 
+$$ \nabla L (\bm{w^*}, \bm{\lambda^*})=0$$
+
+\item With \textbf{inequality constraints}
+\begin{itemize}
+\item \textbf{Minimze} $f(\bm{w})$
+\item \textbf{Subject to} $g_i(\bm{w}) \leq 0 \quad i=1,2...$
+\item \textbf{Subject to} $h_i(\bm{w}) = 0 \quad i=1,2..$
+\end{itemize}
+
+\item Lagrange multipliers for \textbf{equality} are $\lambda_i$ and for \textbf{inequality} are $\alpha_i$
+
+\item \textbf{KKT} conditions
+$$\lambda(\bm{w^*,\alpha^* , \lambda^*})=0$$
+$$ h_i(\bm{w^*})=0$$
+$$ g_i(\bm{w^*}) \leq 0$$
+$$ \alpha^*_i \geq 0 $$
+$$ \alpha^*_ig_i(\bm{w})=0$$
+
+\item Constraints are either active $g_i(\bm{w^*})=0$ (\textbf{IT'S A SUPPORT VECTOR}) or its multiplier is zero $\alpha^*_i=0$
+\end{itemize}
+
+\subsubsection{Dual and Primal Problem}
+\begin{itemize}
+\item Primal : weights over \textbf{features}
+\item Dual : weights over \textbf{instances} $\rightarrow $ easier and has more weights=0
+
+\item \textbf{Lagrangian function}
+$$ L(\bm{w},b,\bm{\alpha})= \frac{1}{2}||\bm{w}||_2^2 - \sum \limits_{n=1}^N \alpha_n(t_n(\bm{w}^T\phi(\bm{x_n})+b)-1)$$
+
+\item Gradient for w,b:
+$$ \bm{w}= \sum \limits_{n=1}^N \alpha_nt_n\phi(x_n)$$
+$$ 0 = \sum \limits_{n=1}^N \alpha_nt_n$$
+
+\item Rewrite Lagrangian
+\begin{itemize}
+\item \textbf{Maximize: } $\tilde{L}(\bm{\alpha})= \sum \limits_{n=1}^N \alpha_n - \frac{1}{2}\sum \limits_{n=1}^N \sum \limits_{m=1}^N \alpha_n\alpha_mt_nt_mk(\bm{x_n,x_m})$
+\item \textbf{Subject to:} $\alpha_n \geq 0 \quad \forall n$
+\item \textbf{Subject to:} $\sum \limits_{n=1}^N \alpha_nt_n=0$
+\end{itemize}
+\end{itemize}
+
+\subsection{Prediction}
+$$ y(x) = sign\left(  \sum \limits_{n=1}^N \alpha_nt_nk(x,x_n)+b \right)$$
+$$ b= \frac{1}{N_S}\sum \limits_{n \in S} \left( t_n -\sum \limits_{m \in S} \alpha_m t_m k(\bm{x_n,x_m}) \right)$$
+\begin{itemize}
+\item As number of dimension increases also the number of \textbf{support vectors} increases. Ideally $N_S << N$ , otherwise overfit
+\end{itemize}
+
+\subsection{Solution Techniques}
+\begin{itemize}
+\item \textbf{Sequential minimal optimization} :
+\begin{enumerate}
+\item Find sample $x_i$ that violates KKT
+\item Select second sample heuristically
+\item Joint optimize $\alpha_i,\alpha_j$
+\end{enumerate}
+\end{itemize}
+
+\subsection{Noisy data and Slack Variables}
+With noisy data missclassification should be allowed using a \textbf{relaxation} of the problem.
+\begin{itemize}
+\item Slack variable $\xi_i$ that allow to violate the constraints, but a \textbf{penalty cost} C
+\begin{itemize}
+\item \textbf{Minimize: } $||w||^2_2 + C \sum \limits_i \xi_i$
+\item \textbf{Subject to: } $t_i (\bm{w}^Tx_i + b) \geq 1-\xi_i$
+\item \textbf{Subject to: } $\xi_i> 0$
+\end{itemize}
+
+\item \textbf{C} allows to trade-off \textbf{bias} and \textbf{variance} (CV to find right C)
+\begin{itemize}
+\item \textbf{High C} : complex solution
+\item \textbf{Low C} : simpler solution
+\end{itemize}
+
+\item Dual with Slack
+\begin{itemize}
+\item \textbf{Maximize: } $\tilde{L}(\bm{\alpha})= \sum \limits_{n=1}^N \alpha_n - \frac{1}{2}\sum \limits_{n=1}^N \sum \limits_{m=1}^N \alpha_n\alpha_mt_nt_mk(\bm{x_n,x_m})$
+\item \textbf{Subject to:} $0 \leq \alpha_n \leq C \quad \forall n$
+\item \textbf{Subject to:} $\sum \limits_{n=1}^N \alpha_nt_n=0$
+\item \textbf{Support vectors} : $\alpha_n > 0$
+\item \textbf{Point on margin}: $\alpha_n < C$
+\item \textbf{Lies inside margin} : $\alpha_n = C$ , is correctly classified $\xi_i \leq 1$ or \textbf{missclassified} if $\xi_i >1$
+\end{itemize}
+\end{itemize}
+
+\subsection{Bounds}
+\begin{itemize}
+\item Bound on VC dimension \textbf{decreases with margin} : \textbf{large margin} = \textbf{low VC Dimension} = \textbf{low variance}
+
+\item Margin bound is very pessimistic
+\item Use \textbf{Leave-one-out Bound}, can be easily computed
+$$ L_h \leq \frac{E[\text{Number of support vectors}]}{N}$$ 
+Remove 1 samples at the time, if you remove a non-support vector , margin does not change. If you remove support vector margin changes!
+\end{itemize}
+
+
+\section{Reinforcement Learning}
+\begin{itemize}
+\item \textbf{Agent} : learns and makes decision, acting and observing the environment. At each step t ,the agent can:
+\begin{itemize}
+\item Perform action $a_t$
+\item Receive observation $o_t$
+\item Receive scalar reward $r_t$
+\end{itemize}
+\item \textbf{The environment} : interacts with the agent (anything that the agent can control). At each step t,it can :
+\begin{itemize}
+\item Receive action $a_t$
+\item Emit observation $o_t$
+\item Emit scalar reward $r_t$
+\end{itemize}
+\item The \textbf{History} is a sequence of actions,observations and rewards: 
+$$ h_t= a_1,o_1,r_1, ... ,a_t,o_t,r_t$$
+\begin{itemize}
+\item It influences the next action to be chosen by the agent and which observation /reward the environment will emit.
+\end{itemize}
+\item The \textbf{state} is the information used to determine what happens next . It is a function of the history 
+$$ s_t^a = f(a_1,o_1,r_1, ... ,a_t,o_t,r_t)$$
+\item The state of the environment is the private internal representation of the environment. It is usually \textbf{not visible} to the agent ( it is in some card games for example)
+
+\item If environment is \textbf{fully observable}
+$$ o_t=s_t^a=s_t^e$$
+
+\item \textbf{Reinforcement Learning} is useful when:
+\begin{itemize}
+\item Dynamics of environment  are \textbf{unknown} or \textbf{difficult to model}
+\item The model of the environment is \textbf{too complex } to be solved exactly, so approximate solutions are needed.
+\end{itemize}
+\end{itemize}
+
+\subsection{Markov Decision Process}
+"Future is independent on the past given the present"
+
+\begin{itemize}
+\item A \textbf{stochastic process} $X_t$ is \textbf{Markovian} if and only if
+$$ P(X_{t+1}=j | X_t =i , X_{t-1}= k_{t-1},...,X_1=k_1,X_0=k_0) = P(X_{t+1}= j|X_t=i)$$
+
+\item Means that the \textbf{current} state is a sufficient statistic to calculate the probability of the next value ( no past is needed).
+
+\item If transition probabilities are  \textbf{time invariant} 
+$$ p_{ij} = P(X_{t+1}=j|X_t =i )=P(X_t= j|X_0=i)$$
+
+\end{itemize}
+\textbf{Markov Decision Process}
+\begin{itemize}
+\item An MDP is Markov reward process with \textbf{decisions}.It models an environment in which all states are	Markov and time is divided into \textbf{stages}.
+$$ \langle S,A,P,R,\gamma,\mu \rangle$$
+\begin{itemize}
+\item \textbf{S} : set of states (finite)
+\item \textbf{A} : set of actions (finite). Can be function of state
+\item \textbf{P} : state-transition probability matrix $P(s'|s,a)$ of size $(|S|+|A|)x|S|$ $P(s'|s,a)$
+\item \textbf{R} : reward function $R(s,a)=E[r|s,a]$
+\item $\bm{\gamma}$: discount factor $\in [0,1]$\\
+How much the reward will lose in 1 time-step
+\begin{itemize}
+\item $\gamma \rightarrow 0 $ \textbf{myopic evaluation}
+\item $\gamma \rightarrow 1 $ \textbf{far-sighted evaluation}
+\end{itemize}
+\item $\bm{\mu}$: set of initial probabilities $\mu_i^0=P(X_0=i)$
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Reward and Goals}
+\begin{itemize}
+\item \textbf{Sutton Hypothesis}: goals and purposes can be thought of as the \textbf{maximization} of the cumulative sum of a received scalar reward
+\item Goal can be defined by infinite \textbf{different reward functions} :but it must always be outside the agent's control which can simply measure success step by step (\textbf{explicitly} and \textbf{frequently}).
+
+\item Time horizons can be:
+\begin{itemize}
+\item \textbf{finite}: horizon reduces at each step so at every time there is a different optimization problem
+\item \textbf{indefinite}: until some stopping criteria is met , like \textbf{absorbing states} (e.g.: Blackjack)
+\item \textbf{infinite} : ideally infinite (e.g.: Pole balancing)
+\end{itemize}
+
+\item \textbf{Cumulative rewards} can be:
+\begin{itemize}
+\item \textbf{total reward} : $V = \sum \limits_{i=1}^{\infty}r_i$
+\item \textbf{average reward}: $V= \lim_{n \to \infty}\frac{r_1+...+r_n}{n}$
+\item \textbf{discounted reward:} $V= \sum_{i=1}^{\infty} \gamma^{i-1}r_i$ 
+\end{itemize}
+\end{itemize}
+
+\textbf{Infinite time-horizon discounted return}
+\begin{itemize}
+\item $v_t = r_{t+1} + \gamma r_{t+2} + ... = \sum_{k=0}^{\infty} \gamma^k r_{t+k+1} $ 
+\end{itemize}
+\subsubsection{Policies}
+\textbf{Policies}
+\begin{itemize}
+\item \textbf{Policy} : mapping from states to probabilities of selecting each possible action. Decides which action an agent selects.
+
+\item Policies can be :
+\begin{itemize}
+\item \textbf{Markovian} $\subset$ History-dependent
+\item \textbf{Deterministic} $\subset$ Stochastic
+\item \textbf{Stationary} $\subset$ Non-stationary
+\end{itemize}
+
+\item Policy $\pi$ is a distribution over actions given a state
+$$ \pi(a|s) = P[a|s]$$
+\item MDP policies depend on the current state (stationary property).\\
+Given an MDP $M$ and a policy $\pi$
+\begin{itemize}
+\item State sequence $s_1,s_2...$ is a \textbf{Markov} process $\langle S, P^{\pi},\mu \rangle$
+\item The state and reward sequence $s_1,r_2,s_2,...$ is a \textbf{Markov	reward process} ( Markov Chain ) $\langle S^{\pi} ,P^{\pi} , R^{\pi}, \gamma ,\mu \rangle$
+$$ P^{\pi} = \sum_{a \in A} \pi(a|s)P(s'|s,a)$$
+$$ R^{\pi} = \sum_{a \in A } \pi(a|s)P(s'|s,a)$$
+\end{itemize}
+\end{itemize}
+
+
+\subsubsection{Value Function}
+\begin{itemize}
+\item Given a policy $\pi$ it is possible to define the utility of \textbf{each state} using \textbf{Policy Evaluation}
+
+\item The \textbf{state-value function } $V^{\pi}(s)$ of an MDP is the expected return starting from state s and then following policy $\pi$
+$$ V^{\pi} = E_{\pi} [v_t|s_t=s]$$
+
+\item For control purposes it is better to define the value of each action in each state using\textbf{action-value function } $Q^{\pi}(s,a)$ 
+$$ Q^{\pi}(s,a)= E_{\pi}[v_t | s_t = s,a_t=a]$$
+
+\subsubsection{Bellman Equations}
+\item \textbf{Bellman equation} for decomposed state-value function  (immediate reward + discounted value of successor state )
+\begin{align*}
+ V^{\pi}(s) &= E_{\pi}[r_{t+1}+ \gamma V^{\pi}(s_{t+1}| s_t = s]\\
+ &= \sum_{a \in A} \pi(a|s) \left( R(s,a)+ \gamma \sum_{s' \in S}P(s'|s,a)V^{\pi}(s') \right)
+\end{align*}
+
+\item \textbf{Bellman equation} for decomposed state-action function
+\begin{align*}
+ Q^{\pi}(s,a) &= E_{\pi}[r_{t+1}+ \gamma Q^{\pi}(s_{t+1},a_{t+1}| s_t = s,a_t=a]\\
+ &= R(s,a)+ \gamma \sum_{s'\in S}P(s'|s,a)V^{\pi}(s') \\
+ &= R(s,a)+ \gamma \sum_{s'\in S}P(s'|s,a) \sum_{a' \in A} \pi(a'|s')Q^{\pi}(a',s')
+\end{align*}
+
+\item In  \textbf{matrix form} using induced MRP (N.B.: max eigenvalue $\gamma P^{\pi} = 1 \cdot \gamma = \gamma$)
+$$ V^{\pi} = R^{\pi} + \lambda P^{\pi}V^{\pi}$$
+$$ V^{\pi} = (I - \gamma P^{\pi})^{-1}R^{\pi}$$
+\begin{itemize}
+\item $\gamma \leq 1$ matrix is \textbf{not singular}
+\item $\gamma =1$ matrix is \textbf{singular}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Bellman Operators}
+\begin{itemize}
+\item Bellman operator for $V^{\pi}$ is defined as $T^{\pi} : R^{|S|} x R^{|S|}$ (maps value functions to value functions)
+$$(T^{\pi}V^{\pi})(s) = \sum_{a \in A} {\pi}(a|s)\left( R(s,a) + \gamma\sum_{s' \in S} P(s'|s,a)V^{\pi}(s') \right)$$
+
+\item Bellman operator for $Q^{\pi}$ is defined as $T^{\pi} : R^{|S|x|A|} x R^{|S|x|A|}$ (maps action- value functions to action-value functions)
+$$(T^{\pi}Q^{\pi})(s,a) =  R(s,a) + \gamma\sum_{s' \in S} P(s'|s,a) \sum_{a \in A} {\pi}(a'|s')Q^{\pi}(s',a')$$
+
+\item Expectation equation become:
+$$ T^{\pi}V^{\pi} = V^{\pi}$$
+$$ T^{\pi}Q^{\pi} = Q^{\pi}$$
+
+\item \textbf{Properties}
+\begin{itemize}
+\item \textbf{Monotonicity} : if $f_1 \leq f_2 $
+$$ T^{\pi}f_1 \leq T^{\pi}f_2 \quad T^{*}f_1 \leq T^{*}f_2$$ 
+\end{itemize}
+
+\item $V^{\pi}$ is a \textbf{fixed point} of the operator, so any other input will result in a vector different from $V^{\pi}$. In the space of vectors ,each point is a different vector with its state components. Somewhere there is a vector $V^{\pi}$ which has a closed form solution
+
+\item If $0 < \gamma < 1$ then $T^{\pi}$ is a \textbf{contraction} wrt to the \textbf{maximum norm} : only 1 fixed points,all other points moved towards it.
+
+\item Max-norm contractions for two vectors $f_1,f_2$
+$$ ||T^{\pi}f_1 - T^{\pi}f_2||_{\infty} \leq ||f_1-f_2||_{\infty}$$
+$$ ||T^{*}f_1 - T^{*}f_2||_{\infty} \leq ||f_1-f_2||_{\infty}$$
+
+\item $V^{\pi},V^{*}$ are fixed points of $T^{\pi},T^{*}$
+
+\item For any vector $f \in R^{|S|}$ and policy $\pi$
+$$ \lim_{k \to \infty } (T{\pi})^{k}f= V^{\pi}$$
+$$ \lim_{k \to \infty } (T{*})^{k}f= V^{*}$$
+
+
+\subsubsection{Optimality functions and operators}
+
+\item Optimal policy $\pi^{*}$ : a policy that is better than or equal to all other policies
+$$ \pi^{*} \geq \pi \quad \forall \pi$$
+\begin{itemize}
+\item $\pi^{*}$ achieves \textbf{optimal value function} $V^{\pi^*}=V^*$
+\item $\pi^{*}$ achieves \textbf{optimal action function} $Q^{\pi^*}=Q^*$
+\item There is always one for any MDP
+$$ \pi^*(a|s)= \begin{cases}
+1 & \quad \text{if } a=argmax_{a \in A}Q^*(s,a)\\
+0 & \quad \text{otherwise} 
+\end{cases}$$
+\end{itemize}
+\item \textbf{Optimal state value function} $V^{*}$ is the maximum value function over all polices
+$$ V^{*} = max_{\pi}V^{\pi}(s)$$
+
+\item \textbf{Optimal action-value function} $Q^{*}$ is the maximum action value function over all policies
+$$ Q^{*}(s,a)= max_{\pi}(s,a)$$
+
+
+\item \textbf{Bellman optimality equation for V}
+$$ V^{*}(s) = max_a\left\{  R(s,a) +\gamma \sum_{s' \in S}P(s'|s,a)V^*(s')  \right\}$$
+\item \textbf{Bellman optimality equation for Q}
+$$ Q^{*}(s,a) = R(s,a) +\gamma \sum_{s' \in S}P(s'|s,a)max_aQ^*(s',a')$$
+\end{itemize}
+
+\subsubsection{Solution strategies}
+\begin{itemize}
+\item Bellman optimality operator non-linear so no closed form solution but many iterative methods 
+\begin{itemize}
+\item Dynamic programming : \textbf{Policy Iteration} , \textbf{Value Iteration}
+\item Linear programming 
+\item Reinforcement Learning :	\textbf{Q-Learning} , \textbf{SARSA}
+\end{itemize}
+\end{itemize}
+
+
+\section{Solving MDPs}
+
+\subsection{Policy Search}
+\begin{itemize}
+\item Solving MDPs = finding \textbf{optimal policy}
+\item \textbf{Brute force} naive approach :
+\begin{itemize}
+\item enumerate all the Markovian policies
+\item evaluate each policy
+\item retrun best one
+\end{itemize}
+
+\item Brute force complexity : $|A|^{|S|}$. Improved with
+\begin{itemize}
+\item Restrict search to subset of possible best policies
+\item Use \textbf{stochastic} optimization algorithm
+\end{itemize}
+\end{itemize}
+
+\subsection{Dynamic Programming}
+Recursively solves \textbf{subproblems} and then combines the solution.
+\begin{itemize}
+\item \textbf{Optimal substructure} : optimal solutions can be decomposed into subproblems ( \textbf{MDPs Bellman Equation})
+
+\item \textbf{Overlapping subproblems}: subproblems may recur many times so solutions can be cached and reused ( MDPs \textbf{Value-Function})
+
+\item \textbf{Fully known MDPs} used for
+\begin{itemize}
+\item \textbf{Prediction} : 
+\begin{itemize}
+\item input $\langle S,A,R,P,\gamma ,\mu \rangle$ 
+\item policy $MRP \langle S, P^{\pi},R^{\pi},\gamma,\mu \rangle $ 
+\item output: \textbf{value function } $\bm{V^{\pi}}$ 
+\end{itemize}
+
+\item \textbf{Control}:
+\begin{itemize}
+\item input $MRP \langle S, P^{\pi},R^{\pi},\gamma,\mu \rangle $ 
+\item output : value-function $V^*$ and optimal policy $\pi^*$
+\end{itemize}
+\end{itemize}
+
+\item Case of \textbf{finite-horizon} MDPs (non-stationary policy!) : use backward induction
+\begin{itemize}
+\item \textbf{Backward recursion} 
+$$ 	V_k^* (s) = max_{a \in A_k} \left\{ R_k(s,a) + \sum_{s' \in S_{k+1}} P_k(s'|s,a) V^*_{k+1}(s') \right\} \quad k= N-1,...0$$
+
+\item \textbf{Optimal policy}
+$$ 	\pi^* (s) = max_{a \in A_k} \left\{ R_k(s,a) + \sum_{s' \in S_{k+1}} P_k(s'|s,a) V^*_{k+1}(s') \right\} \quad k= 0,...N-1$$
+\item Total cost $N|S||A|$ vs $|A|^{N|S|}$ of brute search
+\end{itemize}
+\end{itemize}
+
+
+\subsubsection{Policy Iteration}
+For a given policy $\pi$ compute $V^{\pi}$
+\begin{itemize}
+\item State value function for policy $\pi$ 
+$$ V^{\pi} (s) = E \left\{ \sum_{t=0}^{\infty} \gamma^tr_t|s_0=s \right\}$$
+
+\item Bellman Equation for $V^{\pi}$
+$$ V^{\pi} (s)= \sum_{a \in A} \pi(a|s) \left[ R(s,a) + \gamma \sum_{s' \in S}P(s'|s,a)V^{\pi}(s') \right]$$
+
+\item Closed form solution $V^{\pi} = (I-\gamma P^{\pi})^{-1}R^{\pi} \rightarrow$ \textbf{huge complexity}
+
+\item \textbf{Policy iteration} : \textbf{policy evaluation} + \textbf{policy improvement} 
+
+\item \textbf{Policy evaluation}: full policy evaluation backup
+$$ V_{k+1} (s) \leftarrow \sum_{a \in A} \pi(a|s) \left[ R(s,a) + \gamma \sum_{s' \in S}P(s'|s,a)V_k(s') \right]$$
+\begin{itemize}
+\item With \textbf{sweep} : state backup to update only modified states
+\item After a few iterations, even if optimal value function is not found,the \textbf{optimal policy} has usually converged (depends on shape of V).This is also what makes it faster than \textbf{Value Iteration}
+\end{itemize}
+
+\item \textbf{Policy improvement} : consider a deterministic policy $\pi$ and a given state s, would it be better to perform an action $a \neq \pi(s)$? By acting greedily : 
+$$ \pi'(s) = argmax_{a in A}Q^{\pi}(s,a)$$
+$$ Q^{\pi}(s, \pi'(s))=max_{a \in A}Q^{\pi}(s,a) \geq Q^{\pi}(s,\pi(s))= V^{\pi}(s)$$
+\textbf{Policy improvement theorem
+}\begin{center}
+\fbox{\begin{minipage}{30em}
+Let $\pi$ and $\pi'$ be any pair of deterministic policies such that 
+$Q^{\pi}(s,\pi'(s)) \geq V^{\pi}(s) , \forall s \in S$ , then policy $\pi'$ must be \textbf{as good or better} than  $\pi$ , $V^{pi'} \geq V^{\pi}, s \in S$
+\end{minipage}}
+\end{center}
+Proof 
+\begin{align*}
+V^{\pi}(s) &\leq Q_{\pi}(s,\pi'(s)) = E_{\pi'}[r_{t+1} + \gamma V^{\pi}(s_{t+1})|s_t=s] \\
+&\leq E_{\pi'}[r_{t+1} + \gamma Q^{\pi}(s_{t+1},\pi'(s_{t+1})|s_t=s]\\
+&\leq E_{\pi'}[r_{t+1} \gamma r_{t+2}+ \gamma^2 Q^{\pi}(s_{t+2},\pi'(s_{t+2})|s_t=s]\\
+&\leq E_{\pi'}[r_{t+1} \gamma r_{t+2}+... |s_t=s]= V^{\pi'}(s)
+\end{align*}
+
+\item If improvement stop $V^{\pi} = V^{\pi'} \rightarrow$ \textbf{Bellman optimality equation} 
+$$ V^{\pi} = V^{\pi'} = V^*$$
+$$ \pi = \pi^*$$ 
+\end{itemize}
+
+\subsubsection{Value iteration}
+Find the \textbf{optimal policy} by iteratively applying \textbf{Bellman Optimality Equation} without an explicit policy.
+
+\begin{itemize}
+\item 	max norm $||V||_{\infty} = max_{s \in S} |V(s)|$
+\end{itemize}
+\begin{center}
+\fbox{\begin{minipage}{30em}
+Value iteration converges to the optimal state-value function $\lim_{x \to \infty}V_k = V^*$
+$$ ||V_{k+1}-V^*||_{\infty} = ||T^*V_k - T^*V^*||_{\infty} \leq \gamma||V_k - V^*||_{\infty} \leq $$ $$... \leq \gamma^{k+1}||V^0 - V*||_{\infty} \rightarrow \infty$$
+\end{minipage}}
+\end{center}
+
+\begin{center}
+\fbox{\begin{minipage}{30em}
+$$ ||V_{i+1}-V_i||_{\infty} < \epsilon \implies ||V_{i+1} - V^*||_{\infty} < \frac{2\epsilon}{1-\gamma}$$
+\end{minipage}}
+\end{center}
+
+\subsection{Infinite Horizon Linear Programming}
+\begin{itemize}
+\item Value iteration convergence: 
+$$ V^{*}(s) = max_a\left\{  R(s,a) +\gamma \sum_{s' \in S}P(s'|s,a)V^*(s')  \right\}$$
+
+\item LP formulation for $V^*$:
+\begin{itemize}
+\item min$_v \sum_{s \in S} \mu(s)V(s)$
+\item subject to : $V(s) geq R(s,a)+ \sum_{s' \in S}P(s'|s,a)V(s') \quad \forall s \in S , \forall a \in A$ 
+\end{itemize}
+\item $|S|$ variables , $|S||A|$ constraints
+
+\item \textbf{Optimal Bellman Operator} $T^*$ 
+\begin{itemize}
+\item min$_v \mu^I V$
+\item s.t. $V \geq T^*V$
+\end{itemize}
+Thanks to the monotonicity property $ U \geq V \rightarrow T^*U \geq T^*V$ and by repeated application $V \geq T^*V \geq T^{*^2}(V) \geq T^{*^3}(V)... \geq T^{*^\infty}(V) = V^*$. Since any feasible solution must satisfy $V \geq T^*(V)$ it satisfies also $V \geq V^*$ 
+\end{itemize}
+
+\subsubsection{Dual Problem}
+\begin{itemize}
+\item $$max_{\lambda} \sum_{s \in S} \sum_{a \in A} \lambda(s,a)R(s,a)$$
+\item s.t. $$\sum_{a' \in A} \lambda(s',a')= \mu(s) + \gamma \sum_{s \in S} \sum_{a \in A}\lambda(s,a)P(s'|s,a), \forall s' \in S$$
+\item s.t. $$\lambda \geq 0  \forall s \in S , a \in A$$
+
+In this case $\lambda(s,a) = \sum_{t=0}^{\infty} \gamma^tP(s_t=s,a_t=a)$.\\
+The optimal policy is	
+$$ \pi^* (s) = argmax_a \lambda(s,a)$$
+\end{itemize}
+
+
+\section{RL in finite domains}
+Model is \textbf{not known} (\textbf{model free)} but it is possible to interact with the environment
+\begin{itemize}
+\item \textbf{Model-free prediction}: \textbf{estimate} value function of an unknown MDP ( MDP +policy)
+\item \textbf{Model-free control:} \textbf{optimize} the value function of an unknown MDP
+\end{itemize}
+
+\section{Monte Carlo RF}
+\begin{itemize}
+\item  Model-Free : no known MDP
+\item  Learns directly from experience : \textbf{complete} episodes ( no bootstrapping)
+\item Simple idea \textbf{value=mean return}
+\item Works only with \textbf{episodic MDPs} where all episodes \textbf{terminate}
+\end{itemize}
+Can be used for
+\begin{itemize}
+\item Prediction 
+\begin{itemize}
+\item \textbf{Input}  : episodes of experience $\{s_1,a_1,r_2,...s_T\}$ generated by policy $\pi$
+\item \textbf{Output} : value function $V^{\pi}$
+\end{itemize}
+\item Control
+\begin{itemize}
+\item \textbf{Input}  : episodes of experience $\{s_1,a_1,r_2,...s_T\}$ generated by policy $\pi$
+\item \textbf{Output} : optimal value function $V^{*}$
+\item \textbf{Output} : optimal policy $\pi^*$
+\end{itemize}
+\end{itemize}
+
+\subsection{Monte-Carlo Prediction}
+\begin{itemize}
+\item Goal : estimate value function for a given policy  by averaging the returns observed after visits to states. As more returns are observed the average should \textbf{converge} to the \textbf{expected value}
+
+\item X is R.V. with mean $\mu$ and variance $\sigma^2$
+\begin{itemize}
+\item \textbf{Empirical mean}:$$ \hat{\mu}_n = \frac{1}{n}\sum_{i=0}^n x_i$$	
+\item $E[\hat{\mu}_n] = \mu $ , $Var[\hat{\mu}_n]= \frac{Var[X]}{n}$
+\item Weak law ($\hat{\mu}_n \rightarrow^{P} \mu$) and string law ($\hat{\mu}_n \rightarrow_{a.s.} \mu $) of  large numbers
+\end{itemize}
+
+\item Policy evaluation of $V^{\pi}$ uses \textbf{empirical mean} instead of expected return and can be found using \textbf{two-approaches}
+\begin{itemize}
+\item \textbf{First-Visit MC}: average returns only for the first time s is visited (\textbf{unbiased estimator} ) in an episode
+\item \textbf{Every-Visit-MC} : average returns for every time s is visited (\textbf{biased but consistent})
+\end{itemize}
+
+\item Mean can be computed \textbf{incrementally} : 
+$$ \hat{\mu}_k = \frac{1}{k} \sum_{j=1}^k x_j = \frac{1}{k}\left( x_k + \sum_{j=1}^{k-1}x_j \right)= \frac{1}{k}(x_k+(k-1)\hat{\mu}_{k-1})=\hat{\mu}_{k-1}+\frac{1}{k}(x_k - \hat{\mu}_{k-1})$$
+
+\item This can be used for \textbf{incremental updates}, for each state s with return $v_t$ and being N the time-steps s has been visited:
+$$ N(s_t) \leftarrow N(s_t)+1$$
+$$ V(s_t) \leftarrow V(s_t)+ \frac{1}{N(s_t)}(v_t-V(s_t))$$
+(Discounted return - Expected reward)
+
+\item A \textbf{running mean} should be used in \textbf{non-stationary problems} , which may no converge though : 
+$$ V(s_t) \leftarrow V(s_t) + \alpha(v_t - V(s_t))$$
+\end{itemize}
+
+\subsubsection{Stochastic Approximation of Mean Estimator}
+Let X be random variable in $[0,1]$ with mean $\mu=E[x]$. Let $x_i \sim X,i=1...n$ iid realizations of X.\\
+The estimator (\textbf{exponential average}) 
+$$ \mu_i=(1-\alpha_i)\mu_{i-1}+a_i\mu_i$$
+with $\mu_1 = x_1$ and $a_i$ learning rates
+
+\begin{itemize}
+\item if $\sum_{i \geq 0 }\alpha_i= \infty$ and $\sum_{i \geq 0 }\alpha^2_i < \infty$ then $$ \hat{\mu}_i \rightarrow_{a.s.} \mu$$ which means that the estimator $\hat{\mu}_n$ is \textbf{consistent}
+\end{itemize}
+
+\section{Temporal Difference Learning}
+\begin{itemize}
+\item  Model-Free : no known MDP
+\item  Learns directly from experience : \textbf{incomplete} episodes ( bootstrapping)
+\item Updates guess with a guess
+\end{itemize}
+
+\subsection{TD Prediction}
+\begin{itemize}
+\item Learn $V^{\pi}$ online from experience under policy $\pi$
+\item Monte-Carlo incremental update $ V(s_t) \leftarrow V(s_t) + \alpha(v_t - V(s_t))$
+\item Simplest Temporal Difference learning algorithm \textbf{TD(0)} : update value $V(s_t)$ towards \textbf{estimated return} $r_{t+1} + \gamma V(s_{t+1})$
+$$ V(s_t) \leftarrow V(s_t) + \alpha(\bm{r_{t+1}+\gamma V(s_{t+1})} - V(s_t))$$
+where 
+\begin{itemize}
+\item $r_{t+1}+ \gamma V(s_{t+1})$ is the \textbf{TD - Target}
+\item $\delta_t = r_{t+1}+ \gamma V(s_{t+1}) - V(s_t)$ is the \textbf{TD-Error}
+\end{itemize}
+\end{itemize}
+
+\subsection{MC vs TD}
+\textbf{TD}
+\begin{itemize}
+\item learns \textbf{before} knowing final outcome or \textbf{without} the final outcome
+\item learn \textbf{online} at every step
+\item can learn from \textbf{incomplete} episodes
+\item works in \textbf{continuing} non-terminating MDPs
+\item \textbf{low variance ,some bias}:
+\begin{itemize}
+\item \textbf{TD-target} is a \textbf{biased} estimate of $V^{\pi}$ unless $V^{\pi}(s_{t+1}) = V(s_{t+1})$
+\item \textbf{TD-target} has much lower variance as target depends on \textbf{one random} action,transition and reward
+\end{itemize}
+\item \textbf{TD(0)} converges to $V^{\pi}(s)$
+\item Is sensitive to initial values
+\end{itemize}
+\textbf{MC}
+\begin{itemize}
+\item must wait \textbf{until end of episode} before return is known
+\item learns only from \textbf{complete} sequences
+\item works only for \textbf{episodic} MDPs
+\item \textbf{high variance ,no bias}:
+\begin{itemize}
+\item the return $v_t $is an \textbf{unbiased} estimate of $V^{\pi}$ 
+\item return $v_t$ has high variance as it depends on \textbf{many random} actions,transitions and rewards
+\end{itemize}
+\item \textbf{Not} sensitive to initial values
+\end{itemize}
+\textbf{Batch updating}
+\begin{itemize}
+\item MC and TD converge for experience $\to \infty$
+\item If finite amount of experience : repeat experience, given a V the increments are computed a computed at every time step t at \textbf{non-terminal} states but \textbf{value function} is changed only once, by the sum of all increments.
+\end{itemize}
+
+\end{document}

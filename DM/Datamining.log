@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 MAR 2018 11:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  31 AUG 2018 18:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -197,44 +197,156 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 144.
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2016/05/05 v6.83n Hypertext links for LaTeX
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/05/16 v1.17 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen129
+\Hy@linkcounter=\count125
+\Hy@pagecounter=\count126
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2016/05/05 v6.83n Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count127
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4446.
+Package hyperref Info: Link nesting OFF on input line 4451.
+Package hyperref Info: Hyper index ON on input line 4454.
+Package hyperref Info: Plain pages OFF on input line 4461.
+Package hyperref Info: Backreferencing OFF on input line 4466.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4691.
+\c@Hy@tempcnt=\count128
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5044.
+\XeTeXLinkMargin=\dimen130
+\Fld@menulength=\count129
+\Field@Width=\dimen131
+\Fld@charsize=\dimen132
+Package hyperref Info: Hyper figures OFF on input line 6298.
+Package hyperref Info: Link nesting OFF on input line 6303.
+Package hyperref Info: Hyper index ON on input line 6306.
+Package hyperref Info: backreferencing OFF on input line 6313.
+Package hyperref Info: Link coloring OFF on input line 6318.
+Package hyperref Info: Link coloring with OCG OFF on input line 6323.
+Package hyperref Info: PDF/A mode OFF on input line 6328.
+LaTeX Info: Redefining \ref on input line 6368.
+LaTeX Info: Redefining \pageref on input line 6372.
+\Hy@abspage=\count130
+\c@Item=\count131
+\c@Hfootnote=\count132
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2016/05/05 v6.83n Hyperref driver for pdfTeX
+\Fld@listcount=\count133
+\c@bookmark@seq@number=\count134
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip46
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count125
+\c@float@type=\count135
 \float@exts=\toks22
 \float@box=\box32
 \@float@everytoks=\toks23
 \@floatcapt=\box33
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen129
-\WF@size=\dimen130
-\c@WF@wrappedlines=\count126
+\wrapoverhang=\dimen133
+\WF@size=\dimen134
+\c@WF@wrappedlines=\count136
 \WF@box=\box34
 \WF@everypar=\toks24
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count127
+\c@lips@count=\count137
 )
 (./Datamining.aux)
 \openout1 = `Datamining.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -272,52 +384,23 @@ LaTeX Font Info:    ... okay on input line 67.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count128
-\scratchdimen=\dimen131
+\scratchcounter=\count138
+\scratchdimen=\dimen135
 \scratchbox=\box35
-\nofMPsegments=\count129
-\nofMParguments=\count130
+\nofMPsegments=\count139
+\nofMParguments=\count140
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count131
-\MPscratchDim=\dimen132
-\MPnumerator=\count132
-\makeMPintoPDFobject=\count133
+\MPscratchCnt=\count141
+\MPscratchDim=\dimen136
+\MPnumerator=\count142
+\makeMPintoPDFobject=\count143
 \everyMPtoPDFconversion=\toks26
-) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
+)
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
@@ -327,16 +410,40 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count134
+\c@lstlisting=\count144
+\AtBeginShipoutBox=\box36
+Package hyperref Info: Link coloring OFF on input line 69.
 
-[1
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./Datamining.toc)
-\tf@toc=\write3
-\openout3 = `Datamining.toc'.
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count145
+)
+LaTeX Info: Redefining \ref on input line 69.
+LaTeX Info: Redefining \pageref on input line 69.
+LaTeX Info: Redefining \nameref on input line 69.
 
- [1] (./sections/Intro.tex
+(./Datamining.out) (./Datamining.out)
+\@outlinefile=\write3
+\openout3 = `Datamining.out'.
+
+ [1
+
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Data
+mining.tocpdfTeX warning (ext4): destination with the same identifier (name{pag
+e.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.32 ...le for classification}{34}{subsection.4.6}
+                                                   [1] [2] [3] [4])
+\tf@toc=\write4
+\openout4 = `Datamining.toc'.
+
+ [5]
+(./sections/Intro.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 6.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
@@ -344,47 +451,1050 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
- [2] [3]
+ [6] [7]
 Underfull \hbox (badness 10000) in paragraph at lines 60--63
 
  []
 
-) (./sections/Datarep.tex [4]
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
+) (./sections/Datarep.tex [8]
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-[5])
-Underfull \hbox (badness 10000) in paragraph at lines 31--102
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-[6] (./Datamining.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--39
+
+ []
+
+[10] <Pictures/listwise.png, id=751, 357.335pt x 396.48125pt>
+File: Pictures/listwise.png Graphic file (type png)
+
+<use Pictures/listwise.png>
+Package pdftex.def Info: Pictures/listwise.png used on input line 72.
+(pdftex.def)             Requested size: 167.2989pt x 185.62628pt.
+ [11]
+<Pictures/pairwise.png, id=757, 308.15125pt x 338.26375pt>
+File: Pictures/pairwise.png Graphic file (type png)
+
+<use Pictures/pairwise.png>
+Package pdftex.def Info: Pictures/pairwise.png used on input line 78.
+(pdftex.def)             Requested size: 167.2989pt x 183.6507pt.
+ [12 <./Pictures/listwise.png> <./Pictures/pairwise.png>] <Pictures/geomview.pn
+g, id=765, 547.04375pt x 300.12125pt>
+File: Pictures/geomview.png Graphic file (type png)
+
+<use Pictures/geomview.png>
+Package pdftex.def Info: Pictures/geomview.png used on input line 103.
+(pdftex.def)             Requested size: 167.2989pt x 91.78185pt.
+
+<Pictures/geomview2.png, id=766, 625.33624pt x 395.4775pt>
+File: Pictures/geomview2.png Graphic file (type png)
+
+<use Pictures/geomview2.png>
+Package pdftex.def Info: Pictures/geomview2.png used on input line 107.
+(pdftex.def)             Requested size: 167.2989pt x 105.80276pt.
+ [13]
+<Pictures/arffmissing.png, id=771, 666.49pt x 142.5325pt>
+File: Pictures/arffmissing.png Graphic file (type png)
+
+<use Pictures/arffmissing.png>
+Package pdftex.def Info: Pictures/arffmissing.png used on input line 119.
+(pdftex.def)             Requested size: 209.12683pt x 44.7218pt.
+ [14 <./Pictures/geomview.png> <./Pictures/geomview2.png> <./Pictures/arffmissi
+ng.png>]) (./sections/Dataexploration.tex
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Overfull \hbox (83.40083pt too wide) in paragraph at lines 9--10
+\OT1/cmr/m/n/12 Summary statis-tics are num-bers that sum-ma-rize prop-er-ties 
+of data : lo-ca-tion,mean,spread,skewness
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
+
+ []
+
+<Pictures/histogram.png, id=801, 559.08875pt x 424.58624pt>
+File: Pictures/histogram.png Graphic file (type png)
+
+<use Pictures/histogram.png>
+Package pdftex.def Info: Pictures/histogram.png used on input line 81.
+(pdftex.def)             Requested size: 209.12683pt x 158.81776pt.
+ [19 <./Pictures/histogram.png>]
+<Pictures/boxplot.png, id=807, 349.305pt x 340.27126pt>
+File: Pictures/boxplot.png Graphic file (type png)
+
+<use Pictures/boxplot.png>
+Package pdftex.def Info: Pictures/boxplot.png used on input line 89.
+(pdftex.def)             Requested size: 209.12683pt x 203.7178pt.
+
+<Pictures/chernoff.png, id=808, 766.865pt x 543.02875pt>
+File: Pictures/chernoff.png Graphic file (type png)
+
+<use Pictures/chernoff.png>
+Package pdftex.def Info: Pictures/chernoff.png used on input line 100.
+(pdftex.def)             Requested size: 209.12683pt x 148.08632pt.
+ [20 <./Pictures/boxplot.png>]
+<Pictures/starplot.png, id=814, 581.17125pt x 539.01375pt>
+File: Pictures/starplot.png Graphic file (type png)
+
+<use Pictures/starplot.png>
+Package pdftex.def Info: Pictures/starplot.png used on input line 106.
+(pdftex.def)             Requested size: 209.12683pt x 193.95432pt.
+ [21 <./Pictures/chernoff.png> <./Pictures/starplot.png>] <Pictures/heatmaps.pn
+g, id=822, 453.695pt x 459.7175pt>
+File: Pictures/heatmaps.png Graphic file (type png)
+
+<use Pictures/heatmaps.png>
+Package pdftex.def Info: Pictures/heatmaps.png used on input line 136.
+(pdftex.def)             Requested size: 250.95476pt x 254.28342pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--137
+
+ []
+
+[22]) (./sections/AssociationRules.tex [23 <./Pictures/heatmaps.png>] [24]
+<Pictures/assrules.png, id=843, 430.60875pt x 196.735pt>
+File: Pictures/assrules.png Graphic file (type png)
+
+<use Pictures/assrules.png>
+Package pdftex.def Info: Pictures/assrules.png used on input line 36.
+(pdftex.def)             Requested size: 209.12683pt x 95.54543pt.
+
+<Pictures/assbruteforce.png, id=844, 586.19pt x 270.00874pt>
+File: Pictures/assbruteforce.png Graphic file (type png)
+
+<use Pictures/assbruteforce.png>
+Package pdftex.def Info: Pictures/assbruteforce.png used on input line 48.
+(pdftex.def)             Requested size: 209.12683pt x 96.3255pt.
+ [25 <./Pictures/assrules.png> <./Pictures/assbruteforce.png>] <Pictures/aprior
+i.png, id=853, 691.58376pt x 592.2125pt>
+File: Pictures/apriori.png Graphic file (type png)
+
+<use Pictures/apriori.png>
+Package pdftex.def Info: Pictures/apriori.png used on input line 61.
+(pdftex.def)             Requested size: 292.77629pt x 250.70653pt.
+
+<Pictures/apriorialg.png, id=854, 743.77875pt x 417.56pt>
+File: Pictures/apriorialg.png Graphic file (type png)
+
+<use Pictures/apriorialg.png>
+Package pdftex.def Info: Pictures/apriorialg.png used on input line 65.
+(pdftex.def)             Requested size: 250.95476pt x 140.88536pt.
+ [26 <./Pictures/apriori.png>]
+<Pictures/eclat.png, id=860, 804.00375pt x 515.9275pt>
+File: Pictures/eclat.png Graphic file (type png)
+
+<use Pictures/eclat.png>
+Package pdftex.def Info: Pictures/eclat.png used on input line 74.
+(pdftex.def)             Requested size: 292.77629pt x 187.86717pt.
+ [27 <./Pictures/apriorialg.png> <./Pictures/eclat.png>] <Pictures/fptree.png, 
+id=867, 596.2275pt x 542.025pt>
+File: Pictures/fptree.png Graphic file (type png)
+
+<use Pictures/fptree.png>
+Package pdftex.def Info: Pictures/fptree.png used on input line 88.
+(pdftex.def)             Requested size: 292.77629pt x 266.15697pt.
+
+<Pictures/fptreecond.png, id=868, 569.12625pt x 582.175pt>
+File: Pictures/fptreecond.png Graphic file (type png)
+
+<use Pictures/fptreecond.png>
+Package pdftex.def Info: Pictures/fptreecond.png used on input line 92.
+(pdftex.def)             Requested size: 292.77629pt x 299.49924pt.
+ [28 <./Pictures/fptree.png>]
+Overfull \hbox (8.88315pt too wide) in paragraph at lines 103--105
+\OT1/cmr/m/n/12 Can rules be gen-er-ated \OT1/cmr/bx/n/12 ef-fi-ciently \OT1/cm
+r/m/n/12 ? Con-fi-dence does not fol-low the \OT1/cmr/bx/n/12 anti-monotone
+ []
+
+[29 <./Pictures/fptreecond.png>]
+<Pictures/apriorirule.png, id=883, 860.21375pt x 558.085pt>
+File: Pictures/apriorirule.png Graphic file (type png)
+
+<use Pictures/apriorirule.png>
+Package pdftex.def Info: Pictures/apriorirule.png used on input line 110.
+(pdftex.def)             Requested size: 292.77629pt x 189.95076pt.
+
+<Pictures/exrule.png, id=884, 591.20876pt x 166.6225pt>
+File: Pictures/exrule.png Graphic file (type png)
+
+<use Pictures/exrule.png>
+Package pdftex.def Info: Pictures/exrule.png used on input line 115.
+(pdftex.def)             Requested size: 292.77629pt x 82.51524pt.
+ [30 <./Pictures/apriorirule.png> <./Pictures/exrule.png>] <Pictures/rulesalg.p
+ng, id=895, 689.57625pt x 401.5pt>
+File: Pictures/rulesalg.png Graphic file (type png)
+
+<use Pictures/rulesalg.png>
+Package pdftex.def Info: Pictures/rulesalg.png used on input line 127.
+(pdftex.def)             Requested size: 292.77629pt x 170.46675pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+
+ []
+
+[31 <./Pictures/rulesalg.png>] [32]
+<Pictures/seqex.png, id=907, 685.56125pt x 399.4925pt>
+File: Pictures/seqex.png Graphic file (type png)
+
+<use Pictures/seqex.png>
+Package pdftex.def Info: Pictures/seqex.png used on input line 167.
+(pdftex.def)             Requested size: 292.77629pt x 170.61414pt.
+ [33 <./Pictures/seqex.png>]
+<Pictures/classrule.png, id=913, 785.93625pt x 507.8975pt>
+File: Pictures/classrule.png Graphic file (type png)
+
+<use Pictures/classrule.png>
+Package pdftex.def Info: Pictures/classrule.png used on input line 194.
+(pdftex.def)             Requested size: 292.77629pt x 189.20561pt.
+ [34]
+Overfull \hbox (31.65749pt too wide) in paragraph at lines 196--197
+[]\OT1/cmr/m/n/12 Here columns can take mul-ti-ple val-ues , for ex-am-ple $\OM
+L/cmm/m/it/12 humidity \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 low
+; medium; high\OMS/cmsy/m/n/12 g$
+ []
+
+) (./sections/LinearReg.tex [35 <./Pictures/classrule.png>] [36]
+<Pictures/regression.png, id=934, 811.03pt x 594.22pt>
+File: Pictures/regression.png Graphic file (type png)
+
+<use Pictures/regression.png>
+Package pdftex.def Info: Pictures/regression.png used on input line 38.
+(pdftex.def)             Requested size: 250.95476pt x 183.86174pt.
+ [37] [38 <./Pictures/regression.png>]
+<Pictures/ridge1.png, id=947, 737.75626pt x 463.7325pt>
+File: Pictures/ridge1.png Graphic file (type png)
+
+<use Pictures/ridge1.png>
+Package pdftex.def Info: Pictures/ridge1.png used on input line 74.
+(pdftex.def)             Requested size: 250.95476pt x 157.73772pt.
+
+<Pictures/ridge2.png, id=948, 849.1725pt x 470.75874pt>
+File: Pictures/ridge2.png Graphic file (type png)
+
+<use Pictures/ridge2.png>
+Package pdftex.def Info: Pictures/ridge2.png used on input line 78.
+(pdftex.def)             Requested size: 250.95476pt x 139.12404pt.
+ [39 <./Pictures/ridge1.png>]
+<Pictures/regressionlasso.png, id=955, 732.7375pt x 170.6375pt>
+File: Pictures/regressionlasso.png Graphic file (type png)
+
+<use Pictures/regressionlasso.png>
+Package pdftex.def Info: Pictures/regressionlasso.png used on input line 92.
+(pdftex.def)             Requested size: 250.95476pt x 58.44038pt.
+
+<Pictures/lasso1.png, id=956, 691.58376pt x 477.785pt>
+File: Pictures/lasso1.png Graphic file (type png)
+
+<use Pictures/lasso1.png>
+Package pdftex.def Info: Pictures/lasso1.png used on input line 97.
+(pdftex.def)             Requested size: 250.95476pt x 173.37306pt.
+ <Pictures/lasso2.png, id=957, 853.1875pt x 425.59pt>
+File: Pictures/lasso2.png Graphic file (type png)
+
+<use Pictures/lasso2.png>
+Package pdftex.def Info: Pictures/lasso2.png used on input line 102.
+(pdftex.def)             Requested size: 250.95476pt x 125.1778pt.
+ [40 <./Pictures/ridge2.png> <./Pictures/regressionlasso.png> <./Pictures/lasso
+1.png>]) (./sections/Classification.tex [41 <./Pictures/lasso2.png>] <Pictures/
+class1.png, id=970, 705.63625pt x 501.875pt>
+File: Pictures/class1.png Graphic file (type png)
+
+<use Pictures/class1.png>
+Package pdftex.def Info: Pictures/class1.png used on input line 11.
+(pdftex.def)             Requested size: 209.12683pt x 148.7334pt.
+
+<Pictures/class2.png, id=971, 917.4275pt x 590.205pt>
+File: Pictures/class2.png Graphic file (type png)
+
+<use Pictures/class2.png>
+Package pdftex.def Info: Pictures/class2.png used on input line 17.
+(pdftex.def)             Requested size: 250.95476pt x 161.4378pt.
+
+Overfull \hbox (9.89018pt too wide) in paragraph at lines 13--18
+[]\OT1/cmr/m/n/12 The model is then used to \OT1/cmr/bx/n/12 la-bel un-seen poi
+nt \OT1/cmr/m/n/12 in the pre-dic-tion phase.Differently
+ []
+
+[42 <./Pictures/class1.png> <./Pictures/class2.png>]
+<Pictures/class3.png, id=979, 711.65875pt x 498.86375pt>
+File: Pictures/class3.png Graphic file (type png)
+
+<use Pictures/class3.png>
+Package pdftex.def Info: Pictures/class3.png used on input line 31.
+(pdftex.def)             Requested size: 250.95476pt x 175.9142pt.
+ [43 <./Pictures/class3.png>] [44])
+(./sections/Credibility.tex [45]
+<Pictures/confmatrix.png, id=994, 603.25375pt x 399.4925pt>
+File: Pictures/confmatrix.png Graphic file (type png)
+
+<use Pictures/confmatrix.png>
+Package pdftex.def Info: Pictures/confmatrix.png used on input line 33.
+(pdftex.def)             Requested size: 250.95476pt x 166.18861pt.
+ [46]
+<Pictures/confmatrix2.png, id=1003, 896.34875pt x 586.19pt>
+File: Pictures/confmatrix2.png Graphic file (type png)
+
+<use Pictures/confmatrix2.png>
+Package pdftex.def Info: Pictures/confmatrix2.png used on input line 45.
+(pdftex.def)             Requested size: 250.95476pt x 164.11418pt.
+ [47 <./Pictures/confmatrix.png> <./Pictures/confmatrix2.png>] <Pictures/modele
+val.png, id=1010, 770.88pt x 411.5375pt>
+File: Pictures/modeleval.png Graphic file (type png)
+
+<use Pictures/modeleval.png>
+Package pdftex.def Info: Pictures/modeleval.png used on input line 65.
+(pdftex.def)             Requested size: 250.95476pt x 133.96788pt.
+ [48 <./Pictures/modeleval.png>]
+<Pictures/modeleval2.png, id=1017, 902.37125pt x 546.04pt>
+File: Pictures/modeleval2.png Graphic file (type png)
+
+<use Pictures/modeleval2.png>
+Package pdftex.def Info: Pictures/modeleval2.png used on input line 75.
+(pdftex.def)             Requested size: 250.95476pt x 151.857pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+
+ []
+
+[49 <./Pictures/modeleval2.png>]
+Overfull \hbox (2.21762pt too wide) in paragraph at lines 101--102
+[]\OT1/cmr/m/n/12 Sample a dataset of n in-stances with re-place-ment to form a
+ \OT1/cmr/bx/n/12 new dataset
+ []
+
+[50] <Pictures/testcases.png, id=1029, 875.27pt x 558.085pt>
+File: Pictures/testcases.png Graphic file (type png)
+
+<use Pictures/testcases.png>
+Package pdftex.def Info: Pictures/testcases.png used on input line 126.
+(pdftex.def)             Requested size: 292.77629pt x 186.68074pt.
+ [51 <./Pictures/testcases.png>]
+<Pictures/ttest.png, id=1035, 741.77126pt x 490.83376pt>
+File: Pictures/ttest.png Graphic file (type png)
+
+<use Pictures/ttest.png>
+Package pdftex.def Info: Pictures/ttest.png used on input line 146.
+(pdftex.def)             Requested size: 250.95476pt x 166.05742pt.
+ [52 <./Pictures/ttest.png>] [53]
+<Pictures/roccurve.png, id=1045, 354.32375pt x 259.97125pt>
+File: Pictures/roccurve.png Graphic file (type png)
+
+<use Pictures/roccurve.png>
+Package pdftex.def Info: Pictures/roccurve.png used on input line 203.
+(pdftex.def)             Requested size: 250.95476pt x 184.13261pt.
+ [54 <./Pictures/roccurve.png>]
+<Pictures/roccurve2.png, id=1052, 435.6275pt x 437.635pt>
+File: Pictures/roccurve2.png Graphic file (type png)
+
+<use Pictures/roccurve2.png>
+Package pdftex.def Info: Pictures/roccurve2.png used on input line 224.
+(pdftex.def)             Requested size: 250.95476pt x 252.1056pt.
+
+<Pictures/roccurve3.png, id=1053, 868.24374pt x 425.59pt>
+File: Pictures/roccurve3.png Graphic file (type png)
+
+<use Pictures/roccurve3.png>
+Package pdftex.def Info: Pictures/roccurve3.png used on input line 228.
+(pdftex.def)             Requested size: 292.77629pt x 143.51028pt.
+ [55 <./Pictures/roccurve2.png>])
+(./sections/DecisionTrees.tex [56 <./Pictures/roccurve3.png>] [57]
+<Pictures/DTfinal.png, id=1068, 457.71pt x 305.14pt>
+File: Pictures/DTfinal.png Graphic file (type png)
+
+<use Pictures/DTfinal.png>
+Package pdftex.def Info: Pictures/DTfinal.png used on input line 53.
+(pdftex.def)             Requested size: 209.12683pt x 139.41626pt.
+ [58 <./Pictures/DTfinal.png>]
+Overfull \hbox (11.88167pt too wide) in paragraph at lines 66--67
+\OT1/cmr/m/n/12 Modification of the In-for-ma-tion Gain that \OT1/cmr/bx/n/12 r
+e-duces bias to-wards highly-branched
+ []
+
+[59] <Pictures/gini.png, id=1078, 621.32124pt x 505.89pt>
+File: Pictures/gini.png Graphic file (type png)
+
+<use Pictures/gini.png>
+Package pdftex.def Info: Pictures/gini.png used on input line 97.
+(pdftex.def)             Requested size: 209.12683pt x 170.27121pt.
+ [60 <./Pictures/gini.png>] [61] [62])
+(./sections/CRules.tex [63]
+<Pictures/weatherdata.png, id=1100, 674.52pt x 433.62pt>
+File: Pictures/weatherdata.png Graphic file (type png)
+
+<use Pictures/weatherdata.png>
+Package pdftex.def Info: Pictures/weatherdata.png used on input line 10.
+(pdftex.def)             Requested size: 209.12683pt x 134.43404pt.
+ [64 <./Pictures/weatherdata.png>]
+<Pictures/overfittingrules.png, id=1106, 840.13875pt x 360.34625pt>
+File: Pictures/overfittingrules.png Graphic file (type png)
+
+<use Pictures/overfittingrules.png>
+Package pdftex.def Info: Pictures/overfittingrules.png used on input line 55.
+(pdftex.def)             Requested size: 250.95476pt x 107.63733pt.
+ [65]
+<Pictures/seqcov1.png, id=1115, 824.07875pt x 489.83pt>
+File: Pictures/seqcov1.png Graphic file (type png)
+
+<use Pictures/seqcov1.png>
+Package pdftex.def Info: Pictures/seqcov1.png used on input line 66.
+(pdftex.def)             Requested size: 250.95476pt x 149.16249pt.
+
+<Pictures/seqcov2.png, id=1116, 812.03375pt x 510.90875pt>
+File: Pictures/seqcov2.png Graphic file (type png)
+
+<use Pictures/seqcov2.png>
+Package pdftex.def Info: Pictures/seqcov2.png used on input line 70.
+(pdftex.def)             Requested size: 250.95476pt x 157.88893pt.
+
+<Pictures/prism.png, id=1117, 836.12375pt x 373.395pt>
+File: Pictures/prism.png Graphic file (type png)
+
+<use Pictures/prism.png>
+Package pdftex.def Info: Pictures/prism.png used on input line 75.
+(pdftex.def)             Requested size: 250.95476pt x 112.07063pt.
+ [66 <./Pictures/overfittingrules.png> <./Pictures/seqcov1.png> <./Pictures/seq
+cov2.png>]
+<Pictures/eliminationrules.png, id=1129, 660.4675pt x 537.00626pt>
+File: Pictures/eliminationrules.png Graphic file (type png)
+
+<use Pictures/eliminationrules.png>
+Package pdftex.def Info: Pictures/eliminationrules.png used on input line 90.
+(pdftex.def)             Requested size: 250.95476pt x 204.03992pt.
+ [67 <./Pictures/prism.png> <./Pictures/eliminationrules.png>]) (./sections/Oth
+erClassifiers.tex [68] [69]
+Overfull \hbox (0.7084pt too wide) in paragraph at lines 27--29
+\OT1/cmr/m/n/12 Computes the class prob-a-bil-ity $\OML/cmm/m/it/12 P\OT1/cmr/m
+/n/12 (\OML/cmm/m/it/12 H\OT1/cmr/m/n/12 )$ and the con-di-tional prob-a-bil-it
+y $\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]\OMS/cmsy/m/n/12 j\OM
+L/cmm/m/it/12 H\OT1/cmr/m/n/12 )$
+ []
+
+<Pictures/naiveb.png, id=1147, 800.9925pt x 510.90875pt>
+File: Pictures/naiveb.png Graphic file (type png)
+
+<use Pictures/naiveb.png>
+Package pdftex.def Info: Pictures/naiveb.png used on input line 38.
+(pdftex.def)             Requested size: 292.77629pt x 186.7491pt.
+
+Overfull \hbox (2.80421pt too wide) in paragraph at lines 34--39
+\OT1/cmr/m/n/12 The clas-si-fier makes the as-sump-tions that at-tributes are \
+OT1/cmr/bx/n/12 in-de-pen-dent \OT1/cmr/m/n/12 and \OT1/cmr/bx/n/12 equally
+ []
+
+[70] <Pictures/naive2.png, id=1152, 592.2125pt x 132.495pt>
+File: Pictures/naive2.png Graphic file (type png)
+
+<use Pictures/naive2.png>
+Package pdftex.def Info: Pictures/naive2.png used on input line 48.
+(pdftex.def)             Requested size: 209.12683pt x 46.78636pt.
+
+<Pictures/naive3.png, id=1153, 568.1225pt x 122.4575pt>
+File: Pictures/naive3.png Graphic file (type png)
+
+<use Pictures/naive3.png>
+Package pdftex.def Info: Pictures/naive3.png used on input line 53.
+(pdftex.def)             Requested size: 209.12683pt x 45.07686pt.
+ [71 <./Pictures/naiveb.png> <./Pictures/naive2.png> <./Pictures/naive3.png>] <
+Pictures/knn.png, id=1161, 854.19125pt x 403.5075pt>
+File: Pictures/knn.png Graphic file (type png)
+
+<use Pictures/knn.png>
+Package pdftex.def Info: Pictures/knn.png used on input line 70.
+(pdftex.def)             Requested size: 250.95476pt x 118.54727pt.
+ <Pictures/knn2.png, id=1162, 872.25874pt x 589.20125pt>
+File: Pictures/knn2.png Graphic file (type png)
+
+<use Pictures/knn2.png>
+Package pdftex.def Info: Pictures/knn2.png used on input line 75.
+(pdftex.def)             Requested size: 292.77629pt x 197.76347pt.
+ [72 <./Pictures/knn.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
+ []
+
+[73 <./Pictures/knn2.png>]
+<Pictures/kdtree.png, id=1175, 695.59875pt x 606.265pt>
+File: Pictures/kdtree.png Graphic file (type png)
+
+<use Pictures/kdtree.png>
+Package pdftex.def Info: Pictures/kdtree.png used on input line 119.
+(pdftex.def)             Requested size: 292.77629pt x 255.17535pt.
+ [74] [75 <./Pictures/kdtree.png>]
+<Pictures/belief.png, id=1185, 780.9175pt x 506.89375pt>
+File: Pictures/belief.png Graphic file (type png)
+
+<use Pictures/belief.png>
+Package pdftex.def Info: Pictures/belief.png used on input line 152.
+(pdftex.def)             Requested size: 292.77629pt x 190.03828pt.
+ [76 <./Pictures/belief.png>]
+Overfull \hbox (4.44849pt too wide) in paragraph at lines 157--158
+[]\OT1/cmr/m/n/12 If a node has more par-ents it con-tains the con-di-tional pr
+ob-a-bil-ity $\OML/cmm/m/it/12 PX\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 Y[]; :::; Y
+[]$ 
+ []
+
+<Pictures/svm.png, id=1191, 734.745pt x 676.5275pt>
+File: Pictures/svm.png Graphic file (type png)
+ <use Pictures/svm.png>
+Package pdftex.def Info: Pictures/svm.png used on input line 165.
+(pdftex.def)             Requested size: 292.77629pt x 269.58423pt.
+)
+(./sections/Ensembles.tex
+<Pictures/ensemble.png, id=1192, 673.51625pt x 501.875pt>
+File: Pictures/ensemble.png Graphic file (type png)
+
+<use Pictures/ensemble.png>
+Package pdftex.def Info: Pictures/ensemble.png used on input line 10.
+(pdftex.def)             Requested size: 250.95476pt x 187.00035pt.
+ [77 <./Pictures/svm.png>] [78 <./Pictures/ensemble.png>] <Pictures/RF.png, id=
+1204, 814.04124pt x 585.18625pt>
+File: Pictures/RF.png Graphic file (type png)
+
+<use Pictures/RF.png>
+Package pdftex.def Info: Pictures/RF.png used on input line 42.
+(pdftex.def)             Requested size: 292.77629pt x 210.46152pt.
+ [79 <./Pictures/RF.png>] [80]
+<Pictures/adaboost.png, id=1218, 902.37125pt x 548.0475pt>
+File: Pictures/adaboost.png Graphic file (type png)
+
+<use Pictures/adaboost.png>
+Package pdftex.def Info: Pictures/adaboost.png used on input line 82.
+(pdftex.def)             Requested size: 250.95476pt x 152.4153pt.
+
+<Pictures/ada1.png, id=1219, 903.375pt x 286.06876pt>
+File: Pictures/ada1.png Graphic file (type png)
+ <use Pictures/ada1.png>
+Package pdftex.def Info: Pictures/ada1.png used on input line 87.
+(pdftex.def)             Requested size: 250.95476pt x 79.47012pt.
+
+<Pictures/ada2.png, id=1220, 904.37875pt x 574.145pt>
+File: Pictures/ada2.png Graphic file (type png)
+ <use Pictures/ada2.png>
+Package pdftex.def Info: Pictures/ada2.png used on input line 91.
+(pdftex.def)             Requested size: 250.95476pt x 159.31398pt.
+
+<Pictures/ada3.png, id=1221, 908.39375pt x 551.05875pt>
+File: Pictures/ada3.png Graphic file (type png)
+
+<use Pictures/ada3.png>
+Package pdftex.def Info: Pictures/ada3.png used on input line 95.
+(pdftex.def)             Requested size: 250.95476pt x 152.23532pt.
+ [81 <./Pictures/adaboost.png> <./Pictures/ada1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+
+ []
+
+[82 <./Pictures/ada2.png> <./Pictures/ada3.png>]
+<Pictures/gb1.png, id=1235, 598.235pt x 527.9725pt>
+File: Pictures/gb1.png Graphic file (type png)
+ <use Pictures/gb1.png>
+Package pdftex.def Info: Pictures/gb1.png used on input line 121.
+(pdftex.def)             Requested size: 250.95476pt x 221.48108pt.
+
+<Pictures/gb2.png, id=1236, 778.91pt x 229.85875pt>
+File: Pictures/gb2.png Graphic file (type png)
+ <use Pictures/gb2.png>
+Package pdftex.def Info: Pictures/gb2.png used on input line 124.
+(pdftex.def)             Requested size: 250.95476pt x 74.05434pt.
+
+[83 <./Pictures/gb1.png>]) (./sections/Clustering.tex [84 <./Pictures/gb2.png>]
+[85]
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
+
+ []
+
+[86] [87] <Pictures/kclust.png, id=1264, 696.6025pt x 323.2075pt>
+File: Pictures/kclust.png Graphic file (type png)
+
+<use Pictures/kclust.png>
+Package pdftex.def Info: Pictures/kclust.png used on input line 95.
+(pdftex.def)             Requested size: 250.95476pt x 116.43352pt.
+ [88 <./Pictures/kclust.png>]
+Overfull \hbox (14.22166pt too wide) in paragraph at lines 120--121
+[]\OT1/cmr/m/n/12 Compute the dis-tance be-tween the clus-ter and the re-main-i
+ng clus-ters $\OML/cmm/m/it/12 O\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 NlogN\OT1/cmr
+/m/n/12 )$ 
+ []
+
+<Pictures/hgmin.png, id=1273, 578.16pt x 262.9825pt>
+File: Pictures/hgmin.png Graphic file (type png)
+ <use Pictures/hgmin.png>
+Package pdftex.def Info: Pictures/hgmin.png used on input line 130.
+(pdftex.def)             Requested size: 250.95476pt x 114.14766pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--131
+
+ []
+
+<Pictures/hgmax.png, id=1274, 631.35875pt x 293.095pt>
+File: Pictures/hgmax.png Graphic file (type png)
+
+<use Pictures/hgmax.png>
+Package pdftex.def Info: Pictures/hgmax.png used on input line 137.
+(pdftex.def)             Requested size: 250.95476pt x 116.50246pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--138
+
+ []
+
+[89 <./Pictures/hgmin.png>]
+<Pictures/hgavg.png, id=1280, 609.27625pt x 285.065pt>
+File: Pictures/hgavg.png Graphic file (type png)
+
+<use Pictures/hgavg.png>
+Package pdftex.def Info: Pictures/hgavg.png used on input line 144.
+(pdftex.def)             Requested size: 250.95476pt x 117.41676pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--145
+
+ []
+
+<Pictures/hgcentroid.png, id=1281, 569.12625pt x 284.06125pt>
+File: Pictures/hgcentroid.png Graphic file (type png)
+
+<use Pictures/hgcentroid.png>
+Package pdftex.def Info: Pictures/hgcentroid.png used on input line 151.
+(pdftex.def)             Requested size: 250.95476pt x 125.25606pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--152
+
+ []
+
+[90 <./Pictures/hgmax.png> <./Pictures/hgavg.png>] [91 <./Pictures/hgcentroid.p
+ng>] [92] <Pictures/kmeans1.png, id=1298, 732.7375pt x 506.89375pt>
+File: Pictures/kmeans1.png Graphic file (type png)
+
+<use Pictures/kmeans1.png>
+Package pdftex.def Info: Pictures/kmeans1.png used on input line 214.
+(pdftex.def)             Requested size: 250.95476pt x 173.60233pt.
+ [93]
+<Pictures/kmeans2.png, id=1306, 811.03pt x 236.885pt>
+File: Pictures/kmeans2.png Graphic file (type png)
+
+<use Pictures/kmeans2.png>
+Package pdftex.def Info: Pictures/kmeans2.png used on input line 240.
+(pdftex.def)             Requested size: 250.95476pt x 73.29623pt.
+ [94 <./Pictures/kmeans1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
+
+ []
+
+<Pictures/kmeans3.png, id=1312, 791.95876pt x 381.425pt>
+File: Pictures/kmeans3.png Graphic file (type png)
+
+<use Pictures/kmeans3.png>
+Package pdftex.def Info: Pictures/kmeans3.png used on input line 266.
+(pdftex.def)             Requested size: 250.95476pt x 120.86537pt.
+ [95 <./Pictures/kmeans2.png>]
+<Pictures/kmeans4.png, id=1318, 783.92876pt x 363.3575pt>
+File: Pictures/kmeans4.png Graphic file (type png)
+
+<use Pictures/kmeans4.png>
+Package pdftex.def Info: Pictures/kmeans4.png used on input line 271.
+(pdftex.def)             Requested size: 250.95476pt x 116.31558pt.
+
+<Pictures/kmeans5.png, id=1319, 793.96625pt x 383.4325pt>
+File: Pictures/kmeans5.png Graphic file (type png)
+
+<use Pictures/kmeans5.png>
+Package pdftex.def Info: Pictures/kmeans5.png used on input line 277.
+(pdftex.def)             Requested size: 250.95476pt x 121.19142pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
+
+ []
+
+[96 <./Pictures/kmeans3.png> <./Pictures/kmeans4.png> <./Pictures/kmeans5.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
+
+ []
+
+<Pictures/brf.png, id=1328, 823.075pt x 551.05875pt>
+File: Pictures/brf.png Graphic file (type png)
+ <use Pictures/brf.png>
+Package pdftex.def Info: Pictures/brf.png used on input line 304.
+(pdftex.def)             Requested size: 292.77629pt x 196.0182pt.
+
+[97 <./Pictures/brf.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 330--332
+
+ []
+
+[98] <Pictures/EM.png, id=1347, 503.8825pt x 469.755pt>
+File: Pictures/EM.png Graphic file (type png)
+ <use Pictures/EM.png>
+Package pdftex.def Info: Pictures/EM.png used on input line 352.
+(pdftex.def)             Requested size: 292.77629pt x 272.94551pt.
+
+[99] [100 <./Pictures/EM.png>]
+<Pictures/dbscan.png, id=1361, 608.2725pt x 289.08pt>
+File: Pictures/dbscan.png Graphic file (type png)
+
+<use Pictures/dbscan.png>
+Package pdftex.def Info: Pictures/dbscan.png used on input line 377.
+(pdftex.def)             Requested size: 292.77629pt x 139.14499pt.
+
+<Pictures/dbscan2.png, id=1362, 654.445pt x 549.05125pt>
+File: Pictures/dbscan2.png Graphic file (type png)
+
+<use Pictures/dbscan2.png>
+Package pdftex.def Info: Pictures/dbscan2.png used on input line 386.
+(pdftex.def)             Requested size: 292.77629pt x 245.62141pt.
+ [101 <./Pictures/dbscan.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 405--406
+
+ []
+
+[102 <./Pictures/dbscan2.png>] [103]
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
+
+ []
+
+
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 455--457
+ [] 
+ []
+
+
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 455--457
+ [] 
+ []
+
+[104] [105] [106]
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 521--523
+ [] 
+ []
+
+
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 521--523
+ [] 
+ []
+
+[107]) (./sections/DataPrep.tex [108] [109] [110] [111]
+<Pictures/pca.png, id=1415, 863.225pt x 640.3925pt>
+File: Pictures/pca.png Graphic file (type png)
+ <use Pictures/pca.png>
+Package pdftex.def Info: Pictures/pca.png used on input line 94.
+(pdftex.def)             Requested size: 250.95476pt x 186.16833pt.
+
+[112 <./Pictures/pca.png>]
+Overfull \hbox (7.15114pt too wide) in paragraph at lines 102--103
+[]$\OT1/cmr/m/n/12 ^^F$ : rep-re-sents the \OT1/cmr/bx/n/12 strength \OT1/cmr/m
+/n/12 of each concept.$^^F[]$ are the \OT1/cmr/bx/n/12 sin-gle val-ues\OT1/cmr/
+m/n/12 ,positive
+ []
+
+<Pictures/svd.png, id=1426, 852.18375pt x 402.50375pt>
+File: Pictures/svd.png Graphic file (type png)
+ <use Pictures/svd.png>
+Package pdftex.def Info: Pictures/svd.png used on input line 107.
+(pdftex.def)             Requested size: 292.77629pt x 138.28662pt.
+
+<Pictures/svd2.png, id=1427, 324.21124pt x 433.62pt>
+File: Pictures/svd2.png Graphic file (type png)
+ <use Pictures/svd2.png>
+Package pdftex.def Info: Pictures/svd2.png used on input line 112.
+(pdftex.def)             Requested size: 146.39133pt x 195.79546pt.
+
+<Pictures/svd3.png, id=1428, 798.985pt x 565.11125pt>
+File: Pictures/svd3.png Graphic file (type png)
+ <use Pictures/svd3.png>
+Package pdftex.def Info: Pictures/svd3.png used on input line 116.
+(pdftex.def)             Requested size: 334.60422pt x 236.6639pt.
+
+[113 <./Pictures/svd.png>]
+<Pictures/svd4.png, id=1434, 724.7075pt x 492.84125pt>
+File: Pictures/svd4.png Graphic file (type png)
+ <use Pictures/svd4.png>
+Package pdftex.def Info: Pictures/svd4.png used on input line 121.
+(pdftex.def)             Requested size: 292.77629pt x 199.10327pt.
+
+[114 <./Pictures/svd2.png> <./Pictures/svd3.png>] [115 <./Pictures/svd4.png>])
+(./sections/TextMining.tex [116] [117]
+<Pictures/text1.png, id=1455, 543.02875pt x 554.07pt>
+File: Pictures/text1.png Graphic file (type png)
+ <use Pictures/text1.png>
+Package pdftex.def Info: Pictures/text1.png used on input line 63.
+(pdftex.def)             Requested size: 292.77629pt x 298.7368pt.
+
+[118]
+Underfull \hbox (badness 10000) in paragraph at lines 66--71
+
+ []
+
+<Pictures/text2.png, id=1464, 698.61pt x 474.77374pt>
+File: Pictures/text2.png Graphic file (type png)
+ <use Pictures/text2.png>
+Package pdftex.def Info: Pictures/text2.png used on input line 74.
+(pdftex.def)             Requested size: 292.77629pt x 198.96893pt.
+
+[119 <./Pictures/text1.png>]
+<Pictures/text3.png, id=1470, 643.40375pt x 505.89pt>
+File: Pictures/text3.png Graphic file (type png)
+ <use Pictures/text3.png>
+Package pdftex.def Info: Pictures/text3.png used on input line 79.
+(pdftex.def)             Requested size: 292.77629pt x 230.21118pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+
+ []
+
+[120 <./Pictures/text2.png> <./Pictures/text3.png>]
+<Pictures/text4.png, id=1478, 782.925pt x 444.66125pt>
+File: Pictures/text4.png Graphic file (type png)
+
+<use Pictures/text4.png>
+Package pdftex.def Info: Pictures/text4.png used on input line 110.
+(pdftex.def)             Requested size: 292.77629pt x 166.27939pt.
+ [121]
+<Pictures/text5.png, id=1483, 807.015pt x 414.54875pt>
+File: Pictures/text5.png Graphic file (type png)
+
+<use Pictures/text5.png>
+Package pdftex.def Info: Pictures/text5.png used on input line 115.
+(pdftex.def)             Requested size: 292.77629pt x 150.39499pt.
+
+<Pictures/text6.png, id=1484, 728.7225pt x 422.57875pt>
+File: Pictures/text6.png Graphic file (type png)
+
+<use Pictures/text6.png>
+Package pdftex.def Info: Pictures/text6.png used on input line 123.
+(pdftex.def)             Requested size: 292.77629pt x 169.77647pt.
+ <sections/text7.png, id=1485, 654.445pt x 218.8175pt>
+File: sections/text7.png Graphic file (type png)
+
+<use sections/text7.png>
+Package pdftex.def Info: sections/text7.png used on input line 127.
+(pdftex.def)             Requested size: 292.77629pt x 97.88933pt.
+ [122 <./Pictures/text4.png> <./Pictures/text5.png>]
+<Pictures/text8.png, id=1492, 678.535pt x 428.60126pt>
+File: Pictures/text8.png Graphic file (type png)
+
+<use Pictures/text8.png>
+Package pdftex.def Info: Pictures/text8.png used on input line 132.
+(pdftex.def)             Requested size: 292.77629pt x 184.9293pt.
+
+<Pictures/text9.png, id=1493, 776.9025pt x 456.70625pt>
+File: Pictures/text9.png Graphic file (type png)
+
+<use Pictures/text9.png>
+Package pdftex.def Info: Pictures/text9.png used on input line 140.
+(pdftex.def)             Requested size: 292.77629pt x 172.11461pt.
+ [123 <./Pictures/text6.png> <./sections/text7.png> <./Pictures/text8.png>] <Pi
+ctures/text10.png, id=1502, 804.00375pt x 398.48875pt>
+File: Pictures/text10.png Graphic file (type png)
+
+<use Pictures/text10.png>
+Package pdftex.def Info: Pictures/text10.png used on input line 144.
+(pdftex.def)             Requested size: 292.77629pt x 145.10364pt.
+ <Pictures/text11.png, id=1503, 762.85pt x 473.77pt>
+File: Pictures/text11.png Graphic file (type png)
+
+<use Pictures/text11.png>
+Package pdftex.def Info: Pictures/text11.png used on input line 149.
+(pdftex.def)             Requested size: 292.77629pt x 181.82729pt.
+ [124 <./Pictures/text9.png> <./Pictures/text10.png>]
+<Pictures/text12.png, id=1510, 762.85pt x 339.2675pt>
+File: Pictures/text12.png Graphic file (type png)
+
+<use Pictures/text12.png>
+Package pdftex.def Info: Pictures/text12.png used on input line 155.
+(pdftex.def)             Requested size: 292.77629pt x 130.20683pt.
+
+<Pictures/text13.png, id=1511, 793.96625pt x 410.53375pt>
+File: Pictures/text13.png Graphic file (type png)
+
+<use Pictures/text13.png>
+Package pdftex.def Info: Pictures/text13.png used on input line 165.
+(pdftex.def)             Requested size: 292.77629pt x 151.3877pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--166
+
+ []
+
+[125 <./Pictures/text11.png> <./Pictures/text12.png>]
+<Pictures/text14.png, id=1518, 782.925pt x 357.335pt>
+File: Pictures/text14.png Graphic file (type png)
+
+<use Pictures/text14.png>
+Package pdftex.def Info: Pictures/text14.png used on input line 171.
+(pdftex.def)             Requested size: 292.77629pt x 133.62407pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--172
+
+ []
+
+<Pictures/text15.png, id=1519, 799.98875pt x 175.65625pt>
+File: Pictures/text15.png Graphic file (type png)
+
+<use Pictures/text15.png>
+Package pdftex.def Info: Pictures/text15.png used on input line 177.
+(pdftex.def)             Requested size: 292.77629pt x 64.28687pt.
+ [126 <./Pictures/text13.png> <./Pictures/text14.png> <./Pictures/text15.png>]
+<Pictures/text16.png, id=1528, 778.91pt x 458.71375pt>
+File: Pictures/text16.png Graphic file (type png)
+
+<use Pictures/text16.png>
+Package pdftex.def Info: Pictures/text16.png used on input line 194.
+(pdftex.def)             Requested size: 292.77629pt x 172.4162pt.
+
+<Pictures/text17.png, id=1529, 668.4975pt x 444.66125pt>
+File: Pictures/text17.png Graphic file (type png)
+
+<use Pictures/text17.png>
+Package pdftex.def Info: Pictures/text17.png used on input line 200.
+(pdftex.def)             Requested size: 292.77629pt x 194.74915pt.
+ [127 <./Pictures/text16.png> <./Pictures/text17.png>] [128] [129] <Pictures/te
+xt21.png, id=1544, 832.10875pt x 304.13625pt>
+File: Pictures/text21.png Graphic file (type png)
+
+<use Pictures/text21.png>
+Package pdftex.def Info: Pictures/text21.png used on input line 262.
+(pdftex.def)             Requested size: 292.77629pt x 107.0108pt.
+
+<Pictures/text22.png, id=1545, 833.1125pt x 316.18124pt>
+File: Pictures/text22.png Graphic file (type png)
+
+<use Pictures/text22.png>
+Package pdftex.def Info: Pictures/text22.png used on input line 266.
+(pdftex.def)             Requested size: 292.77629pt x 111.11377pt.
+
+<Pictures/text23.png, id=1546, 745.78625pt x 389.455pt>
+File: Pictures/text23.png Graphic file (type png)
+
+<use Pictures/text23.png>
+Package pdftex.def Info: Pictures/text23.png used on input line 270.
+(pdftex.def)             Requested size: 292.77629pt x 152.8852pt.
+
+<Pictures/text24.png, id=1547, 738.76pt x 458.71375pt>
+File: Pictures/text24.png Graphic file (type png)
+
+<use Pictures/text24.png>
+Package pdftex.def Info: Pictures/text24.png used on input line 274.
+(pdftex.def)             Requested size: 292.77629pt x 181.78839pt.
+ [130 <./Pictures/text21.png> <./Pictures/text22.png> <./Pictures/text23.png>]
+<Pictures/text18.png, id=1556, 744.7825pt x 443.6575pt>
+File: Pictures/text18.png Graphic file (type png)
+
+<use Pictures/text18.png>
+Package pdftex.def Info: Pictures/text18.png used on input line 283.
+(pdftex.def)             Requested size: 292.77629pt x 174.40672pt.
+ [131 <./Pictures/text24.png> <./Pictures/text18.png>] <Pictures/text19.png, id
+=1563, 816.04875pt x 541.02126pt>
+File: Pictures/text19.png Graphic file (type png)
+
+<use Pictures/text19.png>
+Package pdftex.def Info: Pictures/text19.png used on input line 321.
+(pdftex.def)             Requested size: 292.77629pt x 194.10707pt.
+ [132]
+<Pictures/text20.png, id=1569, 806.01125pt x 228.855pt>
+File: Pictures/text20.png Graphic file (type png)
+
+<use Pictures/text20.png>
+Package pdftex.def Info: Pictures/text20.png used on input line 325.
+(pdftex.def)             Requested size: 292.77629pt x 83.12804pt.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 139.
+ [133 <./Pictures/text19.png> <./Pictures/text20.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 139.
+ (./Datamining.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 139.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 139.
+
+
+Package rerunfilecheck Warning: File `Datamining.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Datamining.out':
+(rerunfilecheck)             Before: FDFC49DD2E4EF83D0F00F0B5C1AC5D2B;10255
+(rerunfilecheck)             After:  C192F27CE041C224D22E219D4877F7CA;10430.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 139.
+ ) 
 Here is how much of TeX's memory you used:
- 4575 strings out of 493014
- 62864 string characters out of 6133351
- 238365 words of memory out of 5000000
- 8044 multiletter control sequences out of 15000+600000
+ 9145 strings out of 493014
+ 134906 string characters out of 6133351
+ 323035 words of memory out of 5000000
+ 12085 multiletter control sequences out of 15000+600000
  10345 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,5n,40p,516b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmcsc10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmti12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmtt12.pfb>
-Output written on Datamining.pdf (7 pages, 85265 bytes).
+ 29i,19n,40p,661b,541s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
+sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Datamining.pdf (134 pages, 4575074 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1709 PDF objects out of 1728 (max. 8388607)
+ 1330 compressed objects within 14 object streams
+ 361 named destinations out of 1000 (max. 500000)
+ 1632 words of extra memory for PDF output out of 10000 (max. 10000000)
 
