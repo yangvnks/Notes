@@ -57,3 +57,22 @@
 \BOOKMARK [1][-]{section.11}{Temporal Difference Learning}{}% 57
 \BOOKMARK [2][-]{subsection.11.1}{TD Prediction}{section.11}% 58
 \BOOKMARK [2][-]{subsection.11.2}{MC vs TD}{section.11}% 59
+\BOOKMARK [2][-]{subsection.11.3}{n-Step TD Prediction}{section.11}% 60
+\BOOKMARK [1][-]{section.12}{Model-Free Control}{}% 61
+\BOOKMARK [2][-]{subsection.12.1}{On-Policy}{section.12}% 62
+\BOOKMARK [3][-]{subsubsection.12.1.1}{On-policy : Monte-Carlo Control}{subsection.12.1}% 63
+\BOOKMARK [3][-]{subsubsection.12.1.2}{On-Policy : TD with SARSA}{subsection.12.1}% 64
+\BOOKMARK [2][-]{subsection.12.2}{Off-Policy}{section.12}% 65
+\BOOKMARK [3][-]{subsubsection.12.2.1}{Off-Policy : Monte Carlo}{subsection.12.2}% 66
+\BOOKMARK [3][-]{subsubsection.12.2.2}{Off-Policy : TD with SARSA}{subsection.12.2}% 67
+\BOOKMARK [3][-]{subsubsection.12.2.3}{Off-Policy : TD with Q-Learning}{subsection.12.2}% 68
+\BOOKMARK [1][-]{section.13}{Multi-Armed Bandit}{}% 69
+\BOOKMARK [2][-]{subsection.13.1}{Stochastic MAB}{section.13}% 70
+\BOOKMARK [3][-]{subsubsection.13.1.1}{Regret}{subsection.13.1}% 71
+\BOOKMARK [3][-]{subsubsection.13.1.2}{Lower Bound}{subsection.13.1}% 72
+\BOOKMARK [3][-]{subsubsection.13.1.3}{Pure Exploitation Algorithm}{subsection.13.1}% 73
+\BOOKMARK [3][-]{subsubsection.13.1.4}{Upper Confidence Bound}{subsection.13.1}% 74
+\BOOKMARK [2][-]{subsection.13.2}{Adversarial MAB}{section.13}% 75
+\BOOKMARK [3][-]{subsubsection.13.2.1}{Regret}{subsection.13.2}% 76
+\BOOKMARK [3][-]{subsubsection.13.2.2}{Lower Bound}{subsection.13.2}% 77
+\BOOKMARK [3][-]{subsubsection.13.2.3}{EXP3}{subsection.13.2}% 78

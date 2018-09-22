@@ -1332,7 +1332,399 @@ where
 \textbf{Batch updating}
 \begin{itemize}
 \item MC and TD converge for experience $\to \infty$
-\item If finite amount of experience : repeat experience, given a V the increments are computed a computed at every time step t at \textbf{non-terminal} states but \textbf{value function} is changed only once, by the sum of all increments.
+\item If finite amount of experience : repeat experience, given a V the increments are computed a computed at every time step t at \textbf{non-terminal} states but \textbf{value function} is changed only once, by the sum of all increments.This is repeat until convergence.
+\begin{itemize}
+\item TD(0) \textbf{converges} deterministically to a \textbf{single answer} independent of $\alpha$ (which must be sufficiently small ). It converges to the \textbf{max likelihood} Markov model
+$$ \hat{P}(s'|s,a)= \frac{1}{N(s,a)}\sum_{k=1}^K\sum_{t=1}^T \bm{1}(s^k_t, a^k_t, s^k_{t+1}= s,a,s')$$
+$$ \hat{R}(s,a)= \frac{1}{N(s,a)}\sum_{k=1}^K\sum_{t=1}^T \bm{1}(s^k_t, a^k_t = s,a)r_t^k$$
+\item MC constant $\alpha$ also converges in the same conditions but to a \textbf{different answer}. It converges to the \textbf{minimum mean squared error}
+$$ \sum_{k=1}^K\sum_{t=1}^T (v_t^k - V(s_t^k))^2$$
+\end{itemize}
+\item Markov \textbf{memoryless} property :
+\begin{itemize}
+\item  exploited by TD(0) $\rightarrow$ works better in Markovian environments
+\item not exploited by MC $\rightarrow$ works better in Non-Markovian environments
+\end{itemize}
+\end{itemize}
+
+\subsection{\textit{n}-Step TD Prediction}
+\begin{itemize}
+\item \textit{n-steps} enable \textbf{bootstrapping} to occur over multiple steps
+$$\begin{matrix}
+ n=1 &(TD) & \quad &  v_t^{(1)}= r_{t+1}+\gamma V(s_{t+1}) \\
+ n=2 	& & \quad &v_t^{(2)} = r_{t+1}+\gamma r_{t+2} + \gamma^2 V(s_{t+2})\\
+ \vdots & & \quad &\vdots \\
+ n=\infty &(MC) &\quad &  v_t^{(\infty)} = r_{t+1}+\gamma r_{t+2} + \hdots+ \gamma^{T-1}r_T)
+\end{matrix}$$
+$$ \text{n-step Return: } v_t^{(n)}=r_{t+1}+\gamma r_{t+2}+ \hdots +\gamma^{n-1}r_{t+n}+ \gamma^n V(s_{t+n})$$
+\item \textit{n}-step TD learning
+$$ V(s_t) \leftarrow V(s_t)+\alpha(v_t^{(n)}-V(s_t))$$
+
+\item \textit{n}-steps can be \textbf{averaged} over \textbf{different n}.E.g. average 2-step and 4-step return 
+$$ \frac{1}{2}v^{(2)} + \frac{1}{2}v^{(4)}$$
+which combines information about 2 different time steps. More time-steps can be combined using \textbf{lambda return}
+
+\item $\bm{\lambda}$ \textbf{return} $\bm{v_t^{\lambda}}$ combines all \textit{n}-step returns ,each weighted proportional to $\lambda^{n-1}$ and is normalized by a factor of $1-\lambda$ to ensure they sum up to 1
+$$ v_t^{\lambda}= (1-\lambda) \sum _{n=1}^\infty \lambda^{n-1}v_t^{(n)}$$
+
+\begin{itemize}
+\item \textbf{Forward-view} $TD(\lambda)$  look into the future to compute the return. For each state visited, look forward in time to all future rewards and decide how best to combine them: $$V(s_t) \leftarrow V(s_t)+\alpha(v_t^{\lambda} - V(s_t))$$
+Need whole episodes like MC
+
+\item \textbf{Backward-view} $TD(\lambda)$ updates weight vector on every step of an episode rather than only at the end, and thus it estimates may be better \textbf{sooner}.The computations are \textbf{equally distributed over time} rather than at the end of each episode . Finally it can be applied to \textbf{incomplete episodes}
+$$ e_0(s) =0 ,\quad e_t(s) = \gamma \lambda e_{t-1}(s) + \bm{1}(s=s_t)$$
+$$ V(s) \leftarrow V(s) + \alpha \delta_te_t(s)$$
+Where $e_t$ is an \textbf{eligibility trace} a heuristic that combines \textbf{frequency} and \textbf{recency} heuristic. \\$delta_t$ is the TD error.\\
+$\lambda$ is the \textbf{trace decay} parameter that tells at which rate the trace falls.
+\begin{itemize}
+\item $\lambda =0 $ only current state is updated , which is equivalent to $TD(0)$
+\item $\lambda = 1$ the sum \textbf{telescopes} into MC Error. In this case it is equivalent to MC Every Visit if \textbf{updated offline}. If update \textbf{online} the answer can be different.
+
+\item Convergence problems can be solved by setting the trace to 1 instead of adding 1
+$$e_t(s) =
+\begin{cases}
+\gamma\lambda e_{t-1}(s) &\quad s \neq s_t\\
+1 &\quad s = s_t
+\end{cases}$$
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\section{Model-Free Control}
+\begin{itemize}
+\item Model free control solves problems where model is unknown but experience can be sampled or the model is known but too complex to use except for the experience.
+
+\item How can learning the \textbf{optimal policy} be achieved while acting in a sub-optimal way in order to \textbf{explore all actions}?
+\begin{itemize}
+\item \textbf{On-Policy} : learn about policy $\pi$ from experience samples from $\pi$. It learns action-values for \textbf{near optimal policies}
+\item \textbf{Off-Policy} : learn about policy $\pi$ sampled from $\bar{\pi}$. Target policy is \textbf{different} than behavioural policy
+\end{itemize}
+\end{itemize}
+
+\subsection{On-Policy}
+
+\subsubsection{On-policy : Monte-Carlo Control}
+\begin{itemize}
+\item \textbf{Policy evaluation} performed on $Q(s,a)$ instead of $V(s)$ because $V(S)$ \textbf{requires a model} for \textbf{greedy policy improvement}
+$$ \pi' = argmax_{(a \in A )}\{ R(s,a) + P(s'|s,a)V(s')\}$$
+$$ vs.$$
+$$ \pi' = argmax_{(a \in A)} Q(s,a)$$
+
+\item \textbf{Policy improvement} performed using $\bm{\epsilon}-greedy$ exploration that ensures \textbf{continual} exploration where all \textbf{m-actions} are tried with \textbf{non-zero probability}
+$$ \pi(s,a) =
+\begin{cases}
+\frac{\epsilon}{m}+1 - \epsilon & \quad \text{if } a^* =argmax_{(a \in A)}Q(s,a) \\
+\frac{\epsilon}{m} & \quad \text{otherwise}
+\end{cases}
+$$
+
+\begin{center}
+\fbox{\begin{minipage}{30em}
+For any $\epsilon$-greedy policy $\pi$, the $\epsilon$-greedy policy $\pi'$ wrt to $Q^{\pi}$ is an \textbf{improvement}
+\begin{align*}
+Q^{\pi}(s,\pi'(s)) &=\sum_{a \in A}\pi'(a|s)Q^{\pi}(s,a)\\
+&=  \frac{\epsilon}{m} \sum_{a \in A}Q^{\pi}(s,a) + (1-\epsilon)max_{a \in A}Q^{\pi}(s,a)\\
+&\geq \frac{\epsilon}{m} \sum_{a \in A}Q^{\pi}(s,a) + (1-\epsilon)max_{a \in A}\frac{\pi(a|s) - \frac{\epsilon}{m}}{1-\epsilon}Q^{\pi}(s,a)\\
+&= \sum_{a \in A}\pi(a|s)Q^{\pi}(s,a) = V^{\pi}(s)
+\end{align*}
+Therefore $V^{\pi'} \geq V^{\pi}$ 
+\end{minipage}}
+\end{center}
+ 
+\item In this scenario the policy evaluation \textbf{approximates} the unknown real $Q^{\pi} \rightarrow Q \approx Q^{\pi}$
+
+\item Policies are labeled as \textbf{GLIE} ( Greedy in the limit of infinite exploration ) if they satisfy the conditions
+\begin{itemize}
+\item All state-action pairs are explored \textbf{infinitely } many times 
+$$ \lim{k \to \infty} N_k(s,a) = \infty$$
+\item The policy converges to a \textbf{greedy policy} 
+$$ \lim{k \to \infty} \pi_k(a|s) = \bm{1}(a= argmax_{(a \in A)}Q_k(s',a')$$
+\end{itemize}
+
+\item Sample k-th episode using $\pi : \{ s_1,a_1,r_2,...,s_T\} \sim \pi$. For each state-action in the episode 
+$$ N(s_t,a_t) \leftarrow N(s_t,a_t)+1$$
+$$ Q(s_t,a_t) \leftarrow Q(s_t,a_t)+ \frac{1}{N(s_t,a_t)}(v_t - Q(s_t,a_t))$$
+Improve policy based on new action-value function 
+$$ \epsilon \leftarrow \frac{1}{k}$$
+$$ \pi \leftarrow \epsilon-greedy(Q)$$  
+
+\begin{center}
+\fbox{\begin{minipage}{30em}
+GLIE Monte-Carlo control \textbf{converges} to the \textbf{optimal} action-value function  $Q(s,a) \leftarrow Q^*(s,a)$
+\end{minipage}}
+\end{center}
+
+\item Relevant time scales
+\begin{itemize}
+\item Behavioural time-scale $\frac{1}{1-\gamma}$ discount factor
+\item Sampling in the estimation of Q : $\alpha$ learning rate
+\item Exploration $\epsilon$
+$$ 1-\gamma >> \alpha >> \epsilon$$
+$$ \text{Initially : } 1-\gamma \approx \epsilon \approx \alpha$$
+Then decrease $\epsilon$ faster than $\alpha$
+\end{itemize}
+\end{itemize}
+
+\subsubsection{On-Policy : TD with SARSA}
+\begin{itemize}
+\item Many advantages over MC
+\begin{itemize}
+\item Lower variance
+\item Online
+\item Incomplete sequences
+\end{itemize}
+\item Uses update rule 
+$$ Q(s,a) \leftarrow Q(s,a) 	+ \alpha(r+ \gamma Q(s',a')-Q(s,a))$$
+which is done after every transition from a non-terminal state s. If s' is terminal $Q(s',a') = 0$
+\begin{center}
+\fbox{\begin{minipage}{30em}
+SARSA converges to the \textbf{optimal} action-value function $Q(s,a) \rightarrow Q^*(s,a)$ if
+\begin{itemize}
+\item GLIE sequence of policies $\pi_t(s,a)$
+\item \textbf{Robbin-Monroe} sequence of steps-size $\alpha_t$
+$$ \sum_{t=1}^{\infty} \alpha_t = \infty$$
+$$ \sum_{t=1}^{\infty} \alpha_t^2 < \infty$$
+\end{itemize}
+\end{minipage}}
+\end{center}
+
+\item \textbf{Policy Evaluation} : \textbf{SARSA}
+\item \textbf{Policy improvement} : $\bm{\epsilon-greedy}$ 
+
+\item  $\lambda$ return is supported by SARSA as well
+\begin{itemize}
+\item \textbf{Forward view} : update Q(s,a) to $\lambda-\text{return } v_t^{\lambda}$ 
+\item \textbf{Backward view} : incorporate eligibility traces for state-action pairs
+$e_t(s,a)= \gamma \lambda e_{t-1}(s,a) +\bm{1}(s_t,a_t = s,a)$ 
+\end{itemize}
+\end{itemize}
+
+\subsection{Off-Policy}
+\begin{itemize}
+\item Learn about \textbf{target policy} $\pi(a|s)$ while following behavioural policy $\bar{\pi}(a|s)$
+\item Use \textbf{Importance sampling} : estimate expectation of a different distribution wrt the distribution used to draw samples
+$$ E_{x \sim P}[f(x)] = \sum P(x)f(x) = \sum Q(x)\frac{P(x)}{Q(x)}f(x)= E_{x \sim Q}[\frac{P(x)}{Q(x)}f(x)]$$
+\end{itemize}
+
+\subsubsection{Off-Policy : Monte Carlo}
+\begin{enumerate}
+
+\item Uses return generated from $\bar{\pi}$ to evaluate $\pi$
+\item Weight return $v_t$ calculated according to \textbf{similarity} between policies
+\item Multiple \textbf{importance sample corrections} along with episode : 
+$$ v_t^{\mu} = \frac{\pi(a_t|s_t)}{\bar{\pi}(a_t|s_t)}\frac{\pi(a_{t+1}|s_{t+1})}{\bar{\pi}(a_{t+1}|s_{t+1})}...\frac{\pi(a_T|s_T)}{\bar{\pi}(a_T|s_T)}v_t$$
+\item Update towards \textbf{corrected return}
+$$ Q(s_t|a_t)\leftarrow Q(s_t|a_t) + \alpha(\bm{v_t} -Q(s_t,a_t))$$
+Cannot be used where $\bar{\pi}$ = 0 and $\pi$ is not zero
+\end{enumerate}
+\begin{itemize}
+
+\item Importance sampling can \textbf{dramatically} increase \textbf{variance}
+\end{itemize}
+
+\subsubsection{Off-Policy : TD with SARSA}
+\begin{enumerate}
+\item Use \textbf{TD Targets} generated from $\pi$ to evaluate $\bar{\pi}$
+\item Weight TD target $r+\gamma Q(s',a')$ according to \textbf{similarity} between policies
+\item Use \textbf{single} importance sampling correction
+$$ Q(s_t,a_t) \leftarrow Q(s_t,a_t) + \alpha \left( r_{t+1} + \gamma \frac{\pi(a|s)}{\bar{\pi}(a|s)}Q(s_{t+1},a_{t+1}) - Q(s_t,a_t) \right)$$
+\end{enumerate}
+
+\begin{itemize}
+\item Has much lower variance than MC
+\end{itemize}
+
+\subsubsection{Off-Policy : TD with Q-Learning}
+\begin{itemize}
+\item Learn about optimal policy $\pi=\pi*$
+\item From experience sampled from behaviour policy $\bar{\pi}$ , estimate
+$$ Q(s,a) \approx Q^*(s,a)$$
+\item Uses update rule 
+$$ Q(s,a) \leftarrow Q(s,a)+\alpha(r+ \gamma max_{a \in A}Q(s',a')-Q(s,a))$$
+
+\item It is possible to use \textbf{eligibility traces} with Q-Learning using \textbf{Watkins}
+\begin{itemize}
+\item Zero-out eligibility traces after a non-greedy action
+\item Do max when backing up at first non-greedy choice
+\end{itemize}
+$$ e_t(s,a) = \begin{cases}
+1+\gamma \lambda e_{t-1}(s,a) \quad & if s=s_t,a=a_t,Q_{t-1}(s_t,a_t)= max_aQ_{t-1}(s_t,a)\\
+0 \quad & if Q_{t-1}(s_t,a_t) \neq max_aQ_{t-1}(s_t,a)\\
+\gamma\lambda e_{t-1}(s,a) \quad & otherwise
+\end{cases}$$
+This gives an \textbf{disadvantage} in early learning as the eligibility trace will be \textbf{zeroed-out} frequently. A solution is to use \textbf{Peng's} Q-Learning (hard to implement)
+\begin{itemize}
+\item  Back-up max action \textbf{at the end}
+\item Never cut traces
+\end{itemize}
+\end{itemize}
+
+\section{Multi-Armed Bandit}
+\begin{itemize}
+\item $Q(s,a)$ often not known and online \textbf{decision making} faces two challenges : \textbf{exploration} vs \textbf{exploitation}. Depending on the situation sometimes gaining in the future by making sacrifices in the present is useful.
+\item Exploration is done for example with
+\begin{itemize}
+\item $\epsilon-greedy$  : does not achieve optimal policy
+\item \textbf{Softmax-Bolzman Distribution} 
+$$ \pi(a_i|s) = \frac{e^{\hat{Q}(\frac{a_i|s}{\tau})}}{\sum_{a \in A}e^{\frac{\hat{Q}(a|s)}{\tau}}}$$
+which weights the action according to $\hat{Q}(s,a)$ and $\tau$ is a \textbf{temperature} parameter that increases over time. This approach selects with high probability an action with high reward.
+\end{itemize}
+
+\item MAB is a special case of MDP
+\begin{itemize}
+\item \textbf{Single } state S (expectation of reward will change over time stochastically )
+\item Set of \textbf{arms} 
+\item P Probability matrix (only 1 state , probability of staying in that state is $\bm{1}$)
+\item R reward function (can be \textbf{deterministic}, \textbf{stochastic} , \textbf{adversary})
+\item $\gamma=1$, $\mu=1$
+\end{itemize}
+\end{itemize}
+
+
+\subsection{Stochastic MAB}
+\begin{itemize}
+\item A MAB setting is a tuple $\langle A,R \rangle$
+\begin{itemize}
+\item A set of N possible arms
+\item R is a set of \textbf{unknown} distributions $r_{i,t}\sim R(a_i)$ and $E[R(a_i)] = R(a_i)$ (for simplicity can be assumed to be $\in [0,1]$)
+\end{itemize}
+\item Procedure is as follows:
+\begin{enumerate}
+\item Each time step t	agents selects single arm $a_{i_t}$
+\item Environment generates reward $r_{i_t}$
+\item Agents updates info by means of history $h_t$
+\end{enumerate}
+\item Aim is to \textbf{maximize cumulative reward}
+$$ \sum_{t=1}^T r_{i_t,t}$$
+\end{itemize}
+
+\subsubsection{Regret}
+\begin{itemize}
+\item Assume best arm is $a^*$ with expected reward $R^*=R(a)=max_{a \in A}E[R(a)]$. Then the \textbf{loss} at each time step is
+$$ R(a^*) - R(a_{i_t})$$
+\item Over a time horizon T on \textbf{average} the loss (called \textbf{Expected Pseudo Regret}) is 
+$$ L_T = TR^* -E[\sum_{t=1}^{T} R(a_{i_t})]$$
+
+\item Maximization of reward = minimization of cumulative regret
+\item Second formulation using \textbf{difference} between $a_i$ and optimal one $a^*$ 
+$$ \Delta_i = R^* - R(a_i)$$
+Being $N_t(a_i)$ the \textbf{number of times} arm $a_i$ has been pulled , the \textbf{regret} becomes 
+$$ L_T = TR^* - E[\sum_{t=1} R(a_{i_t})]= E[\sum_{t=1} R^* - R(a_{i_t})]$$
+$$ = \sum _{a \in A}E[N_t(a_i)](R^* - R(a_i)) = \sum_{a \in A}E[N_T(a_i)]\Delta_i$$
+\end{itemize}
+
+\subsubsection{Lower Bound}
+\begin{itemize}
+\item $\Delta_i $ implies that any algorithm performance is implied by the \textbf{similarity among arms}. The more they are similar = the more difficult the problem
+
+\begin{center}
+\fbox{\begin{minipage}{30em}
+Given a MAB stochastic problem ,any algorithm satisfies 
+$$ \lim_{T \to \infty } L_T \geq logT \sum_{a_i| \Delta_i >0} \frac{\Delta_i}{KL(R(a_i),R(a^*))}$$
+\end{minipage}}
+\end{center}
+\end{itemize}
+
+\subsubsection{Pure Exploitation Algorithm}
+\begin{itemize}
+\item Always select action $a_{i_t} =argmax_a \hat{R}_t(a)$ where the expected reward is 
+$$ \hat{R}_t(a_i)= \frac{1}{N_t(a_i)} \sum_{j=1}^t r_{i,j} \bm{1}\{a_i =a_{i_j} \}$$
+
+\item Might \textbf{not converge to optimal solution}
+\item Not considering \textbf{uncertainty} in $\hat{R}_t(a) \rightarrow$ need to provide explicit bonus for \textbf{exploration}
+\item Two formulations
+\begin{itemize}
+\item \textbf{Frequentist :} $R(a_1),...,R(a_N)$ unknown parameters and a policy selects each time step an arm	based on history
+\item \textbf{Bayesian}: $R(a_1),...,R(a_N))$ are random variables with priors and a policy selects at each time step an arm based on	observation history.\\
+The more \textbf{uncertain} the more we want the algorithm to explore the option
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Upper Confidence Bound}
+\begin{itemize}
+\item Instead of using empiric estimate use \textbf{upper bound} $U(a_i)$ over expected value $R(a_i)$
+$$ U(a_i):= \hat{R}_t(a_i) + B_t(a_i) \geq R(a_i)$$
+with \textbf{high probability}
+\item Bound $B_t(a_i)$ will depend on how much information we have on the arm (for example number of times the arm has been pulled)
+
+\item Upper bound can be set using \textbf{Hoeffeding Inequality Bound} : 
+$X_1,...,X_t$ iid random variables with support in $[0,1]$  and identical mean 
+$E[X_i]=: X$ ,$\bar{X}_t = \frac{\sum_{i=1}^t X_i}{t}$ the sample mean , then
+$$ P(X > \bar{X}_t + u ) \leq e^{-2tu^2}$$
+Applied to each arm
+$$ P(R(a_i) > \hat{R}(a_i) + B_t(a_i) ) \leq e^{-2tB_t(a_i)^2}$$
+Then it can be computed as:
+\begin{enumerate}
+\item Pick probability p that the value exceed the bound
+$$ e^{-2N_t(a_i)B_t(a_i)^2} = p_t $$
+\item Solve to find $B_t$
+$$ B_t(a_i) = \sqrt{\frac{-log p_t}{2N_t(a_i)}}$$ 
+\item Reduce value over time $p_t = t^{-4}$
+$$ B_t(a_i) = \sqrt{\frac{2log t}{N_t(a_i)}}$$ 
+\item Ensure to select optimal action as samples increase
+$$ \lim_{t \to \infty }B_t(a_i) = 0 \implies \lim_{t \to \infty}U_t(a_i) = R(a_i)$$
+\end{enumerate}
+
+\item \textbf{UCB1} exploits upper bound. At each time step t:
+\begin{itemize}
+\item Compute $\hat{R}(a_i)$
+\item Compute $B_t(a_i)$
+\item Play arm $a_{i_t} = argmax_{a_i \in A}\left( \hat{R}_t(a_i) +B_t(a_i) \right)$
+\end{itemize}
+
+At finite time T the \textbf{expected total regret of the UCB1} applied to stochastic MAB is
+$$ L_T \leq 8log T \sum_{i|\Delta_i > 0} \frac{1}{\Delta_i}+(1+\frac{\pi^2}{3})\sum_{i|\Delta_i > 0} \Delta_i$$
+
+
+\item \textbf{Thompson Sampling} is a general \textbf{Bayesian} technique for online learning
+\begin{enumerate}
+\item Consider Bayesian prior for each arm $f_1,..,f_N$
+\item At each round t, sample from each on the distributions $\hat{r}_1,...,\hat{r}_N$
+\item Pull the arm $a_i$ with the \textbf{highest sampled value} $i_t= argmax_i \hat{r}_i$
+\item Update prior with new info
+\end{enumerate}
+Example with prior $f_i(0)=Beta(1,1)$ for each arm $a_i$. Keep distribution $f_i(t)=Beta(\alpha_t,\beta_t)$ incorporating information form each arm $a_i$
+\begin{itemize}
+\item \textbf{Success}  : $f_i(t+1)=Beta(\alpha_t+1,\beta_t)$
+\item \textbf{Failure}  : $f_i(t+1)=Beta(\alpha_t,\beta_t+1)$
+\end{itemize}
+At time T, the \textbf{expected total regret} of the algorithm is
+$$ L_T \leq O\left(  \sum_{i|\Delta_i > 0} \frac{\Delta_i}{KL(R_{a_i},R(a^*))}(log T + log log T)\right)$$
+\end{itemize}
+
+\subsection{Adversarial MAB}
+\begin{itemize}
+\item Setting tuple $\langle A,R \rangle$
+\item A set of N arms
+\item R reward vector of $r_{i_t}$ rewards decided by an \textbf{adversarial player}\item Each step agent selects 1 arm and adversary chooses reward which the agents receives.
+\item Goal : \textbf{maximize cumulative reward} 
+$$ \sum_{t=1}^T r_{i_t,t}$$
+\end{itemize}
+
+\subsubsection{Regret}
+\begin{itemize}
+\item Cannot compare received gain with \textbf{optimal one} and we cannot use \textbf{deterministic} algorithms ( adversary decides reward!). So only \textbf{weak regret} can be defined , compared with  \textbf{best constant action}
+$$ L_T  = max_i\sum_{t=1}^T r_{i,t} - \sum_{t=1}^T r_{i_t,t} $$
+\end{itemize}
+\subsubsection{Lower Bound}
+Let \textbf{sup} be the supremum over all distribution of rewards such that for all $i \in \{ 1,...,N\}$ the rewards $r_{i,1}, ...,r_{i,j} \in 0,1$ are iid , and let \textbf{inf} be the infimum over all forecasters. Then
+$$ \text{inf sup }E[L_T]\geq \frac{1}{20} \sqrt{TN}$$
+where the expectation is taken wrt both \textbf{random generation rewards} and \textbf{internal randomization} of forecaster
+
+\subsubsection{EXP3}
+\begin{itemize}
+\item Variation of \textbf{Softmax}
+\item Probability of choosing an arm 
+$$ \pi(a_i)= (1-\beta)\frac{w_t(a_i)}{\sum _j w_t(a_j)} +\frac{\beta}{N}$$
+where
+ $$ w_{t+1}(a_i) = \begin{cases} 
+ w_t(a)e^{- \eta  \frac{r_{i,t}}{\pi_t(a_i)}} & \text{ if } a_i \text{ has been pulled}\\
+ w_t(a_i) & \text{otherwise}  
+\end{cases} 
+  $$
+  
+ At time T the \textbf{expected total regret} of EXP3 algorithm is with $\beta=\eta = \sqrt{\frac{N log N }{(e-1)T}}$ 
+ $$ E[L_T] \leq O(\sqrt{TN log N})$$
 \end{itemize}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  9 SEP 2018 21:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  10 SEP 2018 16:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -440,12 +440,12 @@ ocpdfTeX warning (ext4): destination with the same identifier (name{page.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 ...timization recap}{24}{subsubsection.6.1.1}
-                                                   [1])
+l.31 ...timization recap}{25}{subsubsection.6.1.1}
+                                                   [1] [2])
 \tf@toc=\write4
 \openout4 = `ML.toc'.
 
- [2]
+ [3]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 99.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
@@ -453,7 +453,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 99.
- [3] [4] [5]
+ [4] [5] [6]
 Overfull \hbox (24.76837pt too wide) in paragraph at lines 200--201
 []\OT1/cmr/m/n/12 Posterior : $\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/b/it
 /12 w\OMS/cmsy/m/n/12 j\OML/cmm/b/it/12 t; \OT1/cmr/bx/n/12 ^^H\OML/cmm/m/it/12
@@ -465,13 +465,13 @@ OMS/cmsy/m/n/12 N\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 w\OMS/cmsy/m/n/12 j\OML/cmm/
 b/it/12 w[]; S[]\OT1/cmr/m/n/12 )$ 
  []
 
-[6] [7] [8]
+[7] [8] [9]
 Overfull \hbox (1.70503pt too wide) in paragraph at lines 299--300
 []\OT1/cmr/m/n/12 Finds hy-per-plane by min-i-miz-ing dis-tance of \OT1/cmr/bx/
 n/12 miss-clas-si-fied points \OT1/cmr/m/n/12 to bound-
  []
 
-[9]
+[10]
 Overfull \hbox (8.085pt too wide) in paragraph at lines 330--331
 []\OT1/cmr/m/n/12 Determine pa-ram-e-ters us-ing ML (dif-fer-ently done in \OT1
 /cmr/bx/n/12 gen-er-a-tive ap-proaches\OT1/cmr/m/n/12 ) 
@@ -483,8 +483,8 @@ Overfull \hbox (10.16772pt too wide) detected at line 331
 /bx/n/12 ^^H\OML/cmm/b/it/12 ; w[]; :::; w[]\OT1/cmr/m/n/12 ) = [] [] = [] []
  []
 
-[10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24]
-[25] [26] [27]
+[11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25]
+[26] [27] [28]
 Overfull \hbox (1.31212pt too wide) detected at line 890
 \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X[] \OT1/cmr/m/n/12 = \OML/
 cmm/m/it/12 j\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 X[] \OT1/cmr/m/n/12 = \OML/cmm/
@@ -495,7 +495,7 @@ m/it/12 i; X[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 k[]; :::; X[] \OT1/cmr/m/n/12
 OML/cmm/m/it/12 i\OT1/cmr/m/n/12 )
  []
 
-[28] [29] [30] [31] [32] [33] [34]
+[29] [30] [31] [32] [33] [34] [35]
 Overfull \hbox (11.4349pt too wide) detected at line 1114
 \OML/cmm/m/it/12 V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s\OT1/cmr/m/n/12 ) = \OML
 /cmm/m/it/12 max[] []  k \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 N \OMS/cmsy/m/n/12 
@@ -509,20 +509,20 @@ ML/cmm/m/it/12 max[] []  k \OT1/cmr/m/n/12 = 0\OML/cmm/m/it/12 ; :::N \OMS/cmsy
 /m/n/12 ^^@ \OT1/cmr/m/n/12 1
  []
 
-[35]
+[36]
 Underfull \hbox (badness 1097) in paragraph at lines 1151--1151
 []\OT1/cmr/m/n/12 Let $\OML/cmm/m/it/12 ^^Y$ \OT1/cmr/m/n/12 and $\OML/cmm/m/it
 /12 ^^Y[]$ \OT1/cmr/m/n/12 be any pair of de-ter-min-is-tic poli-cies such that
 
  []
 
-[36]
+[37]
 Underfull \hbox (badness 2608) in paragraph at lines 1176--1176
 []\OT1/cmr/m/n/12 Value it-er-a-tion con-verges to the op-ti-mal state-value fu
 nc-tion
  []
 
-[37] [38] [39]
+[38] [39] [40]
 Overfull \hbox (1.90228pt too wide) detected at line 1264
 [] \OT1/cmr/m/n/12 = [] [] \OML/cmm/m/it/12 x[] \OT1/cmr/m/n/12 = [] [] = [](\O
 ML/cmm/m/it/12 x[] \OT1/cmr/m/n/12 + (\OML/cmm/m/it/12 k \OMS/cmsy/m/n/12 ^^@ \
@@ -530,58 +530,66 @@ OT1/cmr/m/n/12 1)[]) = [] + [](\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 ^^@ []\OT1
 /cmr/m/n/12 )
  []
 
-[40] [41]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1325.
- [42]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1325.
+[41] [42]
+Overfull \hbox (31.59529pt too wide) in paragraph at lines 1328--1329
+[]\OT1/cmr/m/n/12 return $\OML/cmm/m/it/12 v[]$ \OT1/cmr/m/n/12 has high vari-a
+nce as it de-pends on \OT1/cmr/bx/n/12 many ran-dom \OT1/cmr/m/n/12 ac-tions,tr
+ansitions
+ []
+
+[43] [44] [45] [46] [47] [48] [49]
+Overfull \hbox (15.44316pt too wide) detected at line 1554
+\OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s; a\OT1/cmr/m/n/12 ) = [
+]
+ []
+
+[50] [51] [52] [53] [54] [55]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1730.
+ [56]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1730.
  (./ML.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1325.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1325.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1730.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1730.
 
-
-
-Package rerunfilecheck Warning: File `ML.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `ML.out':
-(rerunfilecheck)             Before: B6041A29C4C2A5ABC3A6FA00D6396326;4074
-(rerunfilecheck)             After:  2548B09216B4416FB316465C901E517A;4134.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1325.
+Package rerunfilecheck Info: File `ML.out' has not changed.
+(rerunfilecheck)             Checksum: A1867952200204027375FA59FB6B5562;5540.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1730.
  ) 
 Here is how much of TeX's memory you used:
- 8135 strings out of 493014
- 116828 string characters out of 6133351
+ 8210 strings out of 493014
+ 117824 string characters out of 6133351
  238593 words of memory out of 5000000
- 11458 multiletter control sequences out of 15000+600000
- 12291 words of font info for 43 fonts, out of 8000000 for 9000
+ 11480 multiletter control sequences out of 15000+600000
+ 12997 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,15n,40p,577b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,15n,40p,577b,517s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy
 6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/c
 mbsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 bx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
-x8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc
-10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
-0.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/c
-mex8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.
-pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.
-pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmm
-ib6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra
-/cmmib8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6
-.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
-b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on ML.pdf (43 pages, 332837 bytes).
+x8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxt
+i10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcs
+c10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
+10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/
+cmex8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8
+.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10
+.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cm
+mib6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextr
+a/cmmib8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
+fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on ML.pdf (57 pages, 387790 bytes).
 PDF statistics:
- 618 PDF objects out of 1000 (max. 8388607)
- 546 compressed objects within 6 object streams
- 124 named destinations out of 1000 (max. 500000)
- 465 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 813 PDF objects out of 1000 (max. 8388607)
+ 723 compressed objects within 8 object streams
+ 175 named destinations out of 1000 (max. 500000)
+ 625 words of extra memory for PDF output out of 10000 (max. 10000000)
 
